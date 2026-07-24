@@ -309,7 +309,7 @@ export default function Home() {
     <main className="app-shell">
       <aside className="sidebar">
         <div className="brand">
-          <div className="brand-logo" aria-hidden="true">SBA</div>
+          <img className="brand-logo" src="/sba-hex-logo.png" alt="SBA" />
           <div className="brand-copy">
             <strong>SBA DICTIONARY</strong>
             <small>DATA KNOWLEDGE HUB</small>
