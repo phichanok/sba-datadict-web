@@ -1,6 +1,6 @@
 # SBA Data Dictionary
 
-เว็บ React + Vite ที่ย้ายจาก ChatGPT Sites มาใช้ Supabase สำหรับสมาชิกและข้อมูลแก้ไข พร้อม Deploy บน Vercel
+เว็บ React + Vite ใช้ Supabase สำหรับสมาชิกและข้อมูลแก้ไข พร้อม Deploy บน Vercel
 
 ## ตั้งค่า Supabase
 
