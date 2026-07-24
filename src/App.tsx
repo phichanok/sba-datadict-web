@@ -280,13 +280,12 @@ export default function Home() {
     const form = new FormData(formElement);
     const email = String(form.get("email") ?? "").trim();
     const password = String(form.get("password") ?? "");
-    const displayName = String(form.get("displayName") ?? "").trim();
     setBusy(true);
     setNotice("");
     try {
       const result = mode === "signin"
         ? await signIn(email, password)
-        : await signUp(email, password, displayName);
+        : await signUp(email, password);
       if (result.error) return setNotice(result.error.message);
       await reloadSession();
       setModal(null);
@@ -309,7 +308,7 @@ export default function Home() {
   return (
     <main className="app-shell">
       <aside className="sidebar">
-        <div className="brand"><span className="brand-mark"><Icon type="database" /></span><div><strong>SBA DICT</strong><small>DATA KNOWLEDGE HUB</small></div></div>
+        <div className="brand"><span className="brand-mark" aria-label="SBA">SBA</span><div><strong>SBA DICTIONARY</strong><small>DATA KNOWLEDGE HUB</small></div></div>
         <div className="sidebar-label"><span>DATABASE TABLES</span><span>{dictionary.tableCount}</span></div>
         <nav className="table-list" aria-label="รายชื่อตาราง">
           <button className={selectedTable === "ALL" ? "active" : ""} onClick={() => setSelectedTable("ALL")}><span className="table-code">ALL</span><span className="table-meta">ทุกตาราง</span><b>{dictionary.fieldCount}</b></button>
@@ -368,7 +367,7 @@ export default function Home() {
         <button className="modal-close" onClick={() => setModal(null)}>×</button>
         {modal === "login" ? <form onSubmit={(e) => { e.preventDefault(); void authenticate(e.currentTarget, "signin"); }}>
           <p className="eyebrow">SECURE ACCESS</p><h2>เข้าสู่ระบบ SBA Dictionary</h2><p className="modal-lead">ใช้บัญชีของเว็บนี้เพื่อจัดการข้อมูลตามสิทธิ์ Admin / Editor / Viewer</p>
-          <div className="form-grid"><label className="wide">ชื่อที่แสดง (ใช้ตอนสมัคร)<input name="displayName" placeholder="เช่น น้องแป้ง" /></label><label className="wide">อีเมล<input name="email" type="email" required /></label><label className="wide">รหัสผ่าน<input name="password" type="password" minLength={6} required /></label></div>
+          <div className="form-grid"><label className="wide">อีเมล<input name="email" type="email" required /></label><label className="wide">รหัสผ่าน<input name="password" type="password" minLength={6} required /></label></div>
           {notice && <p className="form-error">{notice}</p>}
           <div className="form-actions"><button type="button" className="action secondary" disabled={busy} onClick={(e) => { const form = e.currentTarget.closest("form"); if (form) void authenticate(form, "signup"); }}>สมัครสมาชิก</button><button type="submit" disabled={busy} className="action primary">{busy ? "กำลังตรวจสอบ..." : "เข้าสู่ระบบ"}</button></div>
         </form> :
