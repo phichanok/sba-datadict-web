@@ -3,11 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
-  },
+ "scripts": {
+  "dev": "vite",
+  "build": "tsc -p tsconfig.app.json && vite build",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@supabase/supabase-js": "^2.57.4",
     "react": "^19.1.1",
