@@ -506,3 +506,226 @@
     font-size: 32px;
   }
 }
+
+/* =========================================================
+   SIMPLE LOGIN / SIGN-UP PAGE
+   วางโค้ดชุดนี้ไว้ท้ายไฟล์ src/index.css
+   ========================================================= */
+
+.simple-auth-page {
+  align-items: center;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(46, 158, 255, 0.10), transparent 32%),
+    radial-gradient(circle at 85% 85%, rgba(34, 201, 167, 0.09), transparent 30%),
+    #eef7fa;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 28px 18px;
+}
+
+.simple-auth-card {
+  background: #ffffff;
+  border: 1px solid #d8e5eb;
+  border-radius: 24px;
+  box-shadow: 0 24px 65px rgba(24, 70, 94, 0.14);
+  max-width: 470px;
+  padding: 42px 38px 36px;
+  text-align: center;
+  width: 100%;
+}
+
+.simple-auth-logo {
+  align-items: center;
+  background: #0e3150;
+  border: 3px solid #f3b935;
+  clip-path: polygon(50% 0, 92% 24%, 92% 76%, 50% 100%, 8% 76%, 8% 24%);
+  display: inline-flex;
+  height: 58px;
+  justify-content: center;
+  margin-bottom: 25px;
+  width: 58px;
+}
+
+.simple-auth-logo span {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.simple-auth-eyebrow {
+  color: #118f8b;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin: 0 0 10px;
+}
+
+.simple-auth-card h1 {
+  color: #123352;
+  font-size: 31px;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.simple-auth-description {
+  color: #698096;
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 12px auto 26px;
+  max-width: 360px;
+}
+
+.simple-auth-tabs {
+  background: #edf4f7;
+  border-radius: 12px;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 24px;
+  padding: 4px;
+}
+
+.simple-auth-tabs button {
+  background: transparent;
+  border: 0;
+  border-radius: 9px;
+  color: #688096;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  min-height: 39px;
+}
+
+.simple-auth-tabs button.active {
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(27, 64, 85, 0.10);
+  color: #118f8b;
+}
+
+.simple-auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.simple-auth-form label {
+  color: #15334e;
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 7px;
+}
+
+.simple-auth-form input {
+  background: #ffffff;
+  border: 1px solid #cbdce5;
+  border-radius: 11px;
+  color: #15334e;
+  min-height: 48px;
+  outline: none;
+  padding: 11px 13px;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  width: 100%;
+}
+
+.simple-auth-form input::placeholder {
+  color: #8798a8;
+}
+
+.simple-auth-form input:focus {
+  border-color: #159791;
+  box-shadow: 0 0 0 4px rgba(21, 151, 145, 0.10);
+}
+
+.simple-auth-message {
+  background: #fff7e8;
+  border: 1px solid #f1d59e;
+  border-radius: 9px;
+  color: #8b5b0a;
+  font-size: 12px;
+  line-height: 1.55;
+  padding: 11px 12px;
+  text-align: left;
+}
+
+.simple-auth-submit {
+  background: #168f8a;
+  border: 0;
+  border-radius: 11px;
+  box-shadow: 0 10px 24px rgba(22, 143, 138, 0.20);
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  min-height: 48px;
+  margin-top: 5px;
+  padding: 11px 18px;
+  transition: background 0.18s, transform 0.18s;
+  width: 100%;
+}
+
+.simple-auth-submit:hover:not(:disabled) {
+  background: #0f7f7a;
+  transform: translateY(-1px);
+}
+
+.simple-auth-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.simple-auth-switch {
+  align-items: center;
+  display: flex;
+  font-size: 13px;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 19px;
+}
+
+.simple-auth-switch span {
+  color: #61778b;
+}
+
+.simple-auth-switch button {
+  background: transparent;
+  border: 0;
+  color: #0873b9;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0;
+}
+
+.simple-auth-switch button:hover {
+  text-decoration: underline;
+}
+
+.simple-auth-note {
+  border-top: 1px solid #e4edf1;
+  color: #6d8191;
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 24px 0 0;
+  padding-top: 18px;
+}
+
+@media (max-width: 520px) {
+  .simple-auth-page {
+    align-items: flex-start;
+    padding: 18px 12px;
+  }
+
+  .simple-auth-card {
+    border-radius: 19px;
+    padding: 32px 22px 28px;
+  }
+
+  .simple-auth-card h1 {
+    font-size: 27px;
+  }
+}

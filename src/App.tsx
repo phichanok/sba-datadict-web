@@ -1,7 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import { appFetch, onAuthChange, signIn, signOut } from "./api";
+import { appFetch, onAuthChange, signIn, signOut, signUp } from "./api";
 
 type Field = {
   name: string;
@@ -170,6 +170,7 @@ export default function Home() {
   const [session, setSession] =
     useState<AdminSession>(emptySession);
   const [authReady, setAuthReady] = useState(false);
+  const [authMode, setAuthMode] = useState<"signin" | "signup">("signin");
   const [managedUsers, setManagedUsers] =
     useState<ManagedUser[]>([]);
 
@@ -790,14 +791,13 @@ export default function Home() {
   ) {
     const form = new FormData(formElement);
 
-    const email = String(
-      form.get("email") ?? ""
-    )
+    const email = String(form.get("email") ?? "")
       .trim()
       .toLowerCase();
 
-    const password = String(
-      form.get("password") ?? ""
+    const password = String(form.get("password") ?? "");
+    const confirmPassword = String(
+      form.get("confirmPassword") ?? ""
     );
 
     if (!email || !password) {
@@ -805,11 +805,27 @@ export default function Home() {
       return;
     }
 
+    if (password.length < 6) {
+      setNotice("รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร");
+      return;
+    }
+
+    if (
+      authMode === "signup" &&
+      password !== confirmPassword
+    ) {
+      setNotice("รหัสผ่านและยืนยันรหัสผ่านไม่ตรงกัน");
+      return;
+    }
+
     setBusy(true);
     setNotice("");
 
     try {
-      const result = await signIn(email, password);
+      const result =
+        authMode === "signin"
+          ? await signIn(email, password)
+          : await signUp(email, password);
 
       if (result.error) {
         const message =
@@ -820,14 +836,21 @@ export default function Home() {
             "invalid login credentials"
           )
         ) {
-          setNotice(
-            "อีเมลหรือรหัสผ่านไม่ถูกต้อง"
-          );
+          setNotice("อีเมลหรือรหัสผ่านไม่ถูกต้อง");
         } else if (
           message.includes("email not confirmed")
         ) {
+          setNotice("บัญชีนี้ยังไม่ได้ยืนยันอีเมล");
+        } else if (
+          message.includes("already registered") ||
+          message.includes("user already registered")
+        ) {
+          setNotice("อีเมลนี้ถูกสมัครสมาชิกแล้ว");
+        } else if (
+          message.includes("signup is disabled")
+        ) {
           setNotice(
-            "บัญชีนี้ยังไม่ได้ยืนยันอีเมล"
+            "ระบบยังปิดการสมัครสมาชิก กรุณาเปิด Sign ups ใน Supabase"
           );
         } else {
           setNotice(result.error.message);
@@ -836,11 +859,22 @@ export default function Home() {
         return;
       }
 
+      if (authMode === "signup") {
+        setNotice(
+          "สมัครสมาชิกสำเร็จ กรุณาตรวจอีเมลเพื่อยืนยันบัญชี แล้วกลับมาเข้าสู่ระบบ"
+        );
+        setAuthMode("signin");
+        formElement.reset();
+        return;
+      }
+
       await reloadSession();
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error("Authentication failed:", error);
       setNotice(
-        "ไม่สามารถเข้าสู่ระบบได้ กรุณาลองใหม่"
+        authMode === "signin"
+          ? "ไม่สามารถเข้าสู่ระบบได้ กรุณาลองใหม่"
+          : "ไม่สามารถสมัครสมาชิกได้ กรุณาลองใหม่"
       );
     } finally {
       setBusy(false);
@@ -886,186 +920,151 @@ export default function Home() {
 
   if (!session.authenticated) {
     return (
-      <main className="login-page">
-        <section className="login-layout">
-          <div className="login-showcase">
-            <div className="login-brand">
-              <span className="login-logo">SBA</span>
-
-              <div>
-                <strong>SBA DATA DICTIONARY</strong>
-                <small>DATA KNOWLEDGE HUB</small>
-              </div>
-            </div>
-
-            <div className="login-introduction">
-              <p className="login-eyebrow">
-                SECURE KNOWLEDGE PLATFORM
-              </p>
-
-              <h1>
-                ค้นหาโครงสร้างข้อมูล
-                <span>ได้ง่ายและเป็นระบบ</span>
-              </h1>
-
-              <p>
-                ศูนย์กลางสำหรับค้นหา Table, Field,
-                Data Type, Key และ Business Rule
-                ของระบบ SBA
-              </p>
-
-              <div className="login-features">
-                <article>
-                  <strong>ค้นหาได้รวดเร็ว</strong>
-                  <span>
-                    ค้นหาจากชื่อตาราง ฟิลด์
-                    และคำอธิบาย
-                  </span>
-                </article>
-
-                <article>
-                  <strong>แบ่งสิทธิ์ผู้ใช้งาน</strong>
-                  <span>
-                    รองรับ Admin, Editor และ Viewer
-                  </span>
-                </article>
-
-                <article>
-                  <strong>
-                    จัดเก็บความรู้ส่วนกลาง
-                  </strong>
-                  <span>
-                    ลดเวลาการค้นหาและส่งต่อความรู้ในทีม
-                  </span>
-                </article>
-              </div>
-            </div>
-
-            <small className="login-copyright">
-              Internal use only · Bualuang Securities
-            </small>
+      <main className="simple-auth-page">
+        <section className="simple-auth-card">
+          <div className="simple-auth-logo">
+            <span>SBA</span>
           </div>
 
-          <div className="login-form-area">
-            <section className="login-card">
-              <div className="login-mobile-brand">
-                <span className="login-logo">SBA</span>
-                <strong>SBA DATA DICTIONARY</strong>
-              </div>
+          <p className="simple-auth-eyebrow">
+            SECURE INTERNAL LIBRARY
+          </p>
 
-              <p className="login-eyebrow">
-                WELCOME BACK
-              </p>
+          <h1>SBA Data Dictionary</h1>
 
-              <h2>เข้าสู่ระบบ</h2>
+          <p className="simple-auth-description">
+            คลังข้อมูลโครงสร้าง Table, Field, Data Type,
+            Key และ Business Rule ของระบบ SBA
+          </p>
 
-              <p className="login-description">
-                กรุณาเข้าสู่ระบบด้วยบัญชีที่ได้รับอนุญาต
-                เพื่อเข้าถึงข้อมูล SBA Data Dictionary
-              </p>
+          <div className="simple-auth-tabs">
+            <button
+              type="button"
+              className={
+                authMode === "signin" ? "active" : ""
+              }
+              onClick={() => {
+                setAuthMode("signin");
+                setNotice("");
+              }}
+            >
+              เข้าสู่ระบบ
+            </button>
 
-              <form
-                className="login-form"
-                onSubmit={(event) => {
-                  event.preventDefault();
-                  void authenticate(
-                    event.currentTarget
-                  );
-                }}
+            <button
+              type="button"
+              className={
+                authMode === "signup" ? "active" : ""
+              }
+              onClick={() => {
+                setAuthMode("signup");
+                setNotice("");
+              }}
+            >
+              สมัครสมาชิก
+            </button>
+          </div>
+
+          <form
+            className="simple-auth-form"
+            onSubmit={(event) => {
+              event.preventDefault();
+              void authenticate(event.currentTarget);
+            }}
+          >
+            <label>
+              <span>อีเมล</span>
+              <input
+                name="email"
+                type="email"
+                autoComplete="email"
+                placeholder="name@company.com"
+                required
+                autoFocus
+              />
+            </label>
+
+            <label>
+              <span>รหัสผ่าน</span>
+              <input
+                name="password"
+                type="password"
+                autoComplete={
+                  authMode === "signin"
+                    ? "current-password"
+                    : "new-password"
+                }
+                placeholder="อย่างน้อย 6 ตัวอักษร"
+                minLength={6}
+                required
+              />
+            </label>
+
+            {authMode === "signup" && (
+              <label>
+                <span>ยืนยันรหัสผ่าน</span>
+                <input
+                  name="confirmPassword"
+                  type="password"
+                  autoComplete="new-password"
+                  placeholder="กรอกรหัสผ่านอีกครั้ง"
+                  minLength={6}
+                  required
+                />
+              </label>
+            )}
+
+            {notice && (
+              <div
+                className="simple-auth-message"
+                role="alert"
               >
-                <label>
-                  <span>อีเมล</span>
-
-                  <div className="login-input-wrapper">
-                    <svg
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <path d="M4 6h16v12H4z" />
-                      <path d="m4 7 8 6 8-6" />
-                    </svg>
-
-                    <input
-                      name="email"
-                      type="email"
-                      autoComplete="email"
-                      placeholder="name@company.com"
-                      required
-                      autoFocus
-                    />
-                  </div>
-                </label>
-
-                <label>
-                  <span>รหัสผ่าน</span>
-
-                  <div className="login-input-wrapper">
-                    <svg
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <rect
-                        x="5"
-                        y="10"
-                        width="14"
-                        height="10"
-                        rx="2"
-                      />
-                      <path d="M8 10V7a4 4 0 0 1 8 0v3" />
-                    </svg>
-
-                    <input
-                      name="password"
-                      type="password"
-                      autoComplete="current-password"
-                      placeholder="กรอกรหัสผ่าน"
-                      minLength={6}
-                      required
-                    />
-                  </div>
-                </label>
-
-                {notice && (
-                  <div
-                    className="login-error"
-                    role="alert"
-                  >
-                    <span>!</span>
-                    <p>{notice}</p>
-                  </div>
-                )}
-
-                <button
-                  className="login-submit"
-                  type="submit"
-                  disabled={busy}
-                >
-                  {busy ? (
-                    <>
-                      <span className="button-spinner" />
-                      กำลังเข้าสู่ระบบ...
-                    </>
-                  ) : (
-                    "เข้าสู่ระบบ"
-                  )}
-                </button>
-              </form>
-
-              <div className="login-security">
-                <svg
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M12 3 5 6v5c0 4.8 2.9 8.3 7 10 4.1-1.7 7-5.2 7-10V6z" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-
-                <span>
-                  ระบบนี้สำหรับผู้ใช้งานที่ได้รับอนุญาตเท่านั้น
-                </span>
+                {notice}
               </div>
-            </section>
+            )}
+
+            <button
+              className="simple-auth-submit"
+              type="submit"
+              disabled={busy}
+            >
+              {busy
+                ? authMode === "signin"
+                  ? "กำลังเข้าสู่ระบบ..."
+                  : "กำลังสมัครสมาชิก..."
+                : authMode === "signin"
+                ? "เข้าสู่ระบบ"
+                : "สมัครสมาชิก"}
+            </button>
+          </form>
+
+          <div className="simple-auth-switch">
+            <span>
+              {authMode === "signin"
+                ? "ยังไม่มีบัญชี?"
+                : "มีบัญชีอยู่แล้ว?"}
+            </span>
+
+            <button
+              type="button"
+              onClick={() => {
+                setAuthMode(
+                  authMode === "signin"
+                    ? "signup"
+                    : "signin"
+                );
+                setNotice("");
+              }}
+            >
+              {authMode === "signin"
+                ? "สมัครบัญชี"
+                : "กลับไปเข้าสู่ระบบ"}
+            </button>
           </div>
+
+          <p className="simple-auth-note">
+            บัญชีใหม่อาจต้องยืนยันอีเมลก่อนเข้าใช้งาน
+          </p>
         </section>
       </main>
     );
