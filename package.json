@@ -1,23 +1,5 @@
-{
-  "name": "sba-datadict-web",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
- "scripts": {
-  "dev": "vite",
-  "build": "tsc -p tsconfig.app.json && vite build",
-  "preview": "vite preview"
-},
-  "dependencies": {
-    "@supabase/supabase-js": "^2.57.4",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1"
-  },
-  "devDependencies": {
-    "@types/react": "^19.1.16",
-    "@types/react-dom": "^19.1.9",
-    "@vitejs/plugin-react": "^5.0.3",
-    "typescript": "~5.9.2",
-    "vite": "^7.1.7"
-  }
-}
+node_modules
+dist
+.env
+.env.local
+.DS_Store
