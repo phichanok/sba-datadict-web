@@ -1,0 +1,166 @@
+[
+  {
+    "concept": "order_today_latest",
+    "table": "JBO",
+    "meaning": "ข้อมูล Order ของวันนี้ฉบับล่าสุด",
+    "keywords": [
+      "order วันนี้",
+      "คำสั่งซื้อขายวันนี้",
+      "รายการ order วันนี้",
+      "order ล่าสุด"
+    ]
+  },
+  {
+    "concept": "order_today_before_edit",
+    "table": "JBOL",
+    "meaning": "ข้อมูล Order ของวันนี้ก่อนแก้ไข",
+    "keywords": [
+      "order วันนี้ก่อนแก้ไข",
+      "order ก่อนแก้วันนี้",
+      "order ก่อนแก้ไข"
+    ]
+  },
+  {
+    "concept": "order_history_latest",
+    "table": "HBO",
+    "meaning": "ข้อมูล Order ย้อนหลังฉบับล่าสุด",
+    "keywords": [
+      "order ย้อนหลัง",
+      "order เมื่อวาน",
+      "ประวัติ order",
+      "order history"
+    ]
+  },
+  {
+    "concept": "order_history_before_edit",
+    "table": "HBOL",
+    "meaning": "ข้อมูล Order ย้อนหลังก่อนแก้ไข",
+    "keywords": [
+      "order ย้อนหลังก่อนแก้ไข",
+      "order เมื่อวานก่อนแก้",
+      "ประวัติ order ก่อนแก้ไข"
+    ]
+  },
+  {
+    "concept": "deal_today_latest",
+    "table": "JBD",
+    "meaning": "ข้อมูล Deal ของวันนี้ฉบับล่าสุด",
+    "keywords": [
+      "deal วันนี้",
+      "ดีลวันนี้",
+      "รายการ match วันนี้",
+      "รายการซื้อขายวันนี้"
+    ]
+  },
+  {
+    "concept": "deal_today_before_edit",
+    "table": "JBDL",
+    "meaning": "ข้อมูล Deal ของวันนี้ก่อนแก้ไข",
+    "keywords": [
+      "deal วันนี้ก่อนแก้ไข",
+      "ดีลก่อนแก้วันนี้"
+    ]
+  },
+  {
+    "concept": "deal_history_latest",
+    "table": "HBD",
+    "meaning": "ข้อมูล Deal ย้อนหลังฉบับล่าสุด",
+    "keywords": [
+      "deal ย้อนหลัง",
+      "deal เมื่อวาน",
+      "ประวัติดีล"
+    ]
+  },
+  {
+    "concept": "deal_history_before_edit",
+    "table": "HBDL",
+    "meaning": "ข้อมูล Deal ย้อนหลังก่อนแก้ไข",
+    "keywords": [
+      "deal ย้อนหลังก่อนแก้ไข",
+      "ดีลเมื่อวานก่อนแก้"
+    ]
+  },
+  {
+    "concept": "current_money_balance",
+    "table": "MCBL",
+    "meaning": "ยอดเงินคงเหลือปัจจุบันของลูกค้า",
+    "keywords": [
+      "ยอดเงินคงเหลือ",
+      "เงินคงเหลือ",
+      "cash balance",
+      "ยอดเงินลูกค้า",
+      "เงินปัจจุบัน"
+    ]
+  },
+  {
+    "concept": "historical_money_balance",
+    "table": "HMCBL",
+    "meaning": "ยอดเงินคงเหลือย้อนหลังของลูกค้า",
+    "keywords": [
+      "ยอดเงินย้อนหลัง",
+      "เงินคงเหลือย้อนหลัง",
+      "history cash balance"
+    ]
+  },
+  {
+    "concept": "current_customer_balance",
+    "table": "JCBL",
+    "meaning": "ยอดคงเหลือของลูกค้าในข้อมูลวันนี้",
+    "keywords": [
+      "ยอดคงเหลือลูกค้าวันนี้",
+      "customer balance today"
+    ]
+  },
+  {
+    "concept": "customer_master",
+    "table": "TCT",
+    "meaning": "ข้อมูลหลักของลูกค้า",
+    "keywords": [
+      "ข้อมูลลูกค้า",
+      "customer master",
+      "ข้อมูลหลักลูกค้า"
+    ]
+  },
+  {
+    "concept": "customer_account",
+    "table": "TCA",
+    "meaning": "ข้อมูลบัญชีของลูกค้า",
+    "keywords": [
+      "บัญชีลูกค้า",
+      "customer account",
+      "เลขบัญชีลูกค้า"
+    ]
+  },
+  {
+    "concept": "customer_account_status",
+    "table": "TCAS",
+    "meaning": "ข้อมูลสถานะบัญชีของลูกค้า",
+    "keywords": [
+      "สถานะบัญชี",
+      "บัญชี active",
+      "บัญชี closed",
+      "account status"
+    ]
+  },
+  {
+    "concept": "share_movement",
+    "table": "HTU",
+    "meaning": "รายการเคลื่อนไหวหุ้นทั้งหมด",
+    "keywords": [
+      "รายการเคลื่อนไหวหุ้น",
+      "movement หุ้น",
+      "โอนฝากถอนหุ้น"
+    ]
+  },
+  {
+    "concept": "share_transfer_deposit_withdrawal",
+    "table": "JSH",
+    "meaning": "รายการโอน ฝาก ถอนหุ้น ที่ไม่มีการซื้อขาย",
+    "keywords": [
+      "โอนหุ้น",
+      "ฝากหุ้น",
+      "ถอนหุ้น",
+      "ไม่มีซื้อขาย"
+    ]
+  }
+]
