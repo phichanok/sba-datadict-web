@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>SBA Query Generator</title>
+<title>SBA Query Assistant</title>
 <style>
 :root{--bg:#eef4f8;--panel:#fff;--line:#d7e3eb;--text:#15324a;--muted:#6a8093;--brand:#168f8a;--brand2:#0b6f9f;--soft:#e9f7f4;--dark:#0d1d2a;--warn:#fff7e8;--danger:#fff0f0}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Thai",sans-serif;background:var(--bg);color:var(--text)}button,textarea{font:inherit}
@@ -25,26 +25,11 @@
 </head>
 <body>
 <div class="app">
-<aside class="side">
-  <div class="brand"><div class="logo">SBA</div><div><strong>SBA Query Generator</strong><small>FREE KNOWLEDGE ENGINE</small></div></div>
-  <div class="info"><b>ฟรี 100%</b><p>ใช้เฉพาะข้อมูลจาก Data Dictionary ของโปรเจกต์ ไม่ใช้ OpenAI และไม่เสียค่า API</p></div>
-  <div class="examples">
-    <button data-q="หา order ย้อนหลังก่อนแก้ไขของ CustCode 123124">Order ย้อนหลังก่อนแก้</button>
-    <button data-q="รวม CashBalance แยกตาม CustCode เรียงจากมากไปน้อย 10 อันดับ">GROUP BY + SUM</button>
-    <button data-q="นับจำนวนลูกค้าแยกตาม Branch">COUNT + GROUP BY</button>
-    <button data-q="แสดง ShareCode ไม่ซ้ำจาก MCSM">DISTINCT</button>
-    <button data-q="หา 5 ลูกค้าที่มี CashBalance มากที่สุด">TOP N</button>
-  </div>
-  <a class="back" href="/">กลับหน้าหลัก</a>
+<aside class="side"> <div class="brand"><div class="logo">SBA</div><div><strong>SBA Query Assistant</strong><small> KNOWLEDGE ENGINE</small></div></div> <div class="info"><b></b><p>ใช้ข้อมูลจาก Data Dictionary และ Business Knowledge ของโครงการ</p></div> <div class="examples"> <button data-q="หา order ย้อนหลังก่อนแก้ไขของ CustCode 123124">Order ย้อนหลังก่อนแก้</button> <button data-q="รวม CashBalance แยกตาม CustCode เรียงจากมากไปน้อย 10 อันดับ">GROUP BY + SUM</button> <button data-q="นับจำนวนลูกค้าแยกตาม Branch">COUNT + GROUP BY</button> <button data-q="แสดง ShareCode ไม่ซ้ำจาก MCSM">DISTINCT</button> <button data-q="หา 5 ลูกค้าที่มี CashBalance มากที่สุด">TOP N</button> </div> <a class="back" href="/">กลับหน้าหลัก</a>
 </aside>
 <main class="main">
-<header class="top"><div><h1>SBA Query Generator</h1><p>พิมพ์ภาษาไทย แล้วระบบวางแผนและสร้าง Informix SQL จาก Table/Field จริง</p></div><span class="pill">SELECT ONLY · FREE</span></header>
-<section class="chat">
-  <div id="messages" class="messages">
-    <div id="welcome" class="welcome"><div class="bot">SQL</div><h2>ลองถาม Query ได้เลย</h2><p>รองรับ WHERE, DISTINCT, COUNT, SUM, AVG, MAX, MIN, GROUP BY, HAVING, ORDER BY และ FIRST N หากข้อมูลไม่พอ ระบบจะไม่เดา</p></div>
-  </div>
-  <div class="composer"><textarea id="question" placeholder="ตัวอย่าง: รวม CashBalance แยกตาม CustCode เรียงจากมากไปน้อย 10 อันดับ"></textarea><button id="send" class="send">สร้าง Query</button></div>
-  <div class="note">ระบบไม่รัน SQL และไม่แก้ไขฐานข้อมูลจริง</div>
+<header class="top"><div><h1>SBA Query Assistant</h1><p>พิมพ์ภาษาไทย แล้วระบบวางแผนและสร้าง Informix SQL จาก Table/Field จริง</p></div><span class="pill">QUERY ASSISTANT</span></header>
+<section class="chat"> <div id="messages" class="messages"> <div id="welcome" class="welcome"><div class="bot">SQL</div><h2>ลองถาม Query ได้เลย</h2><p>รองรับ WHERE, DISTINCT, COUNT, SUM, AVG, MAX, MIN, GROUP BY, HAVING, ORDER BY และ FIRST N หากข้อมูลไม่พอ ระบบจะไม่เดา</p></div> </div> <div class="composer"><textarea id="question" placeholder="ตัวอย่าง: รวม CashBalance แยกตาม CustCode เรียงจากมากไปน้อย 10 อันดับ"></textarea><button id="send" class="send">สร้าง Query</button></div> <div class="note">ระบบไม่รัน SQL และไม่แก้ไขฐานข้อมูลจริง</div>
 </section>
 </main>
 </div>
@@ -54,145 +39,34 @@ const STOP=new Set(["ต้องการ","อยาก","ขอ","ข้อ�
 const norm=v=>String(v??"").toLowerCase().replace(/[^a-z0-9ก-๙_]+/g," ").trim();
 const toks=v=>norm(v).split(/\s+/).filter(x=>x.length>1&&!STOP.has(x));
 const esc=v=>String(v).replace(/'/g,"''");
-const h=v=>{const d=document.createElement("div");d.textContent=String(v??"");return d.innerHTML};
-
-async function load(){
-  const [i,b,a]=await Promise.all([fetch("/search-index.json"),fetch("/business-knowledge.json"),fetch("/alias.json")]);
-  if(!i.ok)throw new Error("โหลด search-index.json ไม่สำเร็จ");
-  indexData=await i.json();business=b.ok?await b.json():[];aliases=a.ok?await a.json():[];
-}
-
-function tableText(t){return norm([t.name,t.thaiName,t.description,...(t.notes||[]),...(t.fields||[]).flatMap(f=>[f.name,f.description,f.rule,...(f.aliases||[])])].join(" "))}
+const h=v=>{const d=document.createElement("div");d.textContent=String(v??"");return d.innerHTML}; async function load(){ const [i,b,a]=await Promise.all([fetch("/search-index.json"),fetch("/business-knowledge.json"),fetch("/alias.json")]); if(!i.ok)throw new Error("โหลด search-index.json ไม่สำเร็จ"); indexData=await i.json();business=b.ok?await b.json():[];aliases=a.ok?await a.json():[];
+} function tableText(t){return norm([t.name,t.thaiName,t.description,...(t.notes||[]),...(t.fields||[]).flatMap(f=>[f.name,f.description,f.rule,...(f.aliases||[])])].join(" "))}
 function mentionedTable(q){const nq=norm(q);return (indexData.tables||[]).filter(t=>nq.includes(norm(t.name)))}
-function fieldMatches(q){
-  const nq=norm(q),result=[];
-  for(const t of indexData.tables||[])for(const f of t.fields||[]){
-    let score=0,matched=[];
-    if(nq.includes(norm(f.name))){score+=150;matched.push(f.name)}
-    for(const a of f.aliases||[]){
-      const na=norm(a);if(na.length>2&&nq.includes(na)){score+=Math.min(70,na.length*2);matched.push(a)}
-    }
-    if(score>0)result.push({table:t.name,field:f,score,matched});
-  }
-  return result.sort((a,b)=>b.score-a.score);
+function fieldMatches(q){ const nq=norm(q),result=[]; for(const t of indexData.tables||[])for(const f of t.fields||[]){ let score=0,matched=[]; if(nq.includes(norm(f.name))){score+=150;matched.push(f.name)} for(const a of f.aliases||[]){ const na=norm(a);if(na.length>2&&nq.includes(na)){score+=Math.min(70,na.length*2);matched.push(a)} } if(score>0)result.push({table:t.name,field:f,score,matched}); } return result.sort((a,b)=>b.score-a.score);
 }
-function ruleScores(q){
-  const nq=norm(q),ts=toks(q);
-  return business.map(r=>{let s=0;if(nq.includes(norm(r.meaning)))s+=180;(r.keywords||[]).forEach(k=>{if(nq.includes(norm(k)))s+=100});ts.forEach(x=>{if(norm(r.meaning).includes(x))s+=8});return{r,s}}).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
+function ruleScores(q){ const nq=norm(q),ts=toks(q); return business.map(r=>{let s=0;if(nq.includes(norm(r.meaning)))s+=180;(r.keywords||[]).forEach(k=>{if(nq.includes(norm(k)))s+=100});ts.forEach(x=>{if(norm(r.meaning).includes(x))s+=8});return{r,s}}).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
 }
 function isNumeric(f){return f.role==="measure"}
 function parseNumber(q){const m=q.match(/(?:first|top|อันดับ|แรก)\s*(\d+)|(\d+)\s*(?:อันดับ|รายการ|คน|ตัว)/i);return Number(m?.[1]||m?.[2]||100)}
-function parseIntent(q){
-  const nq=norm(q);
-  let aggregate=null;
-  if(/นับ|จำนวน|กี่/.test(nq))aggregate="COUNT";
-  if(/รวม|ยอดรวม|ผลรวม/.test(nq))aggregate="SUM";
-  if(/เฉลี่ย|ค่าเฉลี่ย/.test(nq))aggregate="AVG";
-  if(/มากที่สุด|สูงที่สุด|ค่าสูงสุด/.test(nq))aggregate=aggregate||"MAX";
-  if(/น้อยที่สุด|ต่ำที่สุด|ค่าต่ำสุด/.test(nq))aggregate=aggregate||"MIN";
-  const distinct=/ไม่ซ้ำ|distinct/.test(nq);
-  const group=/แยกตาม|แต่ละ|group by/.test(nq);
-  const having=/มากกว่า|น้อยกว่า|อย่างน้อย|ไม่เกิน/.test(nq)&&group;
-  let order=null;if(/มากไปน้อย|สูงไปต่ำ|desc|มากที่สุด|สูงที่สุด/.test(nq))order="DESC";if(/น้อยไปมาก|ต่ำไปสูง|asc|น้อยที่สุด|ต่ำที่สุด/.test(nq))order="ASC";
-  return {aggregate,distinct,group,having,order,first:parseNumber(q)};
+function parseIntent(q){ const nq=norm(q); let aggregate=null; if(/นับ|จำนวน|กี่/.test(nq))aggregate="COUNT"; if(/รวม|ยอดรวม|ผลรวม/.test(nq))aggregate="SUM"; if(/เฉลี่ย|ค่าเฉลี่ย/.test(nq))aggregate="AVG"; if(/มากที่สุด|สูงที่สุด|ค่าสูงสุด/.test(nq))aggregate=aggregate||"MAX"; if(/น้อยที่สุด|ต่ำที่สุด|ค่าต่ำสุด/.test(nq))aggregate=aggregate||"MIN"; const distinct=/ไม่ซ้ำ|distinct/.test(nq); const group=/แยกตาม|แต่ละ|group by/.test(nq); const having=/มากกว่า|น้อยกว่า|อย่างน้อย|ไม่เกิน/.test(nq)&&group; let order=null;if(/มากไปน้อย|สูงไปต่ำ|desc|มากที่สุด|สูงที่สุด/.test(nq))order="DESC";if(/น้อยไปมาก|ต่ำไปสูง|asc|น้อยที่สุด|ต่ำที่สุด/.test(nq))order="ASC"; return {aggregate,distinct,group,having,order,first:parseNumber(q)};
 }
-function rankTables(q){
-  const nq=norm(q),ts=toks(q),fm=fieldMatches(q),rules=ruleScores(q),named=mentionedTable(q);
-  const fieldNames=[...new Set(fm.filter(x=>x.score>=100).map(x=>x.field.name))];
-  const pref=new Map();rules.forEach((x,i)=>pref.set(x.r.table.toUpperCase(),250-i*15));named.forEach(t=>pref.set(t.name.toUpperCase(),300));
-  let list=(indexData.tables||[]).map(t=>{
-    let s=pref.get(t.name.toUpperCase())||0,reasons=[];if(pref.has(t.name.toUpperCase()))reasons.push("ตรงกับกฎธุรกิจหรือชื่อตาราง");
-    const text=tableText(t);const tfields=new Set((t.fields||[]).map(f=>f.name.toLowerCase()));
-    const covered=fieldNames.filter(n=>tfields.has(n.toLowerCase()));s+=covered.length*100;if(covered.length)reasons.push("มี Field ที่ระบุ: "+covered.join(", "));
-    ts.forEach(x=>{if(text.includes(x))s+=5});
-    if(t.description&&ts.some(x=>norm(t.description).includes(x))){s+=35;reasons.push("Description เกี่ยวข้องกับคำถาม")}
-    return{t,s,reasons:[...new Set(reasons)]};
-  }).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,6);
-  return list;
+function rankTables(q){ const nq=norm(q),ts=toks(q),fm=fieldMatches(q),rules=ruleScores(q),named=mentionedTable(q); const fieldNames=[...new Set(fm.filter(x=>x.score>=100).map(x=>x.field.name))]; const pref=new Map();rules.forEach((x,i)=>pref.set(x.r.table.toUpperCase(),250-i*15));named.forEach(t=>pref.set(t.name.toUpperCase(),300)); let list=(indexData.tables||[]).map(t=>{ let s=pref.get(t.name.toUpperCase())||0,reasons=[];if(pref.has(t.name.toUpperCase()))reasons.push("ตรงกับกฎธุรกิจหรือชื่อตาราง"); const text=tableText(t);const tfields=new Set((t.fields||[]).map(f=>f.name.toLowerCase())); const covered=fieldNames.filter(n=>tfields.has(n.toLowerCase()));s+=covered.length*100;if(covered.length)reasons.push("มี Field ที่ระบุ: "+covered.join(", ")); ts.forEach(x=>{if(text.includes(x))s+=5}); if(t.description&&ts.some(x=>norm(t.description).includes(x))){s+=35;reasons.push("Description เกี่ยวข้องกับคำถาม")} return{t,s,reasons:[...new Set(reasons)]}; }).filter(x=>x.s>0).sort((a,b)=>b.s-a.s).slice(0,6); return list;
 }
-function fieldsForTable(t,q){
-  const nq=norm(q),ts=toks(q);
-  return (t.fields||[]).map(f=>{let s=0;if(nq.includes(norm(f.name)))s+=180;(f.aliases||[]).forEach(a=>{const na=norm(a);if(na.length>2&&nq.includes(na))s+=Math.min(80,na.length*2)});ts.forEach(x=>{if(norm([f.description,f.rule].join(" ")).includes(x))s+=5});return{f,s}}).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
+function fieldsForTable(t,q){ const nq=norm(q),ts=toks(q); return (t.fields||[]).map(f=>{let s=0;if(nq.includes(norm(f.name)))s+=180;(f.aliases||[]).forEach(a=>{const na=norm(a);if(na.length>2&&nq.includes(na))s+=Math.min(80,na.length*2)});ts.forEach(x=>{if(norm([f.description,f.rule].join(" ")).includes(x))s+=5});return{f,s}}).filter(x=>x.s>0).sort((a,b)=>b.s-a.s);
 }
-function valueAfter(q,name){
-  const e=name.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
-  const m=q.match(new RegExp(e+"\\s*(?:=|คือ|เป็น|:)?\\s*['\"]?([a-zA-Z0-9_./-]+)","i"));
-  return m&&m[1]&&norm(m[1])!==norm(name)?m[1]:null;
+function valueAfter(q,name){ const e=name.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"); const m=q.match(new RegExp(e+"\\s*(?:=|คือ|เป็น|:)?\\s*['\"]?([a-zA-Z0-9_./-]+)","i")); return m&&m[1]&&norm(m[1])!==norm(name)?m[1]:null;
 }
-function comparison(q){
-  const m=q.match(/(มากกว่า|น้อยกว่า|อย่างน้อย|ไม่เกิน)\s*([\d,.]+)/);
-  if(!m)return null;const op={"มากกว่า":">","น้อยกว่า":"<","อย่างน้อย":">=","ไม่เกิน":"<="}[m[1]];return{op,value:m[2].replace(/,/g,"")};
+function comparison(q){ const m=q.match(/(มากกว่า|น้อยกว่า|อย่างน้อย|ไม่เกิน)\s*([\d,.]+)/); if(!m)return null;const op={"มากกว่า":">","น้อยกว่า":"<","อย่างน้อย":">=","ไม่เกิน":"<="}[m[1]];return{op,value:m[2].replace(/,/g,"")};
 }
-function plan(t,q){
-  const intent=parseIntent(q),matches=fieldsForTable(t,q),all=matches.map(x=>x.f);
-  let dimensions=all.filter(f=>!isNumeric(f)),measures=all.filter(isNumeric);
-  if(!all.length){dimensions=(t.fields||[]).filter(f=>!isNumeric(f)).slice(0,3);measures=(t.fields||[]).filter(isNumeric).slice(0,3)}
-  let dimension=dimensions[0]||null,measure=measures[0]||null;
-  if(intent.group&&!dimension) return {error:"ต้องระบุ Field สำหรับ GROUP BY เช่น Branch, CustCode หรือ ShareCode"};
-  if(["SUM","AVG"].includes(intent.aggregate)&&!measure)return{error:"ยังไม่พบ Field ตัวเลขที่ยืนยันได้สำหรับ "+intent.aggregate};
-  if(["MAX","MIN"].includes(intent.aggregate)&&!measure)measure=all[0]||null;
-  const filters=[];(t.fields||[]).forEach(f=>{const v=valueAfter(q,f.name);if(v)filters.push({field:f,value:v})});
-  return{intent,dimension,measure,selected:all.slice(0,10),filters,comparison:comparison(q)};
+function plan(t,q){ const intent=parseIntent(q),matches=fieldsForTable(t,q),all=matches.map(x=>x.f); let dimensions=all.filter(f=>!isNumeric(f)),measures=all.filter(isNumeric); if(!all.length){dimensions=(t.fields||[]).filter(f=>!isNumeric(f)).slice(0,3);measures=(t.fields||[]).filter(isNumeric).slice(0,3)} let dimension=dimensions[0]||null,measure=measures[0]||null; if(intent.group&&!dimension) return {error:"ต้องระบุ Field สำหรับ GROUP BY เช่น Branch, CustCode หรือ ShareCode"}; if(["SUM","AVG"].includes(intent.aggregate)&&!measure)return{error:"ยังไม่พบ Field ตัวเลขที่ยืนยันได้สำหรับ "+intent.aggregate}; if(["MAX","MIN"].includes(intent.aggregate)&&!measure)measure=all[0]||null; const filters=[];(t.fields||[]).forEach(f=>{const v=valueAfter(q,f.name);if(v)filters.push({field:f,value:v})}); return{intent,dimension,measure,selected:all.slice(0,10),filters,comparison:comparison(q)};
 }
-function build(t,q,p){
-  const {intent,dimension,measure,selected,filters,comparison}=p;let select=[],group=[],having="",order="";
-  if(intent.distinct&&!intent.aggregate){const f=dimension||selected[0];if(!f)return{error:"ไม่พบ Field สำหรับ DISTINCT"};select=[`DISTINCT ${f.name}`]}
-  else if(intent.aggregate){
-    if(intent.group){
-      group=[dimension.name];
-      let expr=intent.aggregate==="COUNT"?`COUNT(*)`:`${intent.aggregate}(${measure.name})`;
-      if(intent.aggregate==="COUNT"&&/ลูกค้า|custcode/.test(norm(q))&&(t.fields||[]).some(f=>f.name.toLowerCase()==="custcode"))expr="COUNT(DISTINCT CustCode)";
-      const alias=(intent.aggregate+"_"+(measure?.name||"rows")).toLowerCase();select=[dimension.name,`${expr} AS ${alias}`];
-      if(intent.having&&comparison)having=`\nHAVING ${expr} ${comparison.op} ${comparison.value}`;
-      if(intent.order)order=`\nORDER BY ${alias} ${intent.order}`;
-    }else{
-      let expr=intent.aggregate==="COUNT"?"COUNT(*)":`${intent.aggregate}(${measure.name})`;
-      if(intent.aggregate==="COUNT"&&/ลูกค้า|custcode/.test(norm(q))&&(t.fields||[]).some(f=>f.name.toLowerCase()==="custcode"))expr="COUNT(DISTINCT CustCode)";
-      select=[`${expr} AS result_value`];
-      if(intent.order)order="";
-    }
-  }else{
-    select=(selected.length?selected:(t.fields||[]).slice(0,10)).map(f=>f.name);
-    if(intent.order&&measure)order=`\nORDER BY ${measure.name} ${intent.order}`;
-  }
-  const where=filters.length?`\nWHERE `+filters.map(x=>`${x.field.name} = '${esc(x.value)}'`).join("\n  AND "):"";
-  const first=(!intent.aggregate||intent.group)?` FIRST ${Math.min(intent.first||100,1000)}`:"";
-  return{sql:`SELECT${first}\n       ${select.join(",\n       ")}\nFROM ${t.name}${where}${group.length?`\nGROUP BY ${group.join(", ")}`:""}${having}${order};`,select,group};
+function build(t,q,p){ const {intent,dimension,measure,selected,filters,comparison}=p;let select=[],group=[],having="",order=""; if(intent.distinct&&!intent.aggregate){const f=dimension||selected[0];if(!f)return{error:"ไม่พบ Field สำหรับ DISTINCT"};select=[`DISTINCT ${f.name}`]} else if(intent.aggregate){ if(intent.group){ group=[dimension.name]; let expr=intent.aggregate==="COUNT"?`COUNT(*)`:`${intent.aggregate}(${measure.name})`; if(intent.aggregate==="COUNT"&&/ลูกค้า|custcode/.test(norm(q))&&(t.fields||[]).some(f=>f.name.toLowerCase()==="custcode"))expr="COUNT(DISTINCT CustCode)"; const alias=(intent.aggregate+"_"+(measure?.name||"rows")).toLowerCase();select=[dimension.name,`${expr} AS ${alias}`]; if(intent.having&&comparison)having=`\nHAVING ${expr} ${comparison.op} ${comparison.value}`; if(intent.order)order=`\nORDER BY ${alias} ${intent.order}`; }else{ let expr=intent.aggregate==="COUNT"?"COUNT(*)":`${intent.aggregate}(${measure.name})`; if(intent.aggregate==="COUNT"&&/ลูกค้า|custcode/.test(norm(q))&&(t.fields||[]).some(f=>f.name.toLowerCase()==="custcode"))expr="COUNT(DISTINCT CustCode)"; select=[`${expr} AS result_value`]; if(intent.order)order=""; } }else{ select=(selected.length?selected:(t.fields||[]).slice(0,10)).map(f=>f.name); if(intent.order&&measure)order=`\nORDER BY ${measure.name} ${intent.order}`; } const where=filters.length?`\nWHERE `+filters.map(x=>`${x.field.name} = '${esc(x.value)}'`).join("\n AND "):""; const first=(!intent.aggregate||intent.group)?` FIRST ${Math.min(intent.first||100,1000)}`:""; return{sql:`SELECT${first}\n ${select.join(",\n ")}\nFROM ${t.name}${where}${group.length?`\nGROUP BY ${group.join(", ")}`:""}${having}${order};`,select,group};
 }
-function validate(t,p,b){
-  if(!b.sql.trim().toLowerCase().startsWith("select"))return"อนุญาตเฉพาะ SELECT";
-  if(/\b(update|delete|insert|drop|alter|truncate|create|execute|merge)\b/i.test(b.sql))return"พบคำสั่งที่ไม่ปลอดภัย";
-  if(p.intent.group&&b.group.length===0)return"GROUP BY ไม่สมบูรณ์";
-  return null;
+function validate(t,p,b){ if(!b.sql.trim().toLowerCase().startsWith("select"))return"อนุญาตเฉพาะ SELECT"; if(/\b(update|delete|insert|drop|alter|truncate|create|execute|merge)\b/i.test(b.sql))return"พบคำสั่งที่ไม่ปลอดภัย"; if(p.intent.group&&b.group.length===0)return"GROUP BY ไม่สมบูรณ์"; return null;
 }
 function addUser(text){document.getElementById("welcome")?.remove();const el=document.createElement("div");el.className="message user";el.innerHTML='<div class="bubble"></div>';el.querySelector(".bubble").textContent=text;messages.appendChild(el)}
 function addBot(){const el=document.createElement("div");el.className="message assistant";el.innerHTML='<div class="avatar">SQL</div><div class="bubble">กำลังวิเคราะห์ Table, Field และรูปแบบ Query...</div>';messages.appendChild(el);messages.scrollTop=messages.scrollHeight;return el.querySelector(".bubble")}
-function render(q,bubble){
-  if(/\b(update|delete|insert|drop|alter|truncate|create|execute|merge)\b/i.test(q)){bubble.innerHTML='<div class="answer">คำขอนี้เปลี่ยนแปลงข้อมูล</div><div class="warn error">ระบบอนุญาตเฉพาะ SELECT เท่านั้น</div>';return}
-  const ranked=rankTables(q);if(!ranked.length){bubble.innerHTML='<div class="answer">ยังสร้าง Query ไม่ได้</div><div class="warn">ไม่พบ Table/Field ที่สัมพันธ์กับคำถามในข้อมูลจริง</div>';return}
-  let current=ranked[0];
-  function draw(){
-    const p=plan(current.t,q);if(p.error){bubble.innerHTML=`<div class="answer">ต้องการข้อมูลเพิ่ม</div><div class="warn">${h(p.error)}</div>`;return}
-    const b=build(current.t,q,p);if(b.error){bubble.innerHTML=`<div class="warn">${h(b.error)}</div>`;return}
-    const err=validate(current.t,p,b);if(err){bubble.innerHTML=`<div class="warn error">${h(err)}</div>`;return}
-    const max=ranked[0].s||1;
-    bubble.innerHTML=`
-      <div class="answer">ระบบเลือก ${h(current.t.name)} จาก Description, Business Rule และ Field ที่ตรงกับคำถาม</div>
-      <div class="tags"><span class="tag">${h(current.t.name)}</span>${p.selected.map(f=>`<span class="tag">${h(f.name)}</span>`).join("")}</div>
-      <div class="plan"><div class="plan-grid">
-        <article><span>OPERATION</span><strong>${h(p.intent.aggregate|| (p.intent.distinct?"DISTINCT":"SELECT"))}</strong></article>
-        <article><span>GROUP BY</span><strong>${h(p.dimension?.name||"—")}</strong></article>
-        <article><span>MEASURE</span><strong>${h(p.measure?.name||"—")}</strong></article>
-        <article><span>ORDER</span><strong>${h(p.intent.order||"—")}</strong></article>
-        <article><span>FIRST</span><strong>${h(p.intent.first||100)}</strong></article>
-        <article><span>FILTERS</span><strong>${h(p.filters.map(x=>x.field.name+"="+x.value).join(", ")||"—")}</strong></article>
-      </div></div>
-      <div class="candidates">${ranked.map((x,i)=>`<div class="candidate ${x.t.name===current.t.name?"selected":""}" data-table="${h(x.t.name)}"><div><strong>${h(x.t.name)}${x.t.thaiName?" — "+h(x.t.thaiName):""}</strong><small>${h(x.t.description||x.reasons.join(" · "))}</small></div><span class="score">${Math.max(35,Math.round(x.s/max*96))}%</span></div>`).join("")}</div>
-      <div class="sqlbox"><div class="sqlhead"><span>INFORMIX SQL</span><button class="copy">COPY SQL</button></div><pre>${h(b.sql)}</pre></div>
-      <div class="details"><strong>เหตุผลและการตรวจสอบ</strong><ul>${current.reasons.map(r=>`<li>${h(r)}</li>`).join("")}<li>Table และ Field มาจาก Data Dictionary จริง</li><li>ตรวจแล้วว่าเป็น SELECT เท่านั้น</li></ul></div>`;
-    bubble.querySelector(".copy").onclick=async e=>{await navigator.clipboard.writeText(b.sql);e.currentTarget.textContent="COPIED";setTimeout(()=>e.currentTarget.textContent="COPY SQL",1200)};
-    bubble.querySelectorAll(".candidate").forEach(c=>c.onclick=()=>{current=ranked.find(x=>x.t.name===c.dataset.table)||current;draw()});
-  }draw();
+function render(q,bubble){ if(/\b(update|delete|insert|drop|alter|truncate|create|execute|merge)\b/i.test(q)){bubble.innerHTML='<div class="answer">คำขอนี้เปลี่ยนแปลงข้อมูล</div><div class="warn error">ระบบอนุญาตเฉพาะ SELECT เท่านั้น</div>';return} const ranked=rankTables(q);if(!ranked.length){bubble.innerHTML='<div class="answer">ยังสร้าง Query ไม่ได้</div><div class="warn">ไม่พบ Table/Field ที่สัมพันธ์กับคำถามในข้อมูลจริง</div>';return} let current=ranked[0]; function draw(){ const p=plan(current.t,q);if(p.error){bubble.innerHTML=`<div class="answer">ต้องการข้อมูลเพิ่ม</div><div class="warn">${h(p.error)}</div>`;return} const b=build(current.t,q,p);if(b.error){bubble.innerHTML=`<div class="warn">${h(b.error)}</div>`;return} const err=validate(current.t,p,b);if(err){bubble.innerHTML=`<div class="warn error">${h(err)}</div>`;return} const max=ranked[0].s||1; bubble.innerHTML=` <div class="answer">ระบบเลือก ${h(current.t.name)} จาก Description, Business Rule และ Field ที่ตรงกับคำถาม</div> <div class="tags"><span class="tag">${h(current.t.name)}</span>${p.selected.map(f=>`<span class="tag">${h(f.name)}</span>`).join("")}</div> <div class="plan"><div class="plan-grid"> <article><span>OPERATION</span><strong>${h(p.intent.aggregate|| (p.intent.distinct?"DISTINCT":"SELECT"))}</strong></article> <article><span>GROUP BY</span><strong>${h(p.dimension?.name||"—")}</strong></article> <article><span>MEASURE</span><strong>${h(p.measure?.name||"—")}</strong></article> <article><span>ORDER</span><strong>${h(p.intent.order||"—")}</strong></article> <article><span>FIRST</span><strong>${h(p.intent.first||100)}</strong></article> <article><span>FILTERS</span><strong>${h(p.filters.map(x=>x.field.name+"="+x.value).join(", ")||"—")}</strong></article> </div></div> <div class="candidates">${ranked.map((x,i)=>`<div class="candidate ${x.t.name===current.t.name?"selected":""}" data-table="${h(x.t.name)}"><div><strong>${h(x.t.name)}${x.t.thaiName?" — "+h(x.t.thaiName):""}</strong><small>${h(x.t.description||x.reasons.join(" · "))}</small></div><span class="score">${Math.max(35,Math.round(x.s/max*96))}%</span></div>`).join("")}</div> <div class="sqlbox"><div class="sqlhead"><span>INFORMIX SQL</span><button class="copy">COPY SQL</button></div><pre>${h(b.sql)}</pre></div> <div class="details"><strong>เหตุผลและการตรวจสอบ</strong><ul>${current.reasons.map(r=>`<li>${h(r)}</li>`).join("")}<li>Table และ Field มาจาก Data Dictionary จริง</li><li>ตรวจแล้วว่าเป็น SELECT เท่านั้น</li></ul></div>`; bubble.querySelector(".copy").onclick=async e=>{await navigator.clipboard.writeText(b.sql);e.currentTarget.textContent="COPIED";setTimeout(()=>e.currentTarget.textContent="COPY SQL",1200)}; bubble.querySelectorAll(".candidate").forEach(c=>c.onclick=()=>{current=ranked.find(x=>x.t.name===c.dataset.table)||current;draw()}); }draw();
 }
 async function ask(){const q=question.value.trim();if(!q)return;addUser(q);question.value="";send.disabled=true;const bubble=addBot();try{if(!indexData)await load();render(q,bubble)}catch(e){bubble.innerHTML=`<div class="answer">เกิดข้อผิดพลาด</div><div class="warn error">${h(e.message)}</div>`}finally{send.disabled=false;messages.scrollTop=messages.scrollHeight}}
 send.onclick=ask;question.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();ask()}});document.querySelectorAll("[data-q]").forEach(b=>b.onclick=()=>{question.value=b.dataset.q;question.focus()});load().catch(()=>{});
