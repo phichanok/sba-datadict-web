@@ -1172,6 +1172,12 @@ export default function Home() {
           </div>
 
           <div className="actions">
+              <a
+    href="/ai-assistant.html"
+    className="action primary"
+  >
+    AI SQL Assistant
+  </a>
             <button
               className="action secondary"
               onClick={() => setModal("theme")}
