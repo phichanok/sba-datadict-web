@@ -1,0 +1,137 @@
+[
+  {
+    "table": "JBO",
+    "meaning": "Order วันนี้ล่าสุด",
+    "keywords": [
+      "order วันนี้",
+      "คำสั่งซื้อขายวันนี้",
+      "order ปัจจุบัน"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "meaning": "Order วันนี้ก่อนแก้ไข",
+    "keywords": [
+      "order วันนี้ก่อนแก้ไข",
+      "order ก่อนแก้ไขวันนี้"
+    ]
+  },
+  {
+    "table": "HBO",
+    "meaning": "Order ย้อนหลังล่าสุด",
+    "keywords": [
+      "order ย้อนหลัง",
+      "order เมื่อวาน"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "meaning": "Order ย้อนหลังก่อนแก้ไข",
+    "keywords": [
+      "order ย้อนหลังก่อนแก้ไข",
+      "order เมื่อวานก่อนแก้"
+    ]
+  },
+  {
+    "table": "JBD",
+    "meaning": "Deal วันนี้ล่าสุด",
+    "keywords": [
+      "deal วันนี้",
+      "รายการ match วันนี้"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "meaning": "Deal วันนี้ก่อนแก้ไข",
+    "keywords": [
+      "deal วันนี้ก่อนแก้ไข"
+    ]
+  },
+  {
+    "table": "HBD",
+    "meaning": "Deal ย้อนหลังล่าสุด",
+    "keywords": [
+      "deal ย้อนหลัง",
+      "deal เมื่อวาน"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "meaning": "Deal ย้อนหลังก่อนแก้ไข",
+    "keywords": [
+      "deal ย้อนหลังก่อนแก้ไข"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "meaning": "ยอดเงิน Credit Balance ปัจจุบันของลูกค้า",
+    "keywords": [
+      "ยอดเงินคงเหลือ",
+      "เงินคงเหลือ",
+      "cash balance",
+      "credit balance"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "meaning": "ยอดเงิน Credit Balance ย้อนหลังของลูกค้า",
+    "keywords": [
+      "ยอดเงินย้อนหลัง",
+      "เงินคงเหลือย้อนหลัง"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "meaning": "จำนวนหุ้นคงเหลือของลูกค้าแต่ละรายและแต่ละหลักทรัพย์",
+    "keywords": [
+      "ลูกค้าถือหุ้นอะไร",
+      "ยอดหุ้น",
+      "หุ้นคงเหลือ",
+      "จำนวนหุ้นที่ถือ"
+    ]
+  },
+  {
+    "table": "HTU",
+    "meaning": "ประวัติการเคลื่อนไหวหุ้นที่ Post แล้ว",
+    "keywords": [
+      "ประวัติหุ้น",
+      "movement หุ้น",
+      "รายการเคลื่อนไหวหุ้น"
+    ]
+  },
+  {
+    "table": "JSH",
+    "meaning": "รายการฝาก ถอน และโอนหุ้น",
+    "keywords": [
+      "ฝากหุ้น",
+      "ถอนหุ้น",
+      "โอนหุ้น"
+    ]
+  },
+  {
+    "table": "TCA",
+    "meaning": "ข้อมูลบัญชีลูกค้า",
+    "keywords": [
+      "บัญชีลูกค้า",
+      "ข้อมูลบัญชี",
+      "สาขาลูกค้า"
+    ]
+  },
+  {
+    "table": "TCT",
+    "meaning": "ข้อมูลหลักลูกค้า",
+    "keywords": [
+      "ข้อมูลลูกค้า",
+      "customer master"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "meaning": "สถานะบัญชีลูกค้า",
+    "keywords": [
+      "สถานะบัญชี",
+      "บัญชี active",
+      "บัญชี closed"
+    ]
+  }
+]

@@ -1,0 +1,8610 @@
+[
+  {
+    "table": "HTR",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "RefType",
+    "aliases": [
+      "RefType",
+      "Refer Type",
+      "reftype"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "RefDate",
+    "aliases": [
+      "RefDate",
+      "Refer Date",
+      "refdate",
+      "วันที่รายการ",
+      "วันที่อ้างอิง"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "RefNo",
+    "aliases": [
+      "RefNo",
+      "Refer No",
+      "refno"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "Purpose",
+    "aliases": [
+      "Purpose",
+      "purpose",
+      "ประเภทการฝากหุ้น"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "OrderNo",
+    "aliases": [
+      "OrderNo",
+      "orderno",
+      "หมายเลขคำสั่ง"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "BrokerNo",
+    "aliases": [
+      "BrokerNo",
+      "brokerno",
+      "รหัสของ Broker ที่ส่งคำสั่ง"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "BrokerOrderNo",
+    "aliases": [
+      "BrokerOrderNo",
+      "brokerorderno",
+      "ลำดับการเสนอซื้อเสนอขายของตลาดฯ ใน Broker Version"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustAcct)"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustCode)",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (Account)",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "Sharecode",
+    "aliases": [
+      "Sharecode",
+      "sharecode",
+      "ชื่อหลักทรัพย์"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "OpenUnit",
+    "aliases": [
+      "OpenUnit",
+      "openunit",
+      "จำนวน order",
+      "จำนวนหุ้นที่สั่งซื้อ",
+      "จำนวนหุ้นที่เสนอ"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "Unit",
+    "aliases": [
+      "Unit",
+      "qty",
+      "quantity",
+      "unit",
+      "จำนวนหุ้น",
+      "จำนวนหุ้นที่ Confirm",
+      "หน่วย"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "CommBroker",
+    "aliases": [
+      "CommBroker",
+      "commbroker",
+      "ค่านายหน้าของ Broker"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "CommSub",
+    "aliases": [
+      "Broker",
+      "CommSub",
+      "commsub",
+      "ค่านายหน้าของ Sub",
+      "ค่านายหน้าของ Sub-Broker"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "VatBroker",
+    "aliases": [
+      "VatBroker",
+      "vatbroker",
+      "ภาษีมูลค่าเพิ่ม of Broker"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "VatSub",
+    "aliases": [
+      "Broker",
+      "VatSub",
+      "vatsub",
+      "ภาษีมูลค่าเพิ่ม of Sub",
+      "ภาษีมูลค่าเพิ่ม of Sub-Broker"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "DutyCust",
+    "aliases": [
+      "DutyCust",
+      "dutycust",
+      "อากรของลูกค้า"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "DutyBroker",
+    "aliases": [
+      "DutyBroker",
+      "dutybroker",
+      "อากรของ Broker"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "Amt",
+    "aliases": [
+      "Amt",
+      "amount",
+      "amt",
+      "จำนวนเงิน",
+      "มูลค่า",
+      "มูลค่าของรายการรวมค่านายหน้าและภาษีมูลค่าเพิ่มแล้ว",
+      "ยอดเงินรายการ"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "OrderTime",
+    "aliases": [
+      "OrderTime",
+      "ordertime",
+      "เวลาที่ส่ง Order"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "ConfirmNo",
+    "aliases": [
+      "ConfirmNo",
+      "confirmno",
+      "หมายเลข Confirm"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "ConfirmTime",
+    "aliases": [
+      "ConfirmTime",
+      "confirmtime",
+      "เวลาที่ Confirm"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "ContraBroker",
+    "aliases": [
+      "ContraBroker",
+      "contrabroker",
+      "หมายเลข Broker ที่ทำรายการกัน"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "BrokerPort",
+    "aliases": [
+      "Broker",
+      "BrokerPort",
+      "brokerport",
+      "หมายเลข Port",
+      "หมายเลข Port ของ Broker"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "DirectMatch",
+    "aliases": [
+      "DirectMatch",
+      "directmatch",
+      "แฟล็กบอกว่ารายการนี้เป็นรายการ Direct Match หรือไม่"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "BuySellSorter",
+    "aliases": [
+      "BuySellSorter",
+      "Reserve ใช้ภายในโปรแกรม",
+      "buysellsorter"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "RemainMethod",
+    "aliases": [
+      "RemainMethod",
+      "remainmethod",
+      "วิธีระบุการ Match ของจำนวนหุ้นส่วนที่เหลือจากรายการ"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "RefGrpFlag",
+    "aliases": [
+      "RefGrpFlag",
+      "Reserve ใช้ภายในโปรแกรม",
+      "refgrpflag"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "GroupNo",
+    "aliases": [
+      "Gen ขึ้นระหว่าง Post",
+      "GroupNo",
+      "groupno",
+      "เลขที่ Group",
+      "เลขที่ Group ที่ Gen ขึ้นระหว่าง Post"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "RemainPostUnit",
+    "aliases": [
+      "RemainPostUnit",
+      "remainpostunit",
+      "จำนวนหุ้นที่ยังคงเหลืออยู่พียังไม่ได้ทำการ Post"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HTR",
+    "field": "RealPrice",
+    "aliases": [
+      "RealPrice",
+      "realprice",
+      "ราคาที่ไม่รวมค่าธรรมเนียมของหุ้น Thai Trust Fund"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "Dd",
+    "aliases": [
+      "Broker ที่เป็น dd หรือไม่",
+      "Dd",
+      "dd",
+      "บอกว่า รายการที่ Match ด้วยเป็นของ Port ของ Broker ที่เป็น dd หรือไม่"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "SubOrderNo",
+    "aliases": [
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split)",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "ConfirmNo",
+    "aliases": [
+      "ConfirmNo",
+      "confirmno",
+      "จากตลาดฯ",
+      "หมายเลข Confirm",
+      "หมายเลข Confirm (จากตลาดฯ)"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "Unit",
+    "aliases": [
+      "Unit",
+      "qty",
+      "quantity",
+      "unit",
+      "จำนวนหุ้น",
+      "จำนวนหุ้นที่ Confirm",
+      "หน่วย"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่ Confirm"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "ConfirmTime",
+    "aliases": [
+      "ConfirmTime",
+      "confirmtime",
+      "เวลาที่ Confirm การซื้อขาย"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "ContraBrokerNo",
+    "aliases": [
+      "ContraBrokerNo",
+      "Match ด้วย",
+      "contrabrokerno",
+      "หมายเลข Broker",
+      "หมายเลข Broker ที่ Match ด้วย"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "ConfirmStatus",
+    "aliases": [
+      "ConfirmStatus",
+      "Office",
+      "confirmstatus",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back-Office"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟลกบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "Delflag",
+    "aliases": [
+      "Delflag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "PutThrough",
+    "aliases": [
+      "PutThrough",
+      "putthrough",
+      "ประเภทรายการ Put Through"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "PCFlag",
+    "aliases": [
+      "PC Flag ของระบบ Front",
+      "PCFlag",
+      "pcflag"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "ContraPCFlag",
+    "aliases": [
+      "ContraPCFlag",
+      "PC Flag ของระบบ Front",
+      "contrapcflag"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "เป็น Flag บอกว่าเป็นรายการ Short Sale หรือไม่"
+    ]
+  },
+  {
+    "table": "HBD",
+    "field": "ConfirmDate",
+    "aliases": [
+      "ConfirmDate",
+      "confirmdate",
+      "วันที่ Confirm"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "Dd",
+    "aliases": [
+      "Broker ที่เป็น dd หรือไม่",
+      "Dd",
+      "dd",
+      "บอกว่า รายการที่ Match ด้วยเป็นของ Port ของ Broker ที่เป็น dd หรือไม่"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "SubOrderNo",
+    "aliases": [
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split)",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "ConfirmNo",
+    "aliases": [
+      "ConfirmNo",
+      "confirmno",
+      "จากตลาดฯ",
+      "หมายเลข Confirm",
+      "หมายเลข Confirm (จากตลาดฯ)"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "Unit",
+    "aliases": [
+      "Unit",
+      "qty",
+      "quantity",
+      "unit",
+      "จำนวนหุ้น",
+      "จำนวนหุ้นที่ Confirm",
+      "หน่วย"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่ Confirm"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "ConfirmTime",
+    "aliases": [
+      "ConfirmTime",
+      "confirmtime",
+      "เวลาที่ Confirm การซื้อขาย"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "ContraBrokerNo",
+    "aliases": [
+      "ContraBrokerNo",
+      "Match ด้วย",
+      "contrabrokerno",
+      "หมายเลข Broker",
+      "หมายเลข Broker ที่ Match ด้วย"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "ConfirmStatus",
+    "aliases": [
+      "ConfirmStatus",
+      "Office",
+      "confirmstatus",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back-Office"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟลกบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "Delflag",
+    "aliases": [
+      "Delflag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "PutThrough",
+    "aliases": [
+      "0 - ไม่ใช่รายการ Put Through",
+      "PutThrough",
+      "putthrough",
+      "ไม่ใช่รายการ Put Through"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "PCFlag",
+    "aliases": [
+      "PC Flag ของระบบ Front",
+      "PCFlag",
+      "pcflag"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "ContraPCFlag",
+    "aliases": [
+      "ContraPCFlag",
+      "PC Flag ของระบบ Front",
+      "contrapcflag"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "เป็น Flag บอกว่าเป็นรายการ Short Sale หรือไม่"
+    ]
+  },
+  {
+    "table": "HBDL",
+    "field": "ConfirmDate",
+    "aliases": [
+      "ConfirmDate",
+      "confirmdate",
+      "วันที่ Confirm"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "SubOrderNo",
+    "aliases": [
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split)",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "Side",
+    "aliases": [
+      "Side",
+      "buy sell",
+      "side",
+      "ซื้อขาย",
+      "ด้านซื้อขาย",
+      "เป็นการเสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "BrokerNo",
+    "aliases": [
+      "BrokerNo",
+      "brokerno",
+      "รหัสของ Broker ที่ส่งคำสั่งผ่าน"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "BrokerOrderNo",
+    "aliases": [
+      "BrokerOrderNo",
+      "brokerorderno",
+      "ลำดับการเสนอซื้อเสนอขายของตลาดฯ ใน Broker Version"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ประเภทบัญชีลูกค้า"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "ShareCode",
+    "aliases": [
+      "ShareCode",
+      "share",
+      "sharecode",
+      "stock",
+      "symbol",
+      "ชื่อหลักทรัพย์",
+      "ชื่อหุ้น",
+      "หลักทรัพย์",
+      "หุ้น"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "OpenUnit",
+    "aliases": [
+      "OpenUnit",
+      "openunit",
+      "จำนวน order",
+      "จำนวนหุ้นที่เสนอ",
+      "จำนวนหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "ConfirmUnit",
+    "aliases": [
+      "ConfirmUnit",
+      "confirmunit",
+      "จำนวนที่จับคู่",
+      "จำนวนหุ้นที่ Confirm มาแล้วทั้งหมดใน Order นี้",
+      "จำนวนหุ้นที่ confirm"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "OrderDate",
+    "aliases": [
+      "OrderDate",
+      "orderdate",
+      "วันที่ทำการซื้อขาย",
+      "วันที่ทำการซื้อขาย/ส่ง order",
+      "ส่ง order"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "OrderTime",
+    "aliases": [
+      "OrderTime",
+      "ordertime",
+      "เวลาที่เสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "OrderStatus",
+    "aliases": [
+      "Office",
+      "OrderStatus",
+      "orderstatus",
+      "ตรงกับ Front",
+      "สถานะของรายการ",
+      "สถานะของรายการ (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "Life",
+    "aliases": [
+      "G,D,E",
+      "Life",
+      "Office",
+      "life",
+      "ตรงกับ Front",
+      "อายุของ Order",
+      "อายุของ Order (G,D,E) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "Condition",
+    "aliases": [
+      "Condition",
+      "FOR,IOC",
+      "Office",
+      "condition",
+      "ตรงกับ Front",
+      "เงื่อนไขในการสั่งคำสั่ง",
+      "เงื่อนไขในการสั่งคำสั่ง (FOR,IOC) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "BrokerPort",
+    "aliases": [
+      "BrokerPort",
+      "brokerport",
+      "ส่งไปยัง broker เป็นรหัสบัญชีลูกค้าย่อยใด"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟล็กบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "DelFlag",
+    "aliases": [
+      "DelFlag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "EntryTrader",
+    "aliases": [
+      "EntryTrader",
+      "entrytrader",
+      "หมายเลข Trader ที่ป้อนรายการคำสั่งนี้"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "Appr_UserId",
+    "aliases": [
+      "Appr_UserId",
+      "appr_userid",
+      "ผู้ใช้ที่ Approve รายการ"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "Chg_UserId",
+    "aliases": [
+      "Chg_UserId",
+      "chg_userid",
+      "ผู้ใช้ที่เป็นผู้แก้ไขรายการ"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "PutThrough",
+    "aliases": [
+      "PutThrough",
+      "putthrough",
+      "ประเภทรายการ Put Through"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HBO",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "เป็น Flag บอกว่าเป็นรายการ Short Sale หรือไม่"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "SubOrderNo",
+    "aliases": [
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split)",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "Side",
+    "aliases": [
+      "Side",
+      "buy sell",
+      "side",
+      "ซื้อขาย",
+      "ด้านซื้อขาย",
+      "เป็นการเสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "BrokerNo",
+    "aliases": [
+      "BrokerNo",
+      "brokerno",
+      "รหัสของ Broker ที่ส่งคำสั่งผ่าน"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "BrokerOrderNo",
+    "aliases": [
+      "BrokerOrderNo",
+      "brokerorderno",
+      "ลำดับการเสนอซื้อเสนอขายของตลาดฯ ใน Broker Version"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ประเภทบัญชีลูกค้า"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "ShareCode",
+    "aliases": [
+      "ShareCode",
+      "share",
+      "sharecode",
+      "stock",
+      "symbol",
+      "ชื่อหลักทรัพย์",
+      "ชื่อหุ้น",
+      "หลักทรัพย์",
+      "หุ้น"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "OpenUnit",
+    "aliases": [
+      "OpenUnit",
+      "openunit",
+      "จำนวน order",
+      "จำนวนหุ้นที่เสนอ",
+      "จำนวนหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "ConfirmUnit",
+    "aliases": [
+      "ConfirmUnit",
+      "confirmunit",
+      "จำนวนที่จับคู่",
+      "จำนวนหุ้นที่ Confirm มาแล้วทั้งหมดใน Order นี้",
+      "จำนวนหุ้นที่ confirm"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "OrderDate",
+    "aliases": [
+      "OrderDate",
+      "orderdate",
+      "วันที่ทำการซื้อขาย",
+      "วันที่ทำการซื้อขาย/ส่ง order",
+      "ส่ง order"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "OrderTime",
+    "aliases": [
+      "OrderTime",
+      "ordertime",
+      "เวลาที่เสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "OrderStatus",
+    "aliases": [
+      "Office",
+      "OrderStatus",
+      "orderstatus",
+      "ตรงกับ Front",
+      "สถานะของรายการ",
+      "สถานะของรายการ (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "Life",
+    "aliases": [
+      "G,D,E",
+      "Life",
+      "Office",
+      "life",
+      "ตรงกับ Front",
+      "อายุของ Order",
+      "อายุของ Order (G,D,E) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "Condition",
+    "aliases": [
+      "Condition",
+      "FOR,IOC",
+      "Office",
+      "condition",
+      "ตรงกับ Front",
+      "เงื่อนไขในการสั่งคำสั่ง",
+      "เงื่อนไขในการสั่งคำสั่ง (FOR,IOC) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "BrokerPort",
+    "aliases": [
+      "BrokerPort",
+      "brokerport",
+      "ส่งไปยัง broker เป็นรหัสบัญชีลูกค้าย่อยใด"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟล็กบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "DelFlag",
+    "aliases": [
+      "DelFlag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "EntryTrader",
+    "aliases": [
+      "EntryTrader",
+      "entrytrader",
+      "หมายเลข Trader ที่ป้อนรายการคำสั่งนี้"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "Appr_UserId",
+    "aliases": [
+      "Appr_UserId",
+      "appr_userid",
+      "ผู้ใช้ที่ Approve รายการ"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "Chg_UserId",
+    "aliases": [
+      "Chg_UserId",
+      "chg_userid",
+      "ผู้ใช้ที่เป็นผู้แก้ไขรายการ"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "PutThrough",
+    "aliases": [
+      "PutThrough",
+      "putthrough",
+      "ประเภทรายการ Put Through"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "HBOL",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "เป็น Flag บอกว่าเป็นรายการ Short Sale หรือไม่"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "Dd",
+    "aliases": [
+      "Broker ที่เป็น dd หรือไม่",
+      "Dd",
+      "dd",
+      "บอกว่า รายการที่ Match ด้วยเป็นของ Port ของ Broker ที่เป็น dd หรือไม่"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "SubOrderNo",
+    "aliases": [
+      "Broker Version",
+      "Broker กรณีเป็น Sub",
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง",
+      "หมายเลขคำสั่ง (หรือหมายเลขคำสั่งภายใน Sub-Broker กรณีเป็น Sub-Broker Version)",
+      "หรือหมายเลขคำสั่งภายใน Sub"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split)",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "ConfirmNo",
+    "aliases": [
+      "ConfirmNo",
+      "confirmno",
+      "จากตลาดฯ",
+      "หมายเลข Confirm",
+      "หมายเลข Confirm (จากตลาดฯ)"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "Unit",
+    "aliases": [
+      "Unit",
+      "qty",
+      "quantity",
+      "unit",
+      "จำนวนหุ้น",
+      "จำนวนหุ้นที่ Confirm",
+      "หน่วย"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่ Confirm"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "ConfirmTime",
+    "aliases": [
+      "ConfirmTime",
+      "confirmtime",
+      "เวลาที่ Confirm การซื้อขาย"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "ContraBrokerNo",
+    "aliases": [
+      "ContraBrokerNo",
+      "Match ด้วย กรณีเป็น Sub",
+      "contrabrokerno",
+      "หมายเลข Broker",
+      "หมายเลข Broker ที่ Match ด้วย กรณีเป็น Sub-Broker Version คือหมายเลข Broker ที่สั่งซื้อขาย"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "ConfirmStatus",
+    "aliases": [
+      "ConfirmStatus",
+      "Office",
+      "confirmstatus",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back-Office"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟลกบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "Delflag",
+    "aliases": [
+      "Delflag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "PutThrough",
+    "aliases": [
+      "PutThrough",
+      "putthrough",
+      "ประเภทรายการ Put Through"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "PCFlag",
+    "aliases": [
+      "PC Flag ของระบบ Front",
+      "PCFlag",
+      "pcflag"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "ContraPCFlag",
+    "aliases": [
+      "ContraPCFlag",
+      "PC Flag ของระบบ Front",
+      "contrapcflag"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "JBD",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "แฟลกเช็คว่ารายการนี้เป็นรายการ ShortSale หรือไม่ของลูกค้า"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "Dd",
+    "aliases": [
+      "Broker ที่เป็น dd หรือไม่",
+      "Dd",
+      "dd",
+      "บอกว่า รายการที่ Match ด้วยเป็นของ Port ของ Broker ที่เป็น dd หรือไม่"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "SubOrderNo",
+    "aliases": [
+      "Broker Version",
+      "Broker กรณีเป็น Sub",
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง",
+      "หมายเลขคำสั่ง (หรือหมายเลขคำสั่งภายใน Sub-Broker กรณีเป็น Sub-Broker Version)",
+      "หรือหมายเลขคำสั่งภายใน Sub"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split)",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "ConfirmNo",
+    "aliases": [
+      "ConfirmNo",
+      "confirmno",
+      "จากตลาดฯ",
+      "หมายเลข Confirm",
+      "หมายเลข Confirm (จากตลาดฯ)"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "Unit",
+    "aliases": [
+      "Unit",
+      "qty",
+      "quantity",
+      "unit",
+      "จำนวนหุ้น",
+      "จำนวนหุ้นที่ Confirm",
+      "หน่วย"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่ Confirm"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "ConfirmTime",
+    "aliases": [
+      "ConfirmTime",
+      "confirmtime",
+      "เวลาที่ Confirm การซื้อขาย"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "ContraBrokerNo",
+    "aliases": [
+      "ContraBrokerNo",
+      "Match ด้วย กรณีเป็น Sub",
+      "contrabrokerno",
+      "หมายเลข Broker",
+      "หมายเลข Broker ที่ Match ด้วย กรณีเป็น Sub-Broker Version คือหมายเลข Broker ที่สั่งซื้อขาย"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "ConfirmStatus",
+    "aliases": [
+      "ConfirmStatus",
+      "Office",
+      "confirmstatus",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back-Office"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟลกบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "Delflag",
+    "aliases": [
+      "Delflag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "PutThrough",
+    "aliases": [
+      "PutThrough",
+      "putthrough",
+      "ประเภทรายการ Put Through"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "PCFlag",
+    "aliases": [
+      "PC Flag ของระบบ Front",
+      "PCFlag",
+      "pcflag"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "ContraPCFlag",
+    "aliases": [
+      "ContraPCFlag",
+      "PC Flag ของระบบ Front",
+      "contrapcflag"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "JBDL",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "แฟลกเช็คว่ารายการนี้เป็นรายการ ShortSale หรือไม่ของลูกค้า"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "SubOrderNo",
+    "aliases": [
+      "Broker Version",
+      "Broker กรณีเป็น Sub",
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง",
+      "หมายเลขคำสั่ง (หรือหมายเลขคำสั่งภายใน Sub-Broker กรณีเป็น Sub-Broker Version)",
+      "หรือหมายเลขคำสั่งภายใน Sub"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split)",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "Side",
+    "aliases": [
+      "Side",
+      "buy sell",
+      "side",
+      "ซื้อขาย",
+      "ด้านซื้อขาย",
+      "เป็นการเสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "BrokerNo",
+    "aliases": [
+      "BrokerNo",
+      "brokerno",
+      "รหัสของ Broker ที่ส่งคำสั่งผ่าน ใช้ใน Sub-Broker Version สำหรับใน Broker Version ไม่ได้ใช้"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "BrokerOrderNo",
+    "aliases": [
+      "BrokerOrderNo",
+      "brokerorderno",
+      "ลำดับการเสนอซื้อเสนอขายของตลาดฯ ใน Broker Version จะมีค่าตรงกับ SubOrderNo"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ประเภทบัญชีลูกค้า"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "ShareCode",
+    "aliases": [
+      "ShareCode",
+      "share",
+      "sharecode",
+      "stock",
+      "symbol",
+      "ชื่อหลักทรัพย์",
+      "ชื่อหุ้น",
+      "หลักทรัพย์",
+      "หุ้น"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "OpenUnit",
+    "aliases": [
+      "OpenUnit",
+      "openunit",
+      "จำนวน order",
+      "จำนวนหุ้นที่เสนอ",
+      "จำนวนหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "ConfirmUnit",
+    "aliases": [
+      "ConfirmUnit",
+      "confirmunit",
+      "จำนวนที่จับคู่",
+      "จำนวนหุ้นที่ Confirm มาแล้วทั้งหมดใน Order นี้",
+      "จำนวนหุ้นที่ confirm"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "OrderDate",
+    "aliases": [
+      "OrderDate",
+      "orderdate",
+      "วันที่ทำการซื้อขาย",
+      "วันที่ทำการซื้อขาย/ส่ง order",
+      "ส่ง order"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "OrderTime",
+    "aliases": [
+      "OrderTime",
+      "ordertime",
+      "เวลาที่เสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "OrderStatus",
+    "aliases": [
+      "Office",
+      "OrderStatus",
+      "orderstatus",
+      "ตรงกับ Front",
+      "สถานะของรายการ",
+      "สถานะของรายการ (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "Life",
+    "aliases": [
+      "G,D,E",
+      "Life",
+      "Office",
+      "life",
+      "ตรงกับ Front",
+      "อายุของ Order",
+      "อายุของ Order (G,D,E) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "Condition",
+    "aliases": [
+      "Condition",
+      "FOR,IOC",
+      "Office",
+      "condition",
+      "ตรงกับ Front",
+      "เงื่อนไขในการสั่งคำสั่ง",
+      "เงื่อนไขในการสั่งคำสั่ง (FOR,IOC) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "BrokerPort",
+    "aliases": [
+      "Broker Version",
+      "BrokerPort",
+      "brokerport",
+      "ส่งไปยัง broker เป็นรหัสบัญชีลูกค้าย่อยใด ใช้ใน Sub-Broker Version"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟล็กบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "DelFlag",
+    "aliases": [
+      "DelFlag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "EntryTrader",
+    "aliases": [
+      "EntryTrader",
+      "entrytrader",
+      "หมายเลข Trader ที่ป้อนรายการคำสั่งนี้"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "Appr_UserId",
+    "aliases": [
+      "Appr_UserId",
+      "appr_userid",
+      "ผู้ใช้ที่ Approve รายการ"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "Chg_UserId",
+    "aliases": [
+      "Chg_UserId",
+      "chg_userid",
+      "ผู้ใช้ที่เป็นผู้แก้ไขรายการ"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "PutThrough",
+    "aliases": [
+      "PutThrough",
+      "putthrough",
+      "ประเภทรายการ Put Through"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "JBO",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "เป็น Flag บอกว่าเป็นรายการ Short Sale หรือไม่"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "SubOrderNo",
+    "aliases": [
+      "Broker Version",
+      "Broker กรณีเป็น Sub",
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง",
+      "หมายเลขคำสั่ง (หรือหมายเลขคำสั่งภายใน Sub-Broker กรณีเป็น Sub-Broker Version)",
+      "หรือหมายเลขคำสั่งภายใน Sub"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split)",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "Side",
+    "aliases": [
+      "Side",
+      "buy sell",
+      "side",
+      "ซื้อขาย",
+      "ด้านซื้อขาย",
+      "เป็นการเสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "BrokerNo",
+    "aliases": [
+      "BrokerNo",
+      "brokerno",
+      "รหัสของ Broker ที่ส่งคำสั่งผ่าน"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "BrokerOrderNo",
+    "aliases": [
+      "BrokerOrderNo",
+      "brokerorderno",
+      "ลำดับการเสนอซื้อเสนอขายของตลาดฯ ใน Broker Version"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustAcct) - ภายใต้กลุ่ม Account Code"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustCode) - ภายใต้กลุ่ม Account Code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (Account) - ภายใต้กลุ่ม Account Code",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "ShareCode",
+    "aliases": [
+      "ShareCode",
+      "share",
+      "sharecode",
+      "stock",
+      "symbol",
+      "ชื่อหลักทรัพย์",
+      "ชื่อหุ้น",
+      "หลักทรัพย์",
+      "หุ้น"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "OpenUnit",
+    "aliases": [
+      "OpenUnit",
+      "openunit",
+      "จำนวน order",
+      "จำนวนหุ้นที่เสนอ",
+      "จำนวนหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "ConfirmUnit",
+    "aliases": [
+      "ConfirmUnit",
+      "confirmunit",
+      "จำนวนที่จับคู่",
+      "จำนวนหุ้นที่ Confirm มาแล้วทั้งหมดใน Order นี้",
+      "จำนวนหุ้นที่ confirm"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "OrderDate",
+    "aliases": [
+      "OrderDate",
+      "orderdate",
+      "วันที่ทำการซื้อขาย",
+      "วันที่ทำการซื้อขาย/ส่ง order",
+      "ส่ง order"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "OrderTime",
+    "aliases": [
+      "OrderTime",
+      "ordertime",
+      "เวลาที่เสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "OrderStatus",
+    "aliases": [
+      "Office",
+      "OrderStatus",
+      "orderstatus",
+      "ตรงกับ Front",
+      "สถานะของรายการ",
+      "สถานะของรายการ (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "Life",
+    "aliases": [
+      "G,D,E",
+      "Life",
+      "Office",
+      "life",
+      "ตรงกับ Front",
+      "อายุของ Order",
+      "อายุของ Order (G,D,E) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "Condition",
+    "aliases": [
+      "Condition",
+      "FOR,IOC",
+      "Office",
+      "condition",
+      "ตรงกับ Front",
+      "เงื่อนไขในการสั่งคำสั่ง",
+      "เงื่อนไขในการสั่งคำสั่ง (FOR,IOC) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "BrokerPort",
+    "aliases": [
+      "BrokerPort",
+      "brokerport",
+      "ส่งไปยัง broker เป็นรหัสบัญชีลูกค้าย่อยใด"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟล็กบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "DelFlag",
+    "aliases": [
+      "DelFlag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "EntryTrader",
+    "aliases": [
+      "EntryTrader",
+      "entrytrader",
+      "หมายเลข Trader ที่ป้อนรายการคำสั่งนี้"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "Appr_UserId",
+    "aliases": [
+      "Appr_UserId",
+      "appr_userid",
+      "ผู้ใช้ที่ Approve รายการ"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "Chg_UserId",
+    "aliases": [
+      "Chg_UserId",
+      "chg_userid",
+      "ผู้ใช้ที่เป็นผู้แก้ไขรายการ"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "PutThrough",
+    "aliases": [
+      "PutThrough",
+      "putthrough",
+      "ประเภทรายการ Put Through"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "JBOL",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "เป็น Flag บอกว่าเป็นรายการ Short Sale หรือไม่"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogUserId",
+    "aliases": [
+      "LogUserId",
+      "loguserid",
+      "รหัสผู้ใช้ที่ทำการแก้ไข"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogUserBranch",
+    "aliases": [
+      "LogUserBranch",
+      "loguserbranch",
+      "สาขาของผู้ใช้ที่แก้ไข"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogSysDate",
+    "aliases": [
+      "LogSysDate",
+      "logsysdate",
+      "วันและเวลาที่ทำการแก้ไข ของระบบ INFORMIX"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogProgName",
+    "aliases": [
+      "LogProgName",
+      "logprogname",
+      "ชื่อโปรแกรมที่ใช้แก้ไข"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogEditDate",
+    "aliases": [
+      "KN_Date",
+      "LogEditDate",
+      "logeditdate",
+      "วันที่ทำการแก้ไข",
+      "วันที่ทำการแก้ไข (KN_Date)"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogAction",
+    "aliases": [
+      "LogAction",
+      "logaction",
+      "ประเภทการแก้ไข"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogSeqNo",
+    "aliases": [
+      "LogSeqNo",
+      "logseqno",
+      "ลำดับที่ของการ Split"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogOldFlag",
+    "aliases": [
+      "LogOldFlag",
+      "logoldflag",
+      "รายการใหม่หลังแก้",
+      "เป็นรายการเก่าก่อนแก้",
+      "เป็นรายการเก่าก่อนแก้ หรือ รายการใหม่หลังแก้"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogRemark",
+    "aliases": [
+      "LogRemark",
+      "logremark",
+      "หมายเหตุ"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "LogDelFlag",
+    "aliases": [
+      "LogDelFlag",
+      "logdelflag",
+      "เก็บสถานะของรายการเช่นเดียวกับ DelFlag"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "SubOrderNo",
+    "aliases": [
+      "Broker Version",
+      "Broker กรณีเป็น Sub",
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง",
+      "หมายเลขคำสั่ง (หรือหมายเลขคำสั่งภายใน Sub-Broker กรณีเป็น Sub-Broker Version)",
+      "หรือหมายเลขคำสั่งภายใน Sub"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split)",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "Side",
+    "aliases": [
+      "Side",
+      "buy sell",
+      "side",
+      "ซื้อขาย",
+      "ด้านซื้อขาย",
+      "เป็นการเสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "BrokerNo",
+    "aliases": [
+      "BrokerNo",
+      "brokerno",
+      "รหัสของ Broker ที่ส่งคำสั่งผ่าน"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "BrokerOrderNo",
+    "aliases": [
+      "BrokerOrderNo",
+      "brokerorderno",
+      "ลำดับการเสนอซื้อเสนอขายของตลาดฯ ใน Broker Version"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustAcct) - ภายใต้กลุ่ม Account Code"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustCode) - ภายใต้กลุ่ม Account Code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (Account) - ภายใต้กลุ่ม Account Code",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "ShareCode",
+    "aliases": [
+      "ShareCode",
+      "share",
+      "sharecode",
+      "stock",
+      "symbol",
+      "ชื่อหลักทรัพย์",
+      "ชื่อหุ้น",
+      "หลักทรัพย์",
+      "หุ้น"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "OpenUnit",
+    "aliases": [
+      "OpenUnit",
+      "openunit",
+      "จำนวน order",
+      "จำนวนหุ้นที่เสนอ",
+      "จำนวนหุ้นที่เสนอซื้อหรือขาย"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "ConfirmUnit",
+    "aliases": [
+      "ConfirmUnit",
+      "confirmunit",
+      "จำนวนที่จับคู่",
+      "จำนวนหุ้นที่ Confirm มาแล้วทั้งหมดใน Order นี้",
+      "จำนวนหุ้นที่ confirm"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "OrderDate",
+    "aliases": [
+      "OrderDate",
+      "orderdate",
+      "วันที่ทำการซื้อขาย",
+      "วันที่ทำการซื้อขาย/ส่ง order",
+      "ส่ง order"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "OrderTime",
+    "aliases": [
+      "OrderTime",
+      "ordertime",
+      "เวลาที่เสนอซื้อเสนอขาย"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "OrderStatus",
+    "aliases": [
+      "Office",
+      "OrderStatus",
+      "orderstatus",
+      "ตรงกับ Front",
+      "สถานะของรายการ",
+      "สถานะของรายการ (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "Life",
+    "aliases": [
+      "G,D,E",
+      "Life",
+      "Office",
+      "life",
+      "ตรงกับ Front",
+      "อายุของ Order",
+      "อายุของ Order (G,D,E) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "Condition",
+    "aliases": [
+      "Condition",
+      "FOR,IOC",
+      "Office",
+      "condition",
+      "ตรงกับ Front",
+      "เงื่อนไขในการสั่งคำสั่ง",
+      "เงื่อนไขในการสั่งคำสั่ง (FOR,IOC) (ตรงกับ Front) ไม่ได้ใช้งานใน Back-Office",
+      "ไม่ได้ใช้งานใน Back"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "BrokerPort",
+    "aliases": [
+      "BrokerPort",
+      "brokerport",
+      "ส่งไปยัง broker เป็นรหัสบัญชีลูกค้าย่อยใด"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟล็กบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "DelFlag",
+    "aliases": [
+      "DelFlag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "EntryTrader",
+    "aliases": [
+      "EntryTrader",
+      "entrytrader",
+      "หมายเลข Trader ที่ป้อนรายการคำสั่งนี้"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "Appr_UserId",
+    "aliases": [
+      "Appr_UserId",
+      "appr_userid",
+      "ผู้ใช้ที่ Approve รายการ",
+      "ผู้ใช้ที่ Approve รายการ (อาจเป็นกรณีจำนวนเงินมากกว่าคำสั่ง)",
+      "อาจเป็นกรณีจำนวนเงินมากกว่าคำสั่ง"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "Chg_UserId",
+    "aliases": [
+      "Chg_UserId",
+      "chg_userid",
+      "ผู้ใช้ที่เป็นผู้แก้ไขรายการ"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "PutThrough",
+    "aliases": [
+      "PutThrough",
+      "putthrough",
+      "ประเภทรายการ Put Through"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "LJBO",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "เป็น Flag บอกว่าเป็นรายการ Short Sale หรือไม่"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogUserId",
+    "aliases": [
+      "LogUserId",
+      "loguserid",
+      "รหัสผู้ใช้ที่ทำการแก้ไข"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogUserBranch",
+    "aliases": [
+      "LogUserBranch",
+      "loguserbranch",
+      "สาขาของผู้ใช้ที่แก้ไข"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogSysDate",
+    "aliases": [
+      "LogSysDate",
+      "logsysdate",
+      "วันและเวลาที่ทำการแก้ไข ของระบบ INFORMIX"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogProgName",
+    "aliases": [
+      "LogProgName",
+      "logprogname",
+      "ชื่อโปรแกรมที่ใช้แก้ไข"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogEditDate",
+    "aliases": [
+      "KN_Date",
+      "LogEditDate",
+      "logeditdate",
+      "วันที่ทำการแก้ไข",
+      "วันที่ทำการแก้ไข (KN_Date)"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogAction",
+    "aliases": [
+      "LogAction",
+      "logaction",
+      "ประเภทการแก้ไข"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogSeqNo",
+    "aliases": [
+      "LogSeqNo",
+      "logseqno",
+      "ลำดับที่ของการ Split"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogOldFlag",
+    "aliases": [
+      "LogOldFlag",
+      "logoldflag",
+      "รายการใหม่หลังแก้",
+      "เป็นรายการเก่าก่อนแก้",
+      "เป็นรายการเก่าก่อนแก้ หรือ รายการใหม่หลังแก้"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogRemark",
+    "aliases": [
+      "LogRemark",
+      "logremark",
+      "หมายเหตุ"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "LogDelFlag",
+    "aliases": [
+      "LogDelFlag",
+      "logdelflag",
+      "เก็บสถานะของรายการเช่นเดียวกับ DelFlag"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ที่มาแก้ไข",
+      "รหัสผู้ที่มาแก้ไข/เพิ่ม/ลบรายการหรือ Split Order",
+      "ลบรายการหรือ Split Order",
+      "เพิ่ม"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "UserTeamId",
+    "aliases": [
+      "UserTeamId",
+      "userteamid",
+      "ทีมของผู้ใช้ของรายการปัจจุบัน"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่เป็นของรายการปัจจุบัน",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "Dd",
+    "aliases": [
+      "Broker ที่เป็น dd หรือไม่",
+      "Dd",
+      "dd",
+      "บอกว่า รายการที่ Match ด้วยเป็นของ Port ของ Broker ที่เป็น dd หรือไม่"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "SubOrderNo",
+    "aliases": [
+      "Broker Version",
+      "Broker กรณีเป็น Sub",
+      "SubOrderNo",
+      "suborderno",
+      "หมายเลขคำสั่ง",
+      "หมายเลขคำสั่ง (หรือหมายเลขคำสั่งภายใน Sub-Broker กรณีเป็น Sub-Broker Version)",
+      "หรือหมายเลขคำสั่งภายใน Sub"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "OrderSeqNo",
+    "aliases": [
+      "OrderSeqNo",
+      "orderseqno",
+      "ค่า Default = 0",
+      "ลำดับของหมายเลขคำสั่ง",
+      "ลำดับของหมายเลขคำสั่ง (เมื่อมีการ Split) ค่า Default = 0",
+      "เมื่อมีการ Split"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "ConfirmNo",
+    "aliases": [
+      "ConfirmNo",
+      "confirmno",
+      "จากตลาดฯ",
+      "หมายเลข Confirm",
+      "หมายเลข Confirm (จากตลาดฯ)"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "Unit",
+    "aliases": [
+      "Unit",
+      "qty",
+      "quantity",
+      "unit",
+      "จำนวนหุ้น",
+      "จำนวนหุ้นที่ Confirm",
+      "หน่วย"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น",
+      "ราคาหุ้นที่ Confirm"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "ConfirmTime",
+    "aliases": [
+      "ConfirmTime",
+      "confirmtime",
+      "เวลาที่ Confirm การซื้อขาย"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "ContraBrokerNo",
+    "aliases": [
+      "ContraBrokerNo",
+      "Match ด้วย กรณีเป็น Sub",
+      "contrabrokerno",
+      "หมายเลข Broker",
+      "หมายเลข Broker ที่ Match ด้วย กรณีเป็น Sub-Broker Version คือหมายเลข Broker ที่สั่งซื้อขาย"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "ConfirmStatus",
+    "aliases": [
+      "ConfirmStatus",
+      "Office",
+      "confirmstatus",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back",
+      "สถานะของรายการ ไม่ได้ใช้งานใน Back-Office (อาจไว้ออกรายงานเท่านั้น)",
+      "อาจไว้ออกรายงานเท่านั้น"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "UpdFlag",
+    "aliases": [
+      "UpdFlag",
+      "updflag",
+      "แฟลกบอกว่ารายการนี้เคยถูก Update หรือยัง"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "Delflag",
+    "aliases": [
+      "Delflag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟลกบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "PutThrough",
+    "aliases": [
+      "PutThrough",
+      "putthrough",
+      "ประเภทรายการ Put Through"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "PCFlag",
+    "aliases": [
+      "PC Flag ของระบบ Front",
+      "PCFlag",
+      "pcflag"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "ContraPCFlag",
+    "aliases": [
+      "ContraPCFlag",
+      "PC Flag ของระบบ Front",
+      "contrapcflag"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "TrxMktId",
+    "aliases": [
+      "TrxMktId",
+      "trxmktid",
+      "รหัส Marketing ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "TrxTeamId",
+    "aliases": [
+      "TrxTeamId",
+      "trxteamid",
+      "รหัส Marketing Team ที่ดูแลขณะเกิดรายการ"
+    ]
+  },
+  {
+    "table": "LJBD",
+    "field": "ShortSale",
+    "aliases": [
+      "ShortSale",
+      "shortsale",
+      "แฟลกเช็คว่ารายการนี้เป็นรายการ ShortSale หรือไม่ของลูกค้า"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "Branch",
+    "aliases": [
+      "Branch",
+      "Customer Branch",
+      "Customer Branch : สาขาของบริษัท",
+      "branch",
+      "สาขา",
+      "สาขาของบริษัท"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "CustType",
+    "aliases": [
+      "CustType",
+      "Customer Type",
+      "Customer Type : ประเภทลูกค้า",
+      "customer type",
+      "custtype",
+      "ประเภทลูกค้า"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "Customer Account Type",
+      "Customer Account Type : ประเภทบัญชีของลูกค้า",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ประเภทบัญชีของลูกค้า"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "Running No ของลูกค้า",
+      "Running No ของลูกค้า (รหัสลูกค้าประจำตัว บัญชีหลัก)",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "รหัสลูกค้า",
+      "รหัสลูกค้าประจำตัว บัญชีหลัก",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "CheckDgt",
+    "aliases": [
+      "CheckDgt",
+      "Customer Check Digit",
+      "checkdgt"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "รหัสบัญชี",
+      "เก็บรหัสบัญชีลูกค้าที่ Format แล้ว ไม่รวมสาขา",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "OpenDate",
+    "aliases": [
+      "OpenDate",
+      "opendate",
+      "วันที่เปิดบัญชี"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "EffDate",
+    "aliases": [
+      "EffDate",
+      "effdate",
+      "ซื้อขายหุ้นได้",
+      "วันที่เปิด",
+      "วันที่เปิด/ซื้อขายหุ้นได้"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "CloseDate",
+    "aliases": [
+      "CloseDate",
+      "closedate",
+      "วันที่ปิดบัญชี"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "ShareMatch",
+    "aliases": [
+      "ShareMatch",
+      "sharematch",
+      "แฟลกกำหนดลำดับวิธีการ Match"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "Receivetype",
+    "aliases": [
+      "Receivetype",
+      "receivetype",
+      "แฟลกกำหนดประเภทการรับ ชำระเงิน"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "Paymenttype",
+    "aliases": [
+      "Paymenttype",
+      "paymenttype",
+      "แฟลกกำหนดประเภทการจ่ายเงินให้ลูกค้า"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "HoldPayment",
+    "aliases": [
+      "HoldPayment",
+      "holdpayment",
+      "แฟลกกำหนดให้ Hold รายการจ่ายของลูกค้า โดยจะเปลี่ยนเป็นเช็คและเปลี่ยนสถานะเช็คให้เป็น Hold"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "Xreceivetype",
+    "aliases": [
+      "Xreceivetype",
+      "xreceivetype",
+      "แฟลกกำหนดประเภทการรับชำระเงิน สำหรับรายการ X"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "Xpaymenttype",
+    "aliases": [
+      "Xpaymenttype",
+      "xpaymenttype",
+      "แฟลกกำหนดประเภทการจ่ายเงินให้ลูกค้า สำหรับรายการ X"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "XholdPayment",
+    "aliases": [
+      "XholdPayment",
+      "xholdpayment",
+      "แฟลกกำหนดให้ Hold รายการจ่ายของลูกค้า โดยจะเปลี่ยนเป็นเช็คและเปลี่ยนสถานะเช็คให้เป็น Hold สำหรับรายการ X"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "XbankCheqCode",
+    "aliases": [
+      "BankCheqCode สำหรับรายการจ่าย Cheque ของรายการ X",
+      "XbankCheqCode",
+      "xbankcheqcode"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "CheqPName",
+    "aliases": [
+      "CheqPName",
+      "cheqpname",
+      "ชื่อลูกค้าที่จะพิมพ์บน Cheque กรณีที่ ลูกค้ามีหลายบัญชีและต้องการให้ใช้ PayName ตามประเภทบัญชี"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankCheqCode",
+    "aliases": [
+      "BankCheqCode",
+      "bankcheqcode",
+      "รหัสเช็คของธนาคารและสาขาที่จะออกให้กับลูกค้ารายนี้"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankCheqCodeExtra",
+    "aliases": [
+      "BankCheqCodeExtra",
+      "SameDay, Previous",
+      "bankcheqcodeextra",
+      "ใช้ในการ Clearing แบบ ATS ในกรณีที่เป็นรายการผิดปกติ (SameDay, Previous)"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankCode",
+    "aliases": [
+      "BankCode",
+      "bankcode",
+      "กลุ่ม Bank For Payin",
+      "รหัสของธนาคารที่จะจ่าย Payin เข้าให้ลูกค้า (กลุ่ม Bank For Payin)"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankBranchCode",
+    "aliases": [
+      "BankBranchCode",
+      "bankbranchcode",
+      "กลุ่ม Bank For Payin",
+      "รหัสสาขาของธนาคารที่จะจ่าย Payin",
+      "รหัสสาขาของธนาคารที่จะจ่าย Payin (กลุ่ม Bank For Payin)"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankAccType",
+    "aliases": [
+      "BankAccType",
+      "bankacctype",
+      "กลุ่ม Bank For Payin",
+      "รหัสประเภทบัญชีของลูกค้า ประกอบด้วย",
+      "รหัสประเภทบัญชีของลูกค้า ประกอบด้วย (กลุ่ม Bank For Payin)"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "GrandAccount",
+    "aliases": [
+      "( Reserve )",
+      "GrandAccount",
+      "Reserve",
+      "grandaccount"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "CashLineAvail",
+    "aliases": [
+      "CashLineAvail",
+      "cashlineavail",
+      "วิธีคำนวณยอดวงเงินคงเหลือ กรณี CashCreditFlag = '0'"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "IntReceiveType",
+    "aliases": [
+      "IntReceiveType",
+      "intreceivetype",
+      "แฟลกกำหนดประเภทการรับชำระเงิน สำหรับรายการดอกเบี้ยสิ้นเดือน"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "IntPaymentType",
+    "aliases": [
+      "IntPaymentType",
+      "intpaymenttype",
+      "แฟลกกำหนดประเภทการจ่ายเงินให้ลูกค้า สำหรับรายการดอกเบี้ยสิ้นเดือน"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "IntHoldPayment",
+    "aliases": [
+      "IntHoldPayment",
+      "intholdpayment",
+      "แฟลกกำหนดให้ Hold รายการจ่ายของลูกค้ารายนี้ โดยจะเปลี่ยนเป็นเช็คและเปลี่ยนสถานะเช็คให้เป็น Hold สำหรับรายการดอกเบี้ยสิ้นเดือน"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "IntBankCheqCode",
+    "aliases": [
+      "BankCheqCode สำหรับรายการจ่าย Cheque ของดอกเบี้ยสิ้นเดือน",
+      "IntBankCheqCode",
+      "intbankcheqcode"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "XcheqPName",
+    "aliases": [
+      "XcheqPName",
+      "xcheqpname",
+      "ชื่อลูกค้าที่จะพิมพ์บน Cheque สำหรับรายการ X"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "IntCheqPName",
+    "aliases": [
+      "IntCheqPName",
+      "intcheqpname",
+      "ชื่อลูกค้าที่จะพิมพ์บน Cheque สำหรับรายการดอกเบี้ยสิ้นเดือน"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "CrossType",
+    "aliases": [
+      "CrossType",
+      "crosstype",
+      "ประเภทของการขีดคร่อมบนเช็ค"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "XcrossType",
+    "aliases": [
+      "XcrossType",
+      "xcrosstype",
+      "ประเภทของการขีดคร่อมบนเช็ครายการ X"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "IntCrossType",
+    "aliases": [
+      "IntCrossType",
+      "intcrosstype",
+      "ประเภทของการขีดคร่อมบนเช็ครายการดอกเบี้ยสิ้นเดือน"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankAccno",
+    "aliases": [
+      "BankAccno",
+      "bankaccno",
+      "เลขที่บัญชีธนาคาร"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankCode2",
+    "aliases": [
+      "BankCode2",
+      "bankcode2",
+      "กลุ่ม Bank For ATS",
+      "รหัสของธนาคารที่จะใช้ในระบบ ATS",
+      "รหัสของธนาคารที่จะใช้ในระบบ ATS (กลุ่ม Bank For ATS)"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankBranchCode2",
+    "aliases": [
+      "BankBranchCode2",
+      "bankbranchcode2",
+      "กลุ่ม Bank For ATS",
+      "รหัสสาขาของธนาคารที่จะใช้ในระบบ ATS",
+      "รหัสสาขาของธนาคารที่จะใช้ในระบบ ATS (กลุ่ม Bank For ATS)"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankAccType2",
+    "aliases": [
+      "BankAccType2",
+      "bankacctype2",
+      "กลุ่ม Bank For ATS",
+      "รหัสประเภทบัญชีของลูกค้า ประกอบด้วย",
+      "รหัสประเภทบัญชีของลูกค้า ประกอบด้วย (กลุ่ม Bank For ATS)"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankAccno2",
+    "aliases": [
+      "BankAccno2",
+      "bankaccno2",
+      "เลขที่บัญชีธนาคาร"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "ReceiveBankFee",
+    "aliases": [
+      "( Reserve )",
+      "ReceiveBankFee",
+      "Reserve",
+      "receivebankfee"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "PaymentBankFee",
+    "aliases": [
+      "( Reserve )",
+      "PaymentBankFee",
+      "Reserve",
+      "paymentbankfee"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "ClearBankCode",
+    "aliases": [
+      "ClearBankCode",
+      "clearbankcode",
+      "รหัสธนาคารและสาขาที่ใช้ในการ Clearing เวลาลูกค้าจ่ายเงิน"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "XclearBankCode",
+    "aliases": [
+      "XclearBankCode",
+      "xclearbankcode",
+      "รหัสธนาคารและสาขาที่ใช้ในการ Clearing เวลาลูกค้าจ่ายเงิน สำหรับรายการ X"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "IntClearBankCode",
+    "aliases": [
+      "IntClearBankCode",
+      "intclearbankcode",
+      "รหัสธนาคารและสาขาที่ใช้ในการ Clearing เวลาลูกค้าจ่ายเงิน สำหรับรายการ ดอกเบี้ยสิ้นเดือน"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "CashBalanceFlag",
+    "aliases": [
+      "CashBalanceFlag",
+      "cashbalanceflag",
+      "แฟลกที่บอกว่าเป็นลูกค้าที่มีการวางเงินในบัญชีเงินเพื่อซื้อขายหลักทรัพย์หรือไม่"
+    ]
+  },
+  {
+    "table": "TCA",
+    "field": "BankCheqCode2",
+    "aliases": [
+      "BankCheqCode2",
+      "bankcheqcode2",
+      "รหัสเช็คของธนาคารและสาขาที่จะออกให้กับลูกค้า ATS"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสลูกค้ารายบัญชี",
+      "รหัสลูกค้ารายบัญชี (ประเภทบัญชี) - ภายใต้กลุ่ม Account Code"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสประจำตัวลูกค้า",
+      "รหัสลูกค้า",
+      "รหัสลูกค้ารายบัญชี",
+      "รหัสลูกค้ารายบัญชี (รหัสประจำตัวลูกค้า) - ภายใต้กลุ่ม Account Code",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีเต็ม",
+      "รหัสลูกค้ารายบัญชี",
+      "รหัสลูกค้ารายบัญชี (รหัสบัญชีเต็ม) - ภายใต้กลุ่ม Account Code",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "AcctStatus",
+    "aliases": [
+      "AcctStatus",
+      "acctstatus",
+      "สถานะของบัญชี ประกอบด้วย"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "EnableBuy",
+    "aliases": [
+      "Buy",
+      "EnableBuy",
+      "enablebuy",
+      "เป็นตัวกำหนดควบคุม การทำรายการซื้อหุ้น (Buy)"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "EnableSell",
+    "aliases": [
+      "EnableSell",
+      "Sell",
+      "enablesell",
+      "เป็นตัวกำหนดควบคุม การทำรายการขายหุ้น (Sell)"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "EnableDeposit",
+    "aliases": [
+      "Deposit",
+      "EnableDeposit",
+      "enabledeposit",
+      "เป็นตัวกำหนดควบคุม การทำรายการฝากหุ้น (Deposit)"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "EnableWithdraw",
+    "aliases": [
+      "EnableWithdraw",
+      "Withdraw",
+      "enablewithdraw",
+      "เป็นตัวกำหนดควบคุม การทำรายการถอนหุ้น (Withdraw)"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "CreditType",
+    "aliases": [
+      "CreditType",
+      "credittype",
+      "ประเภทของวงเงิน เพื่อส่งไประบบ Front Office"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "CashCreditFalg",
+    "aliases": [
+      "CashCreditFalg",
+      "cashcreditfalg",
+      "การคำนวณวงเงินลูกค้าบัญชีเงินสด"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "AppCreditLine",
+    "aliases": [
+      "AppCreditLine",
+      "appcreditline",
+      "วงเงินอนุมัติ วงเงินสูงสุดที่ลูกค้าสามารถซื้อหุ้นคงค้างได้"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "SellCreditLine",
+    "aliases": [
+      "SellCreditLine",
+      "sellcreditline",
+      "วงเงินด้านขาย"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "MaxOrderSize",
+    "aliases": [
+      "MaxOrderSize",
+      "maxordersize",
+      "ข้อมูลส่งไป Front"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "MaxShortSell",
+    "aliases": [
+      "MaxShortSell",
+      "maxshortsell",
+      "ข้อมูลส่งไป Front"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "CreditLineflag",
+    "aliases": [
+      "CreditLineflag",
+      "creditlineflag",
+      "ประเภทการตัด CreditLine เพื่อส่งข้อมูลไป Front"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "LastTrade",
+    "aliases": [
+      "LastTrade",
+      "lasttrade",
+      "วันที่ทำการซื้อขายวันสุดท้าย"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "ApprDate",
+    "aliases": [
+      "ApprDate",
+      "apprdate",
+      "วันที่แก้ไข ApproveCredit ครั้งล่าสุด"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "LineEffective",
+    "aliases": [
+      "LineEffective",
+      "lineeffective",
+      "วันที่เริ่มใช้วงเงินนี้"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "LineExpire",
+    "aliases": [
+      "LineExpire",
+      "lineexpire",
+      "วันหมดอายุของวงเงินนี้"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "ShortAppCreditLine",
+    "aliases": [
+      "ShortAppCreditLine",
+      "shortappcreditline",
+      "วงเงินอนุมัติสำหรับการขาย Short"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "CapitalGainTax",
+    "aliases": [
+      "CapitalGainTax",
+      "capitalgaintax",
+      "แฟล็กกำหนดว่าจะให้คำนวณภาษีจากกำไรการขายหุ้นหรือไม่"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "EnableWarrentBuy",
+    "aliases": [
+      "EnableWarrentBuy",
+      "enablewarrentbuy",
+      "แฟลกกำหนดว่าสามารถซื้อหุ้น Warrant ได้หรือไม่"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "EnableColWarrent",
+    "aliases": [
+      "EnableColWarrent",
+      "enablecolwarrent",
+      "แฟลกกำหนดว่าสามารถซื้อขายหุ้น Derivative Warrant ได้หรือไม่"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "Warrantapprovline",
+    "aliases": [
+      "Warrantapprovline",
+      "warrantapprovline",
+      "วงเงินอนุมัติสำหรับการซื้อขายหุ้น Warrant"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "Mktid",
+    "aliases": [
+      "Mktid",
+      "mktid",
+      "รหัส Marketing ผู้ดูแลบัญชี"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "OpenDate",
+    "aliases": [
+      "OpenDate",
+      "opendate",
+      "วันที่เปิดบัญชี"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "EffDate",
+    "aliases": [
+      "EffDate",
+      "effdate",
+      "วันที่เริ่มต้นมีผลของบัญชีและตลาดนั้นๆ"
+    ]
+  },
+  {
+    "table": "TCAS",
+    "field": "EndDate",
+    "aliases": [
+      "EndDate",
+      "enddate",
+      "วันที่สิ้นสุดการมีผลของบัญชีและตลาดนั้นๆ"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "LogUserId",
+    "aliases": [
+      "LogUserId",
+      "loguserid",
+      "รหัสผู้ใช้ที่ทำการแก้ไข"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "LogUserBranch",
+    "aliases": [
+      "LogUserBranch",
+      "loguserbranch",
+      "สาขาของผู้ใช้ที่แก้ไข"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "LogSysDate",
+    "aliases": [
+      "LogSysDate",
+      "logsysdate",
+      "วันและเวลาที่ทำการแก้ไข ของระบบ INFORMIX"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "LogProgName",
+    "aliases": [
+      "LogProgName",
+      "logprogname",
+      "ชื่อโปรแกรมที่ใช้แก้ไข"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "LogEditDate",
+    "aliases": [
+      "LogEditDate",
+      "logeditdate",
+      "วันที่ทำการแก้ไข"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "LogAction",
+    "aliases": [
+      "LogAction",
+      "logaction",
+      "ประเภทการแก้ไข"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสลูกค้ารายบัญชี",
+      "รหัสลูกค้ารายบัญชี (ประเภทบัญชี) - ภายใต้กลุ่ม Account Code"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสประจำตัวลูกค้า",
+      "รหัสลูกค้า",
+      "รหัสลูกค้ารายบัญชี",
+      "รหัสลูกค้ารายบัญชี (รหัสประจำตัวลูกค้า) - ภายใต้กลุ่ม Account Code",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีเต็ม",
+      "รหัสลูกค้ารายบัญชี",
+      "รหัสลูกค้ารายบัญชี (รหัสบัญชีเต็ม) - ภายใต้กลุ่ม Account Code",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "AcctStatus",
+    "aliases": [
+      "AcctStatus",
+      "acctstatus",
+      "สถานะของบัญชี ประกอบด้วย"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "EnableBuy",
+    "aliases": [
+      "Buy",
+      "EnableBuy",
+      "enablebuy",
+      "เป็นตัวกำหนดควบคุม การทำรายการซื้อหุ้น (Buy)"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "EnableSell",
+    "aliases": [
+      "EnableSell",
+      "Sell",
+      "enablesell",
+      "เป็นตัวกำหนดควบคุม การทำรายการขายหุ้น (Sell)"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "EnableDeposit",
+    "aliases": [
+      "Deposit",
+      "EnableDeposit",
+      "enabledeposit",
+      "เป็นตัวกำหนดควบคุม การทำรายการฝากหุ้น (Deposit)"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "EnableWithdraw",
+    "aliases": [
+      "EnableWithdraw",
+      "Withdraw",
+      "enablewithdraw",
+      "เป็นตัวกำหนดควบคุม การทำรายการถอนหุ้น (Withdraw)"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "CreditType",
+    "aliases": [
+      "CreditType",
+      "credittype",
+      "ประเภทของวงเงิน เพื่อส่งไระบบ Front Office"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "CashCreditFalg",
+    "aliases": [
+      "CashCreditFalg",
+      "cashcreditfalg",
+      "การคำนวณวงเงินลูกค้าบัญชีเงินสด"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "AppCreditLine",
+    "aliases": [
+      "AppCreditLine",
+      "appcreditline",
+      "วงเงินอนุมัติ วงเงินสูงสุดที่ลูกค้าสามารถซื้อหุ้นคงค้างได้"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "SellCreditLine",
+    "aliases": [
+      "SellCreditLine",
+      "sellcreditline",
+      "วงเงินด้านขาย"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "MaxOrderSize",
+    "aliases": [
+      "MaxOrderSize",
+      "maxordersize",
+      "ข้อมูลส่งไป Front"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "MaxShortSell",
+    "aliases": [
+      "MaxShortSell",
+      "maxshortsell",
+      "ข้อมูลส่งไป Front"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "CreditLineflag",
+    "aliases": [
+      "CreditLineflag",
+      "creditlineflag",
+      "ประเภทการตัด CreditLine เพื่อส่งข้อมูลไป Front"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "LastTrade",
+    "aliases": [
+      "LastTrade",
+      "lasttrade",
+      "วันที่ทำการซื้อขายวันสุดท้าย"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "ApprDate",
+    "aliases": [
+      "ApprDate",
+      "apprdate",
+      "วันที่แก้ไข ApproveCredit ครั้งล่าสุด"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "LineEffective",
+    "aliases": [
+      "LineEffective",
+      "lineeffective",
+      "วันที่เริ่มใช้วงเงินนี้"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "LineExpire",
+    "aliases": [
+      "LineExpire",
+      "lineexpire",
+      "วันหมดอายุของวงเงินนี้"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "ShortAppCreditLine",
+    "aliases": [
+      "ShortAppCreditLine",
+      "shortappcreditline",
+      "วงเงินอนุมัติสำหรับการขาย Short"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "CapitalGainTax",
+    "aliases": [
+      "CapitalGainTax",
+      "capitalgaintax",
+      "แฟล็กกำหนดว่าจะให้คำนวณภาษีจากกำไรการขายหุ้นหรือไม่"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "EnableWarrentBuy",
+    "aliases": [
+      "EnableWarrentBuy",
+      "enablewarrentbuy",
+      "แฟลกกำหนดว่าสามารถซื้อหุ้น Warrant ได้หรือไม่"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "EnableColWarrent",
+    "aliases": [
+      "EnableColWarrent",
+      "enablecolwarrent",
+      "แฟลกกำหนดว่าสามารถซื้อขายหุ้น Derivative Warrant ได้หรือไม่"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "Warrantapprovline",
+    "aliases": [
+      "Warrantapprovline",
+      "warrantapprovline",
+      "วงเงินอนุมัติสำหรับการซื้อขายหุ้น Warrant"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "Mktid",
+    "aliases": [
+      "Mktid",
+      "mktid",
+      "รหัส Marketing ผู้ดูแลบัญชี"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "OpenDate",
+    "aliases": [
+      "OpenDate",
+      "opendate",
+      "วันที่เปิดบัญชี"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "EffDate",
+    "aliases": [
+      "EffDate",
+      "effdate",
+      "วันที่เริ่มต้นมีผลของบัญชีและตลาดนั้นๆ"
+    ]
+  },
+  {
+    "table": "LTCAS",
+    "field": "EndDate",
+    "aliases": [
+      "EndDate",
+      "enddate",
+      "วันที่สิ้นสุดการมีผลของบัญชีและตลาดนั้นๆ"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "DivCode",
+    "aliases": [
+      "DivCode",
+      "divcode",
+      "รหัสแผนกของบริษัท"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสประจำตัวของผู้ใช้ โดยบังคับให้เป็นตัวอักษรตัวเล็กเท่านั้น"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "UserEName",
+    "aliases": [
+      "UserEName",
+      "userename",
+      "ชื่อของผู้ใช้ภาษาอังกฤษ เก็บบันทึก ชื่อ-นามสกุลของผู้ใช้",
+      "นามสกุลของผู้ใช้"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "UserTName",
+    "aliases": [
+      "UserTName",
+      "usertname",
+      "ชื่อของผู้ใช้ภาษาไทย เก็บบันทึก ชื่อ-นามสกุล",
+      "นามสกุล"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "AuthLevel",
+    "aliases": [
+      "AuthLevel",
+      "authlevel",
+      "ระดับ Authorize"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "Admin",
+    "aliases": [
+      "Admin",
+      "admin",
+      "แฟล็กบอกว่าเป็น User ที่สามารถใช้ Program Admin ได้หรือไม่"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "TeamId",
+    "aliases": [
+      "TeamId",
+      "teamid",
+      "รหัสประจำทีมของผู้ใช้"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "UserPassWord",
+    "aliases": [
+      "UserPassWord",
+      "encrypt แล้ว",
+      "userpassword",
+      "รหัสผ่าน เก็บ Password",
+      "รหัสผ่าน เก็บ Password ที่ encrypt แล้ว"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "PasswordExpireDate",
+    "aliases": [
+      "PasswordExpireDate",
+      "passwordexpiredate",
+      "วันที่ User Expire"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "FrontTeamId",
+    "aliases": [
+      "FrontTeamId",
+      "frontteamid",
+      "รหัสประจำทีมที่ใช้ในระบบ Front"
+    ]
+  },
+  {
+    "table": "TUS",
+    "field": "Primary Key",
+    "aliases": [
+      "Primary Key",
+      "primary key",
+      "รหัสประจำตัวของผู้ใช้ โดยบังคับให้เป็นตัวอักษรตัวเล็กเท่านั้น"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustAcct) - ภายใต้กลุ่ม Account Code"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustCode) - ภายใต้กลุ่ม Account Code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (Account) - ภายใต้กลุ่ม Account Code",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "ImgBalance",
+    "aliases": [
+      "ImgBalance",
+      "imgbalance",
+      "ยอด Balance ที่ฝากล่วงหน้า 1 วันและ Update วงเงินในวันรุ่งขึ้น",
+      "ยอดฝากล่วงหน้า 1 วัน"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "AdvBalance",
+    "aliases": [
+      "AdvBalance",
+      "advbalance",
+      "ยอด Balance ที่ฝากล่วงหน้า",
+      "ยอดฝากล่วงหน้า"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "CashBalance",
+    "aliases": [
+      "CashBalance",
+      "cash balance",
+      "cashbalance",
+      "ยอดเงิน",
+      "ยอดเงินฝาก",
+      "ยอดเงินฝากของลูกค้าที่ถึง Due แล้ว",
+      "เงินคงเหลือ"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "AvailBalance",
+    "aliases": [
+      "AvailBalance",
+      "available balance",
+      "availbalance",
+      "ยอดพร้อมใช้",
+      "ยอดเงินฝากของลูกค้าที่ Cheque Clearing แล้ว",
+      "เงินถอนได้"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "MargBalance",
+    "aliases": [
+      "MargBalance",
+      "margbalance",
+      "ยอดเงินกู้",
+      "ยอดเงินกู้ของลูกค้าที่ถึง Due แล้ว",
+      "หนี้ margin"
+    ]
+  },
+  {
+    "table": "MCBL",
+    "field": "AvailMargBalance",
+    "aliases": [
+      "AvailMargBalance",
+      "availmargbalance",
+      "ยอดเงินกู้ของลูกค้าที่ Cheque ผ่าน",
+      "ยอดเงินกู้ที่เช็คผ่าน"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "PostDate",
+    "aliases": [
+      "Balance",
+      "PostDate",
+      "postdate",
+      "วันที่ Outstanding",
+      "วันที่ Outstanding ของ Balance"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustAcct) - ภายใต้กลุ่ม Account Code"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustCode) - ภายใต้กลุ่ม Account Code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (Account) - ภายใต้กลุ่ม Account Code",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "ImgBalance",
+    "aliases": [
+      "ImgBalance",
+      "imgbalance",
+      "ยอด Balance ที่ฝากล่วงหน้า 1 วันและ Update วงเงินในวันรุ่งขึ้น",
+      "ยอดฝากล่วงหน้า 1 วัน"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "AdvBalance",
+    "aliases": [
+      "AdvBalance",
+      "advbalance",
+      "ยอด Balance ที่ฝากล่วงหน้า",
+      "ยอดฝากล่วงหน้า"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "CashBalance",
+    "aliases": [
+      "CashBalance",
+      "cash balance",
+      "cashbalance",
+      "ยอดเงิน",
+      "ยอดเงินฝาก",
+      "ยอดเงินฝากของลูกค้าที่ถึง Due แล้ว",
+      "เงินคงเหลือ"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "AvailBalance",
+    "aliases": [
+      "AvailBalance",
+      "available balance",
+      "availbalance",
+      "ยอดพร้อมใช้",
+      "ยอดเงินฝากของลูกค้าที่ Cheque Clearing แล้ว",
+      "เงินถอนได้"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "MargBalance",
+    "aliases": [
+      "MargBalance",
+      "margbalance",
+      "ยอดเงินกู้",
+      "ยอดเงินกู้ของลูกค้าที่ถึง Due แล้ว",
+      "หนี้ margin"
+    ]
+  },
+  {
+    "table": "HMCBL",
+    "field": "AvailMargBalance",
+    "aliases": [
+      "AvailMargBalance",
+      "availmargbalance",
+      "ยอดเงินกู้ของลูกค้าที่ Cheque ผ่าน",
+      "ยอดเงินกู้ที่เช็คผ่าน"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "Seqno",
+    "aliases": [
+      "Seqno",
+      "seqno",
+      "ลำดับที่ของรายการ Transaction ที่จะนำไปกระทบยอด Balance"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustAcct) - ภายใต้กลุ่ม Account Code"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustCode) - ภายใต้กลุ่ม Account Code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (Account) - ภายใต้กลุ่ม Account Code",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "CBRefType",
+    "aliases": [
+      "CBRefType",
+      "cbreftype",
+      "กลุ่ม CBRefer",
+      "ประเภทของรายการที่เกิดในบัญชี Credit Balance (กลุ่ม CBRefer)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "CBRefDate",
+    "aliases": [
+      "CBRefDate",
+      "cbrefdate",
+      "กลุ่ม CBRefer",
+      "วันที่เกิดรายการ",
+      "วันที่เกิดรายการ (กลุ่ม CBRefer)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "CBRefNo",
+    "aliases": [
+      "CBRefNo",
+      "cbrefno",
+      "กลุ่ม CBRefer",
+      "หมายเลขที่อ้างถึงรายการ",
+      "หมายเลขที่อ้างถึงรายการ (กลุ่ม CBRefer)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "RefType",
+    "aliases": [
+      "RefType",
+      "reftype",
+      "กลุ่ม ReferNo",
+      "รายการที่ทำให้เกิดรายการ Credit Balance นี้ (กลุ่ม ReferNo)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "RefDate",
+    "aliases": [
+      "RefDate",
+      "refdate",
+      "กลุ่ม ReferNo",
+      "วันที่ทำให้เกิดรายการ",
+      "วันที่ทำให้เกิดรายการ (กลุ่ม ReferNo)",
+      "วันที่รายการ",
+      "วันที่อ้างอิง"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "RefNo",
+    "aliases": [
+      "RefNo",
+      "refno",
+      "กลุ่ม ReferNo",
+      "หมายเลขรายการ",
+      "หมายเลขรายการ (กลุ่ม ReferNo)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "CDRefType",
+    "aliases": [
+      "CDRefType",
+      "Refer No ที่จะบอกว่ารายการนี้เป็นรายการด้านรับหรือจ่าย (กลุ่ม CDRefer)",
+      "cdreftype",
+      "กลุ่ม CDRefer"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "CDRefDate",
+    "aliases": [
+      "CDRefDate",
+      "cdrefdate",
+      "กลุ่ม CDRefer",
+      "จ่าย",
+      "วันที่อ้างอิงด้านรับ",
+      "วันที่อ้างอิงด้านรับ/จ่าย (กลุ่ม CDRefer)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "CDRefNo",
+    "aliases": [
+      "CDRefNo",
+      "cdrefno",
+      "กลุ่ม CDRefer",
+      "จ่าย",
+      "หมายเลขรายการรับ",
+      "หมายเลขรายการรับ/จ่าย (กลุ่ม CDRefer)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "TransType1",
+    "aliases": [
+      "TransType1",
+      "Transaction ของบัญชี Credit Balance",
+      "transtype1"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "TransType2",
+    "aliases": [
+      "TransType2",
+      "transtype2",
+      "รายการ Transaction ต่างๆ ของบัญชี Credit Balance"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "SubType",
+    "aliases": [
+      "AP",
+      "SubType",
+      "subtype",
+      "เก็บบันทึกว่าเป็นด้าน AR",
+      "เก็บบันทึกว่าเป็นด้าน AR หรือ AP"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "DueDate",
+    "aliases": [
+      "DueDate",
+      "duedate",
+      "วัน Due ของรายการ Transaction ต่างๆ"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "GenDate",
+    "aliases": [
+      "GenDate",
+      "gendate",
+      "เป็นวันที่สำหรับให้ Program สร้างรายการ Next State ซึ่งจะเป็นรายการเกี่ยวกับการทำรายการล่วงหน้าและการกำหนดวันที่ถือว่า Cheque ผ่าน"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "Amt",
+    "aliases": [
+      "Amt",
+      "amount",
+      "amt",
+      "จำนวนเงิน",
+      "จำนวนเงินของ Transaction นั้นๆ ที่มีผลต่อยอด Balance",
+      "มูลค่า",
+      "ยอดเงินรายการ"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "MatCashAmt",
+    "aliases": [
+      "MatCashAmt",
+      "matcashamt",
+      "ยกเลิก",
+      "ยอดเงินที่ตัดหรือเพิ่มในบัญชี Cash",
+      "ยอดเงินที่ตัดหรือเพิ่มในบัญชี Cash (ยกเลิก)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "MatMargAmt",
+    "aliases": [
+      "MatMargAmt",
+      "matmargamt",
+      "ยกเลิก",
+      "ยอดเงินที่ตัดหรือเพิ่มในบัญชี Margin (ยกเลิก)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "PostDate",
+    "aliases": [
+      "PostDate",
+      "postdate",
+      "วันที่ Post JCBL ไปยัง File MCBL โดย Update Field Balance"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "GenPostDate",
+    "aliases": [
+      "GenPostDate",
+      "genpostdate",
+      "วันที่ Gen รายการ"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "Delflag",
+    "aliases": [
+      "Delflag",
+      "delete flag",
+      "delflag",
+      "ยกเลิกหรือไม่",
+      "สถานะลบ",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง",
+      "แฟล็กบอกว่ารายการนี้ถูกลบทิ้ง/ยกเลิกหรือไม่"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "RepostType",
+    "aliases": [
+      "RepostType",
+      "reposttype",
+      "กลุ่ม RepostRefer",
+      "ประเภทรายการ Repost",
+      "ประเภทรายการ Repost (กลุ่ม RepostRefer)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "RepostDate",
+    "aliases": [
+      "RepostDate",
+      "repostdate",
+      "กลุ่ม RepostRefer",
+      "วันที่อ้างอิงของรายการ Repost",
+      "วันที่อ้างอิงของรายการ Repost (กลุ่ม RepostRefer)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "RepostNo",
+    "aliases": [
+      "RepostNo",
+      "repostno",
+      "กลุ่ม RepostRefer",
+      "หมายเลข Refer ที่อ้างถึงรายการ Repost (กลุ่ม RepostRefer)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "ImgRule",
+    "aliases": [
+      "ImgRule",
+      "imgrule",
+      "เป็นจำนวนเงินที่ฝากล่วงหน้าก่อนวัน Due 1 วัน"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "AdvRule",
+    "aliases": [
+      "AdvRule",
+      "advrule",
+      "เป็นจำนวนเงินที่ฝากล่วงหน้า"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "CashRule",
+    "aliases": [
+      "CashRule",
+      "cashrule",
+      "รวมถึงเช็คที่ยังไม่ผ่าน",
+      "เป็นจำนวนเงินที่มี",
+      "เป็นจำนวนเงินที่มี (รวมถึงเช็คที่ยังไม่ผ่าน) หรือเป็นจำนวนเงินที่ถอนได้จริง จะรวมเช็คที่ due ด้วย"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "AvailRule",
+    "aliases": [
+      "AvailRule",
+      "availrule",
+      "เป็นจำนวนเงินที่ถอนได้จริง จะรวมเช็คที่ due ด้วย"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "MargRule",
+    "aliases": [
+      "MargRule",
+      "margrule",
+      "เป็นจำนวนเงินที่กู้ ถ้ามีการมาฝากเงินเพื่อลดหนี้และกฎบอกให้ลบที่ฟิลด์นี้ก่อน และจำนวนเงินที่ฝากสามารถล้างหนี้ได้หมด ให้ดูว่าลูกค้ายังมีหุ้นคงเหลืออยู่ในบัญชีหรือไม่ ถ้ายังเหลืออยู่ไม่ว่าจำนวนเท่าไหร่ ให้คงเหลือหนี้ไว้ใน MarginBalance อย่างน้อย = TCC2.MinMargBalance"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "AvailMargRule",
+    "aliases": [
+      "AvailMargRule",
+      "availmargrule",
+      "ความหมายเหมือน MargRule",
+      "ความหมายเหมือน MargRule (เนื่องจากมีการถอนเงินเกินยอด AvailBalance ยอดที่ถอนเกินจะนำมาเข้าไว้ที่ AvailMargBance)"
+    ]
+  },
+  {
+    "table": "JCBL",
+    "field": "HaveStock",
+    "aliases": [
+      "HaveStock",
+      "havestock",
+      "ตอนที่ทำ Transaction ลูกค้ามีหุ้น Marginable อยู่หรือไม่"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustAcct) - ภายใต้กลุ่ม Account Code"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustCode) - ภายใต้กลุ่ม Account Code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (Account) - ภายใต้กลุ่ม Account Code",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "field": "ShareCode",
+    "aliases": [
+      "ShareCode",
+      "share",
+      "sharecode",
+      "stock",
+      "symbol",
+      "ชื่อหลักทรัพย์",
+      "ชื่อหุ้น",
+      "หลักทรัพย์",
+      "หุ้น"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "field": "Purpose",
+    "aliases": [
+      "Purpose",
+      "purpose",
+      "ประเภทการฝากหุ้น"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "field": "PositiveUnit",
+    "aliases": [
+      "PositiveUnit",
+      "positiveunit",
+      "จำนวนหุ้น",
+      "จำนวนหุ้น (ด้านบวก)",
+      "จำนวนหุ้นคงเหลือ",
+      "ด้านบวก",
+      "ยอดถือหุ้น",
+      "ยอดหุ้น",
+      "หุ้นคงเหลือ"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "field": "NegativeUnit",
+    "aliases": [
+      "NegativeUnit",
+      "negativeunit",
+      "จำนวนหุ้น",
+      "จำนวนหุ้น (ด้านลบ เช่นขายเกิน)",
+      "ด้านลบ เช่นขายเกิน",
+      "ยอดหุ้นติดลบ",
+      "หุ้นติดลบ"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "field": "MavgAmt",
+    "aliases": [
+      "MavgAmt",
+      "mavgamt",
+      "คำนวณแบบ Moving Average",
+      "มูลค่าหุ้น",
+      "มูลค่าหุ้น (คำนวณแบบ Moving Average)",
+      "มูลค่าหุ้น moving average"
+    ]
+  },
+  {
+    "table": "MCSM",
+    "field": "FiFoAmt",
+    "aliases": [
+      "FiFoAmt",
+      "fifoamt",
+      "คำนวณแบบ FIFO",
+      "มูลค่าหุ้น",
+      "มูลค่าหุ้น (คำนวณแบบ FIFO)",
+      "มูลค่าหุ้น fifo"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "Seqno",
+    "aliases": [
+      "Seqno",
+      "seqno",
+      "ลำดับประจำรายการแต่ละรายการที่ POST ผ่าน MCSD"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "RefType",
+    "aliases": [
+      "RefType",
+      "reftype",
+      "กลุ่ม ReferNo",
+      "ประเภทข้อมูลอ้างอิง",
+      "ประเภทข้อมูลอ้างอิง (กลุ่ม ReferNo)"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "RefDate",
+    "aliases": [
+      "RefDate",
+      "refdate",
+      "กลุ่ม ReferNo",
+      "วันที่รายการ",
+      "วันที่อ้างอิง",
+      "วันที่เกิดรายการอ้างอิง",
+      "วันที่เกิดรายการอ้างอิง (กลุ่ม ReferNo)"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "Refno",
+    "aliases": [
+      "Refno",
+      "refno",
+      "กลุ่ม ReferNo",
+      "หมายเลขรายการอ้างอิง",
+      "หมายเลขรายการอ้างอิง (กลุ่ม ReferNo)"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "Purpose",
+    "aliases": [
+      "Purpose",
+      "purpose",
+      "วัตถุประสงค์ของการฝากหุ้น"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "LocationFlag",
+    "aliases": [
+      "Customer",
+      "LocationFlag",
+      "locationflag",
+      "บอกว่าเป็นรายการของ Location",
+      "บอกว่าเป็นรายการของ Location หรือ Customer"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "CustType",
+    "aliases": [
+      "CustType",
+      "customer type",
+      "custtype",
+      "กลุ่ม Account Code",
+      "ประเภทลูกค้า",
+      "รหัสประเภทลูกค้า",
+      "รหัสประเภทลูกค้า (กลุ่ม Account Code)"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "กลุ่ม Account Code",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (กลุ่ม Account Code)"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "กลุ่ม Account Code",
+      "รหัสลูกค้า",
+      "รหัสลูกค้า (กลุ่ม Account Code)",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้าเต็ม",
+      "รหัสบัญชีลูกค้าเต็ม (กลุ่ม Account Code)",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "ShareCode",
+    "aliases": [
+      "ShareCode",
+      "share",
+      "sharecode",
+      "stock",
+      "symbol",
+      "ชื่อหลักทรัพย์",
+      "ชื่อหุ้น",
+      "หลักทรัพย์",
+      "หุ้น"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "Unit",
+    "aliases": [
+      "Unit",
+      "qty",
+      "quantity",
+      "unit",
+      "จำนวนหุ้น",
+      "หน่วย"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "Amt",
+    "aliases": [
+      "Amt",
+      "amount",
+      "amt",
+      "จำนวนเงิน",
+      "มูลค่า",
+      "มูลค่าของรายการ",
+      "ยอดเงินรายการ"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "Price",
+    "aliases": [
+      "Price",
+      "price",
+      "ราคา",
+      "ราคาหุ้น"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "InFlag",
+    "aliases": [
+      "InFlag",
+      "Out",
+      "inflag",
+      "แฟล็กบอกว่าเป็นด้าน In",
+      "แฟล็กบอกว่าเป็นด้าน In หรือ Out"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "BfPositiveUnit",
+    "aliases": [
+      "BfPositiveUnit",
+      "bfpositiveunit",
+      "ยอดหุ้นที่เป็นบวกก่อนหน้านี้ที่จะนำรายการนี้ไป Update"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "BfNegativeUnit",
+    "aliases": [
+      "BfNegativeUnit",
+      "Unmatch",
+      "bfnegativeunit",
+      "ฝั่ง Out",
+      "ยอดหุ้นที่เป็นลบ",
+      "ยอดหุ้นที่เป็นลบ (ฝั่ง Out ที่ Unmatch) ก่อนหน้านี้ที่จะนำรายการนี้ไป Update"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "CfPositiveUnit",
+    "aliases": [
+      "CfPositiveUnit",
+      "cfpositiveunit",
+      "ยอดหุ้นที่เป็นบวกหลังนำรายการนี้ไป Update"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "CfNegativeUnit",
+    "aliases": [
+      "CfNegativeUnit",
+      "Unmatch",
+      "cfnegativeunit",
+      "ฝั่ง Out",
+      "ยอดหุ้นที่เป็นลบ",
+      "ยอดหุ้นที่เป็นลบ (ฝั่ง Out ที่ Unmatch) หลังการนำรายการนี้ไป Update",
+      "หลังการนำรายการนี้ไป Update"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "PostDate",
+    "aliases": [
+      "PostDate",
+      "postdate",
+      "วันที่ Post รายการนี้"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "CancelDate",
+    "aliases": [
+      "CancelDate",
+      "canceldate",
+      "วันที่ยกเลิกรายการนี้ จากการ Repost"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "BfMavgAmt",
+    "aliases": [
+      "BfMavgAmt",
+      "bfmavgamt",
+      "มูลค่าแบบ Moving Average ก่อนหน้าที่จะนำรายการนี้ไป Update"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "BfFifoAmt",
+    "aliases": [
+      "...",
+      "... (สืบค้นเนื้อความหน้าถัดไป) มูลค่าแบบ FIFO ก่อนหน้าที่จะนำรายการนี้ไป Update",
+      "BfFifoAmt",
+      "bffifoamt",
+      "สืบค้นเนื้อความหน้าถัดไป"
+    ]
+  },
+  {
+    "table": "HTU",
+    "field": "RepostDate",
+    "aliases": [
+      "RepostDate",
+      "repostdate",
+      "วันที่ทำการ Post รายการ Repost"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "TxType",
+    "aliases": [
+      "TxType",
+      "txtype",
+      "ประเภทของรายการ ดูภาคผนวก"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "GenFlag",
+    "aliases": [
+      "GenFlag",
+      "NT",
+      "genflag",
+      "โปรแกรมสร้างหรือไม่ เช่น รายการ Net Clearing (NT)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "RefType",
+    "aliases": [
+      "RefType",
+      "reftype",
+      "กลุ่ม ReferNo",
+      "ประเภทข้อมูลอ้างอิงฝั่งแรก",
+      "ประเภทข้อมูลอ้างอิงฝั่งแรก (กลุ่ม ReferNo)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "RefDate",
+    "aliases": [
+      "RefDate",
+      "refdate",
+      "กลุ่ม ReferNo",
+      "วันที่รายการ",
+      "วันที่อ้างอิง",
+      "วันที่เกิดรายการฝั่งแรก",
+      "วันที่เกิดรายการฝั่งแรก (กลุ่ม ReferNo)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Refno",
+    "aliases": [
+      "Refno",
+      "refno",
+      "กลุ่ม ReferNo",
+      "หมายเลขรายการฝั่งแรก",
+      "หมายเลขรายการฝั่งแรก (กลุ่ม ReferNo)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "ShareCode",
+    "aliases": [
+      "ShareCode",
+      "share",
+      "sharecode",
+      "stock",
+      "symbol",
+      "ชื่อหลักทรัพย์",
+      "ชื่อหุ้น",
+      "หลักทรัพย์",
+      "หุ้น"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Purpose",
+    "aliases": [
+      "Purpose",
+      "purpose",
+      "ประเภทของหุ้นฝั่งแรก"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "LocationFlag",
+    "aliases": [
+      "Customer",
+      "LocationFlag",
+      "locationflag",
+      "บอกว่าเป็นรายการของ Location",
+      "บอกว่าเป็นรายการของ Location หรือ Customer"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "CustType",
+    "aliases": [
+      "CustType",
+      "Location",
+      "customer type",
+      "custtype",
+      "กลุ่ม Account Code",
+      "ประเภทลูกค้า",
+      "รหัสประเภทลูกค้า",
+      "รหัสประเภทลูกค้า/Location (กลุ่ม Account Code)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "กลุ่ม Account Code",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (กลุ่ม Account Code)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "กลุ่ม Account Code",
+      "รหัสลูกค้า",
+      "รหัสลูกค้า (กลุ่ม Account Code)",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้าเต็ม",
+      "รหัสบัญชีลูกค้าเต็ม (กลุ่ม Account Code)",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "DmatchFlag",
+    "aliases": [
+      "Direct Match Flag",
+      "Direct Match Flag : บอกว่ารายการฝั่งแรกมีการระบุ Direct Match หรือไม่",
+      "DmatchFlag",
+      "dmatchflag"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "InFlag",
+    "aliases": [
+      "InFlag",
+      "inflag",
+      "ทิศทางรายการฝั่งแรก"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "RefType2",
+    "aliases": [
+      "RefType2",
+      "reftype2",
+      "กลุ่ม ReferNo2",
+      "ประเภทข้อมูลอ้างอิงฝั่งที่สอง",
+      "ประเภทข้อมูลอ้างอิงฝั่งที่สอง (กลุ่ม ReferNo2)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "RefDate2",
+    "aliases": [
+      "RefDate2",
+      "refdate2",
+      "กลุ่ม ReferNo2",
+      "วันที่เกิดรายการฝั่งที่สอง",
+      "วันที่เกิดรายการฝั่งที่สอง (กลุ่ม ReferNo2)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Refno2",
+    "aliases": [
+      "Refno2",
+      "refno2",
+      "กลุ่ม ReferNo2",
+      "หมายเลขรายการฝั่งที่สอง",
+      "หมายเลขรายการฝั่งที่สอง (กลุ่ม ReferNo2)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "ShareCode2",
+    "aliases": [
+      "ShareCode2",
+      "sharecode2",
+      "ชื่อหลักทรัพย์ของฝั่ง Contra"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Purpose2",
+    "aliases": [
+      "Purpose2",
+      "purpose2",
+      "ประเภทของหุ้นของรายการฝั่ง Contra"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "LocationFlag2",
+    "aliases": [
+      "Customer ฝั่ง Contra",
+      "LocationFlag2",
+      "locationflag2",
+      "บอกว่าเป็นรายการของ Location",
+      "บอกว่าเป็นรายการของ Location หรือ Customer ฝั่ง Contra"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "CustType2",
+    "aliases": [
+      "CustType2",
+      "Location ฝั่ง Contra",
+      "custtype2",
+      "กลุ่ม Account Code2",
+      "รหัสประเภทลูกค้า",
+      "รหัสประเภทลูกค้า/Location ฝั่ง Contra (กลุ่ม Account Code2)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "CustAcct2",
+    "aliases": [
+      "CustAcct2",
+      "custacct2",
+      "กลุ่ม Account Code2",
+      "รหัสบัญชีลูกค้าฝั่ง Contra",
+      "รหัสบัญชีลูกค้าฝั่ง Contra (กลุ่ม Account Code2)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "CustCode2",
+    "aliases": [
+      "CustCode2",
+      "custcode2",
+      "กลุ่ม Account Code2",
+      "รหัสลูกค้าฝั่ง Contra",
+      "รหัสลูกค้าฝั่ง Contra (กลุ่ม Account Code2)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Account2",
+    "aliases": [
+      "Account2",
+      "account2",
+      "กลุ่ม Account Code2",
+      "รหัสบัญชีลูกค้าเต็มฝั่ง Contra",
+      "รหัสบัญชีลูกค้าเต็มฝั่ง Contra (กลุ่ม Account Code2)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "DmatchFlag2",
+    "aliases": [
+      "Direct Match Flag",
+      "Direct Match Flag : บอกว่ารายการฝั่งที่สองมีการระบุ Direct Match หรือไม่",
+      "DmatchFlag2",
+      "dmatchflag2"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "InFlag2",
+    "aliases": [
+      "InFlag2",
+      "inflag2",
+      "ทิศทางรายการฝั่งที่สอง"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "EffDate",
+    "aliases": [
+      "EffDate",
+      "effdate",
+      "วันที่รายการมีผล",
+      "วันที่รายการมีผล (เช่น การสร้างใบฝาก Short เป็นวันที่ Trade)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Unit",
+    "aliases": [
+      "Unit",
+      "qty",
+      "quantity",
+      "unit",
+      "จำนวนหุ้น",
+      "หน่วย"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "AvgPrice",
+    "aliases": [
+      "AvgPrice",
+      "average price",
+      "avgprice",
+      "ราคาต่อหุ้น โดยประมาณ",
+      "ราคาเฉลี่ย"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Amt",
+    "aliases": [
+      "Amt",
+      "Unit * AvgPrice",
+      "amount",
+      "amt",
+      "จำนวนเงิน",
+      "ต้นทุนฝาก โดยประมาณ",
+      "ต้นทุนฝาก โดยประมาณ (Unit * AvgPrice)",
+      "มูลค่า",
+      "ยอดเงินรายการ"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "OtherReferNo",
+    "aliases": [
+      "OtherReferNo",
+      "Refer No ของเอกสารของหน่วยงานที่ติดต่อด้วย",
+      "otherreferno"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "OtherReferNo2",
+    "aliases": [
+      "OtherReferNo2",
+      "Refer No ของเอกสารของหน่วยงานที่ติดต่อด้วยฝั่ง Contra",
+      "otherreferno2"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "XcloseFlag",
+    "aliases": [
+      "XcloseFlag",
+      "xcloseflag",
+      "แฟล็กบอกว่ารายการนี้ได้รับสิทธิในการขึ้นป้าย X ใดๆ หรือไม่"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Xdate",
+    "aliases": [
+      "Purpose 1*",
+      "Xdate",
+      "xdate",
+      "วันที่ขึ้นป้าย XR ของลูกหุ้นใบนั้นๆ กรณีฝากลูกหุ้น (Purpose 1*)"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "ContraLocation",
+    "aliases": [
+      "ContraLocation",
+      "contralocation",
+      "รหัสของ Location ที่โอนหุ้นด้วย เช่น รหัส Broker หรือ รหัสสมาชิกย่อยของ SDC ที่ลูกค้าโอนหุ้นผ่าน"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "RedeemDate",
+    "aliases": [
+      "RedeemDate",
+      "redeemdate",
+      "วันที่ทำการ Redeem"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "EditDate",
+    "aliases": [
+      "EditDate",
+      "editdate",
+      "ทำรายการนี้",
+      "วันที่ป้อน",
+      "วันที่ป้อน/ทำรายการนี้"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "EditTime",
+    "aliases": [
+      "EditTime",
+      "edittime",
+      "เวลาที่ป้อน",
+      "เวลาที่ป้อน/แก้ไขรายการนี้ครั้งสุดท้าย",
+      "แก้ไขรายการนี้ครั้งสุดท้าย"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "PeditFlag",
+    "aliases": [
+      "( Reserve )",
+      "PeditFlag",
+      "Reserve",
+      "peditflag"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "PconfirmFlag",
+    "aliases": [
+      "PconfirmFlag",
+      "pconfirmflag",
+      "เหมือน LConfirmFlag"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "PpostFlag",
+    "aliases": [
+      "PpostFlag",
+      "ppostflag",
+      "เหมือน LPostFlag"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "PpostDate",
+    "aliases": [
+      "PpostDate",
+      "ppostdate",
+      "เหมือน LPostDate"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "LconfirmFlag",
+    "aliases": [
+      "LconfirmFlag",
+      "lconfirmflag",
+      "แฟล็กบอกว่า Confirm แล้วหรือยังโดยโปรแกรม Confirm for Post"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "LpostFlag",
+    "aliases": [
+      "LpostFlag",
+      "lpostflag",
+      "รายการอนุญาตให้ Post หรือไม่ มีค่าเท่ากับ 1 เสมอ"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "LpostDate",
+    "aliases": [
+      "LpostDate",
+      "lpostdate",
+      "วันที่ทำการ Post ยอดหุ้น"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "DelFlag",
+    "aliases": [
+      "DelFlag",
+      "Delete Flag",
+      "Delete Flag : แฟล็กบอกว่ารายการนี้ถูกยกเลิกหรือไม่",
+      "delete flag",
+      "delflag",
+      "สถานะลบ"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "PrintFlag",
+    "aliases": [
+      "Print Flag",
+      "Print Flag : แฟล็กบอกว่ารายการนี้พิมพ์แล้วหรือยัง",
+      "PrintFlag",
+      "printflag"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "UserBranch",
+    "aliases": [
+      "UserBranch",
+      "user branch",
+      "userbranch",
+      "สาขาของผู้ใช้ที่ป้อนรายการเข้า",
+      "สาขาผู้ใช้"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "UserId",
+    "aliases": [
+      "UserId",
+      "userid",
+      "รหัสผู้ใช้ที่ป้อนรายการ"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "Remark",
+    "aliases": [
+      "Remark",
+      "remark",
+      "หมายเหตุ"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "RemainMethod",
+    "aliases": [
+      "Flag บอกวิธีตัดหุ้นที่เหลือจากการ Direct Match",
+      "RemainMethod",
+      "remainmethod"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "RedeemNo",
+    "aliases": [
+      "RedeemNo",
+      "Refer No ของรายการ Redeem",
+      "Refer No ของรายการ Redeem (ReferType = TM)",
+      "ReferType = TM",
+      "redeemno"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "RemainPostUnit",
+    "aliases": [
+      "RemainPostUnit",
+      "remainpostunit",
+      "จำนวนหุ้นที่ยังคงเหลืออยู่แต่อย่างไม่ได้ทำการ Post"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "TrxBranch",
+    "aliases": [
+      "TrxBranch",
+      "transaction branch",
+      "trxbranch",
+      "สาขาที่เกิดรายการ",
+      "สาขารายการ"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "UnpaidUnit",
+    "aliases": [
+      "UnpaidUnit",
+      "unpaidunit",
+      "ยอดหุ้นที่ติดภาระ"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "OverUnit",
+    "aliases": [
+      "OverUnit",
+      "overunit",
+      "ยอดหุ้นที่ถอนเกินบัญชี"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "AuthorizeUser",
+    "aliases": [
+      "Authorize รายการนี้",
+      "AuthorizeUser",
+      "authorizeuser",
+      "user",
+      "user ที่ Authorize รายการนี้"
+    ]
+  },
+  {
+    "table": "JSH",
+    "field": "ConfirmUser",
+    "aliases": [
+      "Confirm รายการนี้",
+      "ConfirmUser",
+      "confirmuser",
+      "user",
+      "user ที่ Confirm รายการนี้"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "PostDate",
+    "aliases": [
+      "PostDate",
+      "postdate",
+      "วันที่ของข้อมูลที่ใช้ในการ Post Margin"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดฯใด"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustAcct) - ภายใต้กลุ่ม Account Code"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (CustCode) - ภายใต้กลุ่ม Account Code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "ภายใต้กลุ่ม Account Code",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "รหัสบัญชีลูกค้า (Account) - ภายใต้กลุ่ม Account Code",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "PnAmt1",
+    "aliases": [
+      "PnAmt1",
+      "pnamt1",
+      "มูลค่า PN ของลูกค้าที่ได้นำมาฝากไว้ ซึ่งจะเพิ่มวงเงิน"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "PnAmt2",
+    "aliases": [
+      "PnAmt2",
+      "pnamt2",
+      "มูลค่า PN ของลูกค้าที่ได้นำมาฝากไว้ ซึ่งไม่เพิ่มวงเงิน แต่คำนวณใน MM"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Collateral1",
+    "aliases": [
+      "Collateral1",
+      "collateral1",
+      "มูลค่าของสินทรัพย์ค้ำประกัน ซึ่งเพิ่มวงเงิน"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Collateral2",
+    "aliases": [
+      "Collateral2",
+      "collateral2",
+      "มูลค่าของสินทรัพย์ค้ำประกัน ซึ่งใช้คำนวณ MM แต่ไม่เพิ่มวงเงิน"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Debt",
+    "aliases": [
+      "Debt",
+      "debt",
+      "มูลหนี้ทั้งหมดที่ยังไม่ได้จ่ายเงินของลูกค้า Margin"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AR_Trade",
+    "aliases": [
+      "AR_Trade",
+      "ar_trade",
+      "ยอดหนี้ที่ต้องรับชำระจากรายการซื้อขาย"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AR_Redeem",
+    "aliases": [
+      "AR_Redeem",
+      "ar_redeem",
+      "ยอดหนี้ที่ต้องรับชำระจากรายการไถ่ถอน"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AR_MonInterest",
+    "aliases": [
+      "AR_MonInterest",
+      "ar_moninterest",
+      "ยอดหนี้ที่ต้องรับชำระจากรายการดอกเบี้ยสิ้นเดือน"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AR_Overdue",
+    "aliases": [
+      "AR_Overdue",
+      "ar_overdue",
+      "ยอดหนี้ที่ต้องรับชำระทุกชนิดที่ Overdue แล้ว"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AR_CashMarginBuy",
+    "aliases": [
+      "( Reserve )",
+      "AR_CashMarginBuy",
+      "Reserve",
+      "ar_cashmarginbuy"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AR_Other",
+    "aliases": [
+      "AR_Other",
+      "ar_other",
+      "ยอดหนี้ที่ต้องรับชำระจากรายการอื่นๆ"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AR_CheqReturn",
+    "aliases": [
+      "AR_CheqReturn",
+      "ar_cheqreturn",
+      "ยอดหนี้ที่ต้องรับชำระจากรายการเช็คคืน"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AP_Trade",
+    "aliases": [
+      "AP_Trade",
+      "ap_trade",
+      "ยอดหนี้ที่ต้องจ่ายชำระจากรายการซื้อขาย"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "MktVal",
+    "aliases": [
+      "MktVal",
+      "mktval",
+      "ราคาตลาด"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "MktVal_Bis",
+    "aliases": [
+      "BIS",
+      "MktVal_Bis",
+      "mktval_bis",
+      "ราคาตลาด คิดตาม %",
+      "ราคาตลาด คิดตาม % ของ BIS"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Mkt_Right",
+    "aliases": [
+      "Mkt_Right",
+      "mkt_right",
+      "ราคาตลาดของลูกหุ้น"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Mkt_Right_Bis",
+    "aliases": [
+      "BIS",
+      "Mkt_Right_Bis",
+      "mkt_right_bis",
+      "ราคาตลาดของลูกหุ้น คิดตาม %",
+      "ราคาตลาดของลูกหุ้น คิดตาม % ของ BIS"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Mkt_Pledgef",
+    "aliases": [
+      "Mkt_Pledgef",
+      "mkt_pledgef",
+      "ราคาตลาดของหุ้นค้ำประกันด้านเงินกู้"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Mkt_Pledgef_Bis",
+    "aliases": [
+      "BIS",
+      "Mkt_Pledgef_Bis",
+      "mkt_pledgef_bis",
+      "ราคาตลาดของหุ้นค้ำประกันด้านเงินกู้ คิดตาม % ของ BIS"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Mkt_Pledgem",
+    "aliases": [
+      "Mkt_Pledgem",
+      "mkt_pledgem",
+      "ราคาตลาดของหุ้นค้ำประกันด้านหลักทรัพย์"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Mkt_Pledgem_Bis",
+    "aliases": [
+      "Mkt_Pledgem_Bis",
+      "mkt_pledgem_bis",
+      "ราคาตลาดของหุ้นค้ำประกันด้านหลักทรัพย์ คิดตามเปอร์เซ็นต์ของ BIS"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "PnUsed",
+    "aliases": [
+      "PnUsed",
+      "pnused",
+      "มูลค่า PN ที่ใช้เพื่อค้ำประกันการซื้อ Margin ทั้งหมด"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "UsedCreditLine",
+    "aliases": [
+      "UsedCreditLine",
+      "usedcreditline",
+      "วงเงินที่ใช้ไป"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "MarginRatio",
+    "aliases": [
+      "MarginRatio",
+      "marginratio",
+      "อัตราส่วน Maintenance Margin"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AppCreditLine",
+    "aliases": [
+      "AppCreditLine",
+      "appcreditline",
+      "วงเงินอนุมัติ"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_CreditLine",
+    "aliases": [
+      "Std_CreditLine",
+      "std_creditline",
+      "วงเงินที่คำนวณได้ตามที่ตลาดฯ กำหนด"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_MaxCreditLine",
+    "aliases": [
+      "Std_MaxCreditLine",
+      "std_maxcreditline",
+      "ตลาดฯ",
+      "วงเงินสูงสุดที่เทียบระหว่าง วงเงินที่คำนวณได้ด้วย PN กับที่อนุมัติ (ตลาดฯ)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_LineAvailable",
+    "aliases": [
+      "Std_LineAvailable",
+      "std_lineavailable",
+      "ตลาดฯ",
+      "วงเงินคงเหลือ เป็นวงเงินที่ยังคงสามารถซื้อหุ้นได้อีก (ตลาดฯ)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_PNCall",
+    "aliases": [
+      "Std_PNCall",
+      "std_pncall",
+      "ตลาดฯ",
+      "มูลค่า PN ที่ต้องเรียกเพิ่ม กรณี MM% ต่ำกว่ากำหนด (ตลาดฯ)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_PnWithdraw",
+    "aliases": [
+      "Std_PnWithdraw",
+      "std_pnwithdraw",
+      "ตลาดฯ",
+      "มูลค่า PN ที่ถอนได้",
+      "มูลค่า PN ที่ถอนได้ (ตลาดฯ)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_ForceSell",
+    "aliases": [
+      "Std_ForceSell",
+      "std_forcesell",
+      "จำนวนเงินที่ต้อง Force Sell กรณี MM% ต่ำกว่ากำหนด (ตลาดฯ)",
+      "ตลาดฯ"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_CallIM",
+    "aliases": [
+      "Std_CallIM",
+      "std_callim",
+      "มูลค่าหุ้นที่เรียกมาเพื่อให้มีค่าเท่ากับ IM"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_SellIM",
+    "aliases": [
+      "Std_SellIM",
+      "std_sellim",
+      "มูลค่าหุ้นที่บังคับขายเพื่อให้มีค่าเท่ากับ IM"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_CallMM",
+    "aliases": [
+      "Std_CallMM",
+      "std_callmm",
+      "มูลค่าหุ้นที่เรียกมาเพื่อให้มีค่าเท่ากับ MM"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_SellMM",
+    "aliases": [
+      "Std_SellMM",
+      "std_sellmm",
+      "มูลค่าหุ้นที่บังคับขายเพื่อให้มีค่าเท่ากับ MM"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_CallIM",
+    "aliases": [
+      "Comp_CallIM",
+      "Ref ฝั่งบริษัท",
+      "Ref ฝั่งบริษัท: มูลค่าหุ้นที่เรียกมาเพื่อให้มีค่าเท่ากับ IM",
+      "comp_callim"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_SellIM",
+    "aliases": [
+      "Comp_SellIM",
+      "Ref ฝั่งบริษัท",
+      "Ref ฝั่งบริษัท: มูลค่าหุ้นที่บังคับขายเพื่อให้มีค่าเท่ากับ IM",
+      "comp_sellim"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_CallMM",
+    "aliases": [
+      "Comp_CallMM",
+      "Ref ฝั่งบริษัท",
+      "Ref ฝั่งบริษัท: มูลค่าหุ้นที่เรียกมาเพื่อให้มีค่าเท่ากับ MM",
+      "comp_callmm"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_SellMM",
+    "aliases": [
+      "Comp_SellMM",
+      "Ref ฝั่งบริษัท",
+      "Ref ฝั่งบริษัท: มูลค่าหุ้นที่บังคับขายเพื่อให้มีค่าเท่ากับ MM",
+      "comp_sellmm"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_CreditLine",
+    "aliases": [
+      "Comp_CreditLine",
+      "comp_creditline",
+      "วงเงินที่คำนวณได้ตามที่บริษัทฯ กำหนด"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_MaxCreditLine",
+    "aliases": [
+      "Comp_MaxCreditLine",
+      "comp_maxcreditline",
+      "บริษัทฯ",
+      "วงเงินสูงสุดที่เทียบระหว่าง วงเงินที่คำนวณได้ด้วย PN กับที่อนุมัติ (บริษัทฯ)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_LineAvailable",
+    "aliases": [
+      "Comp_LineAvailable",
+      "comp_lineavailable",
+      "บริษัทฯ",
+      "วงเงินคงเหลือ เป็นวงเงินที่ยังคงสามารถซื้อหุ้นได้อีก (บริษัทฯ)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_PNCall",
+    "aliases": [
+      "Comp_PNCall",
+      "Ref ฝั่งบริษัท",
+      "Ref ฝั่งบริษัท: มูลค่า PN ที่ต้องเรียกเพิ่ม กรณี MM% ต่ำกว่ากำหนด",
+      "comp_pncall"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_PnWithdraw",
+    "aliases": [
+      "Comp_PnWithdraw",
+      "Ref ฝั่งบริษัท",
+      "Ref ฝั่งบริษัท: มูลค่า PN ที่ถอนได้",
+      "comp_pnwithdraw",
+      "มูลค่า PN ที่ถอนได้"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_ForceSell",
+    "aliases": [
+      "Comp_ForceSell",
+      "comp_forcesell",
+      "จำนวนเงินที่ต้อง Force Sell กรณี MM% ต่ำกว่ากำหนด (บริษัทฯ)",
+      "บริษัทฯ"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Letter Refno",
+    "aliases": [
+      "Letter Refno",
+      "ReferNo ของจดหมาย Call PN",
+      "ReferNo ของจดหมาย Call PN (กลุ่ม Letter Refno)",
+      "letter refno",
+      "กลุ่ม Letter Refno"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "LetType",
+    "aliases": [
+      "LetType",
+      "lettype",
+      "กลุ่ม Letter Refno",
+      "ประเภทจดหมาย",
+      "ประเภทจดหมาย (กลุ่ม Letter Refno)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "LetDate",
+    "aliases": [
+      "LetDate",
+      "letdate",
+      "กลุ่ม Letter Refno",
+      "วันที่ในจดหมาย",
+      "วันที่ในจดหมาย (กลุ่ม Letter Refno)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "LetNo",
+    "aliases": [
+      "LetNo",
+      "letno",
+      "กลุ่ม Letter Refno",
+      "หมายเลขจดหมาย",
+      "หมายเลขจดหมาย (กลุ่ม Letter Refno)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "FifoAmt",
+    "aliases": [
+      "FifoAmt",
+      "fifoamt",
+      "เก็บ inamount, inamount.make ของลูกค้า"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Amt02",
+    "aliases": [
+      "Amt02",
+      "amt02",
+      "เฉพาะ inamount 02 เพื่อคำนวณ Avgim ใช้สำหรับ Post Margin"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Mkt_PledgeSell",
+    "aliases": [
+      "( Reserve )",
+      "Mkt_PledgeSell",
+      "Reserve",
+      "mkt_pledgesell"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AdvPNUsed",
+    "aliases": [
+      "( Reserve )",
+      "AdvPNUsed",
+      "Reserve",
+      "advpnused"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "CashBalance",
+    "aliases": [
+      "Cash Balance",
+      "CashBalance",
+      "cash balance",
+      "cashbalance",
+      "ยอดเงิน",
+      "ยอดเงินฝาก",
+      "เงินคงเหลือ",
+      "เงินที่วางเป็นประกันสำหรับ Credit Balance หรือ Cash Balance"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AdvCashBalance",
+    "aliases": [
+      "AdvCashBalance",
+      "advcashbalance",
+      "เงิน CashBalance รวมกับรายการ Cashbalance ล่วงหน้า"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "ShortMktVal",
+    "aliases": [
+      "ShortMktVal",
+      "shortmktval",
+      "มูลค่าตามราคาตลาดของหลักทรัพย์ของ Credit Balance ที่ขาย Short"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Equity",
+    "aliases": [
+      "Equity",
+      "Equity ในระบบ Credit Balance",
+      "equity",
+      "ทรัพย์สินของลูกค้า",
+      "ทรัพย์สินของลูกค้า (Equity ในระบบ Credit Balance)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "ExcessEquity",
+    "aliases": [
+      "Excess Equity ในระบบ Credit Balance",
+      "ExcessEquity",
+      "excessequity",
+      "ทรัพย์สินส่วนเกินของลูกค้า",
+      "ทรัพย์สินส่วนเกินของลูกค้า (Excess Equity ในระบบ Credit Balance)"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AdvExcessEquity",
+    "aliases": [
+      "AdvExcessEquity",
+      "advexcessequity",
+      "ทรัพย์สินส่วนเกินของลูกค้าที่รวมรายการ Advance"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_AdvLineAvail",
+    "aliases": [
+      "Comp_AdvLineAvail",
+      "comp_advlineavail",
+      "วงเงินคงเหลือที่รวมรายการ Advance"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_CallMarg",
+    "aliases": [
+      "LONG MARKET VALUE * อัตรา Call Margin + SHORT MARKET VALUE * อัตรา Call Margin ฝั่ง Short ที่ตลาดกำหนด",
+      "Std_CallMarg",
+      "std_callmarg"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_CallMarg",
+    "aliases": [
+      "Comp_CallMarg",
+      "LONG MARKET VALUE * อัตรา Call Margin + SHORT MARKET VALUE * อัตรา Call Margin ฝั่ง Short ที่บริษัทฯกำหนด",
+      "comp_callmarg"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_AdvcallMarg",
+    "aliases": [
+      "( Reserve )",
+      "Comp_AdvcallMarg",
+      "Reserve",
+      "comp_advcallmarg"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Std_Forcesellbuy",
+    "aliases": [
+      "LONG MARKET VALUE * อัตรา Force Sale + SHORT MARKET VALUE * อัตรา Force Buy ที่ตลาดกำหนด",
+      "Std_Forcesellbuy",
+      "std_forcesellbuy"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_Forcesellbuy",
+    "aliases": [
+      "Comp_Forcesellbuy",
+      "LONG MARKET VALUE * อัตรา Force Sale + SHORT MARKET VALUE * อัตรา Force Buy ที่บริษัทฯกำหนด",
+      "comp_forcesellbuy"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Comp_AdvForcesell",
+    "aliases": [
+      "( Reserve )",
+      "Comp_AdvForcesell",
+      "Reserve",
+      "comp_advforcesell"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "Salesproceed",
+    "aliases": [
+      "SHORT MARKET VALUE * 105 %",
+      "Salesproceed",
+      "salesproceed"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "SegRegAmt",
+    "aliases": [
+      "SegRegAmt",
+      "segregamt",
+      "มูลค่าของเงินที่ Segregate ไว้รายลูกค้ารายวัน"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "WarrantLineAvail",
+    "aliases": [
+      "WarrantLineAvail",
+      "warrantlineavail",
+      "วงเงินที่สามารถซื้อหุ้น Warrant ได้"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "AR_Warrant",
+    "aliases": [
+      "AR ของการซื้อหุ้นที่ยังไม่ครบกำหนดชำระ เฉพาะรายการที่เป็น Warrant",
+      "AR_Warrant",
+      "ar_warrant"
+    ]
+  },
+  {
+    "table": "TMG",
+    "field": "StockCollatAmt",
+    "aliases": [
+      "Purpose 04",
+      "StockCollatAmt",
+      "stockcollatamt",
+      "มูลค่าหลักทรัพย์ค้ำประกัน",
+      "มูลค่าหลักทรัพย์ค้ำประกัน (Purpose 04)"
+    ]
+  },
+  {
+    "table": "TTM",
+    "field": "Teamid",
+    "aliases": [
+      "Teamid",
+      "teamid",
+      "รหัสทีม"
+    ]
+  },
+  {
+    "table": "TTM",
+    "field": "TeamEName",
+    "aliases": [
+      "TeamEName",
+      "teamename",
+      "ชื่อภาษาอังกฤษของทีม"
+    ]
+  },
+  {
+    "table": "TTM",
+    "field": "TeamTName",
+    "aliases": [
+      "TeamTName",
+      "teamtname",
+      "ชื่อภาษาไทยของทีม"
+    ]
+  },
+  {
+    "table": "TTM",
+    "field": "CostCenter",
+    "aliases": [
+      "CostCenter",
+      "costcenter",
+      "การจัดกลุ่มของทีม"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดใด"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "CustAcct",
+    "aliases": [
+      "CustAcct",
+      "custacct",
+      "customer account type",
+      "บัญชีลูกค้า",
+      "ประเภทบัญชี",
+      "รหัสบัญชีลูกค้า"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "CustCode",
+    "aliases": [
+      "CustCode",
+      "cust code",
+      "custcode",
+      "customer",
+      "customer code",
+      "รหัสลูกค้า",
+      "ลูกค้า"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "PnAmt1",
+    "aliases": [
+      "PnAmt1",
+      "pnamt1",
+      "มูลค่า PN ของลูกค้าที่ได้นำมาฝากไว้ ซึ่งจะเพิ่มวงเงิน"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "PnAmt2",
+    "aliases": [
+      "PnAmt2",
+      "pnamt2",
+      "มูลค่า PN ของลูกค้าที่ได้นำมาฝากไว้ ซึ่งไม่เพิ่มวงเงิน แต่คำนวณใน MM"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Collateral1",
+    "aliases": [
+      "Collateral1",
+      "collateral1",
+      "มูลค่าของสินทรัพย์ค้ำประกัน ซึ่งเพิ่มวงเงิน"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Collateral2",
+    "aliases": [
+      "Collateral2",
+      "collateral2",
+      "มูลค่าของสินทรัพย์ค้ำประกัน ซึ่งใช้คำนวณ MM แต่ไม่เพิ่มวงเงิน"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Debt",
+    "aliases": [
+      "Debt",
+      "debt",
+      "มูลหนี้ทั้งหมดที่ยังไม่ได้จ่ายเงินของลูกค้า Margin"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AR_Trade",
+    "aliases": [
+      "AR_Trade",
+      "ar_trade",
+      "ยอดหนี้ที่ต้องรับชำระจากรายการซื้อขาย"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AR_Redeem",
+    "aliases": [
+      "AR_Redeem",
+      "ar_redeem",
+      "ยอดหนี้ที่ต้องรับชำระจากรายการไถ่ถอน"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AR_MonInterest",
+    "aliases": [
+      "AR_MonInterest",
+      "ar_moninterest",
+      "ยอดหนี้ที่ต้องรับชำระจากดอกเบี้ยสิ้นเดือน"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AR_Overdue",
+    "aliases": [
+      "AR_Overdue",
+      "ar_overdue",
+      "ยอดหนี้ที่ต้องรับชำระทุกชนิดที่ Overdue แล้ว"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AR_CashMarginBuy",
+    "aliases": [
+      "( Reserve )",
+      "AR_CashMarginBuy",
+      "Reserve",
+      "ar_cashmarginbuy"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AR_Other",
+    "aliases": [
+      "AR_Other",
+      "ar_other",
+      "ยอดหนี้ที่ต้องรับชำระจากรายการอื่นๆ"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AR_CheqReturn",
+    "aliases": [
+      "AR_CheqReturn",
+      "ar_cheqreturn",
+      "ยอดหนี้ที่ต้องรับชำระจากรายการเช็คคืน"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AP_Trade",
+    "aliases": [
+      "AP_Trade",
+      "ap_trade",
+      "ยอดหนี้ที่ต้องจ่ายชำระจากรายการซื้อขาย"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "MktVal",
+    "aliases": [
+      "MktVal",
+      "mktval",
+      "ราคาตลาด"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "MktVal_Bis",
+    "aliases": [
+      "BIS",
+      "MktVal_Bis",
+      "mktval_bis",
+      "ราคาตลาด คิดตาม %",
+      "ราคาตลาด คิดตาม % ของ BIS"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Mkt_Right",
+    "aliases": [
+      "Mkt_Right",
+      "mkt_right",
+      "ราคาตลาดของลูกหุ้น"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Mkt_Right_Bis",
+    "aliases": [
+      "BIS",
+      "Mkt_Right_Bis",
+      "mkt_right_bis",
+      "ราคาตลาดของลูกหุ้น คิดตาม %",
+      "ราคาตลาดของลูกหุ้น คิดตาม % ของ BIS"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Mkt_Pledgef",
+    "aliases": [
+      "Mkt_Pledgef",
+      "mkt_pledgef",
+      "ราคาตลาดของหุ้นค้ำประกันด้านเงินกู้"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Mkt_Pledgef_Bis",
+    "aliases": [
+      "BIS",
+      "Mkt_Pledgef_Bis",
+      "mkt_pledgef_bis",
+      "ราคาตลาดของหุ้นค้ำประกันด้านเงินกู้ คิดตาม % ของ BIS"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Mkt_Pledgem",
+    "aliases": [
+      "Mkt_Pledgem",
+      "mkt_pledgem",
+      "ราคาตลาดของหุ้นค้ำประกันด้านหลักทรัพย์"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Mkt_Pledgem_Bis",
+    "aliases": [
+      "BIS",
+      "Mkt_Pledgem_Bis",
+      "mkt_pledgem_bis",
+      "ราคาตลาดของหุ้นค้ำประกันด้านหลักทรัพย์ คิดตาม % ของ BIS"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "PnUsed",
+    "aliases": [
+      "PnUsed",
+      "pnused",
+      "มูลค่า PN ที่ใช้ไปเพื่อค้ำประกันการซื้อ Margin ทั้งหมด"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "UsedCreditLine",
+    "aliases": [
+      "UsedCreditLine",
+      "usedcreditline",
+      "วงเงินที่ใช้ไป"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "MarginRatio",
+    "aliases": [
+      "MarginRatio",
+      "marginratio",
+      "อัตราส่วน Maintenance Margin"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AppCreditLine",
+    "aliases": [
+      "AppCreditLine",
+      "appcreditline",
+      "วงเงินอนุมัติ"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_CreditLine",
+    "aliases": [
+      "Std_CreditLine",
+      "std_creditline",
+      "วงเงินที่คำนวณได้ตามที่ตลาดฯ กำหนด"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_MaxCreditLine",
+    "aliases": [
+      "Std_MaxCreditLine",
+      "std_maxcreditline",
+      "ตลาดฯ",
+      "วงเงินสูงสุดที่เทียบระหว่าง วงเงินที่คำนวณได้ด้วย PN กับที่อนุมัติ (ตลาดฯ)"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_LineAvailable",
+    "aliases": [
+      "Std_LineAvailable",
+      "std_lineavailable",
+      "ตลาดฯ",
+      "วงเงินคงเหลือ เป็นวงเงินที่ยังสามารถซื้อหุ้นได้อีก (ตลาดฯ)"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_PNCall",
+    "aliases": [
+      "Std_PNCall",
+      "std_pncall",
+      "ตลาดฯ",
+      "มูลค่า PN ที่ต้องเรียกเพิ่ม กรณี MM% ต่ำกว่ากำหนด (ตลาดฯ)"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_PnWithdraw",
+    "aliases": [
+      "Std_PnWithdraw",
+      "std_pnwithdraw",
+      "ตลาดฯ",
+      "มูลค่า PN ที่ถอนได้",
+      "มูลค่า PN ที่ถอนได้ (ตลาดฯ)"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_ForceSell",
+    "aliases": [
+      "Std_ForceSell",
+      "std_forcesell",
+      "จำนวนเงินที่ต้อง Force Sell กรณี MM% ต่ำกว่ากำหนด (ตลาดฯ)",
+      "ตลาดฯ"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_CallIM",
+    "aliases": [
+      "Std_CallIM",
+      "std_callim",
+      "มูลค่าหุ้นที่เรียกมาเพื่อให้มีค่าเท่ากับ IM"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_SellIM",
+    "aliases": [
+      "Std_SellIM",
+      "std_sellim",
+      "มูลค่าหุ้นที่บังคับขายเพื่อให้มีค่าเท่ากับ IM"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_CallMM",
+    "aliases": [
+      "Std_CallMM",
+      "std_callmm",
+      "มูลค่าหุ้นที่เรียกมาเพื่อให้มีค่าเท่ากับ MM"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_SellMM",
+    "aliases": [
+      "Std_SellMM",
+      "std_sellmm",
+      "มูลค่าหุ้นที่บังคับขายเพื่อให้มีค่าเท่ากับ MM"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_CallIM",
+    "aliases": [
+      "Comp_CallIM",
+      "comp_callim",
+      "บริษัทฯ กำหนด",
+      "มูลค่าหุ้นที่เรียกมาเพื่อให้มีค่าเท่ากับ IM (บริษัทฯ กำหนด)"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_SellIM",
+    "aliases": [
+      "Comp_SellIM",
+      "comp_sellim",
+      "มูลค่าหุ้นที่บังคับขายเพื่อให้มีค่าเท่ากับ IM"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_CallMM",
+    "aliases": [
+      "Comp_CallMM",
+      "comp_callmm",
+      "มูลค่าหุ้นที่เรียกมาเพื่อให้มีค่าเท่ากับ MM"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_SellMM",
+    "aliases": [
+      "Comp_SellMM",
+      "comp_sellmm",
+      "มูลค่าหุ้นที่บังคับขายเพื่อให้มีค่าเท่ากับ MM"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_CreditLine",
+    "aliases": [
+      "Comp_CreditLine",
+      "comp_creditline",
+      "วงเงินที่คำนวณได้ตามที่บริษัทฯ กำหนด"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_MaxCreditLine",
+    "aliases": [
+      "Comp_MaxCreditLine",
+      "comp_maxcreditline",
+      "บริษัทฯ",
+      "วงเงินสูงสุดที่เทียบระหว่าง วงเงินที่คำนวณได้ด้วย PN กับที่อนุมัติ (บริษัทฯ)"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_LineAvailable",
+    "aliases": [
+      "Comp_LineAvailable",
+      "comp_lineavailable",
+      "บริษัทฯ",
+      "วงเงินคงเหลือ เป็นวงเงินที่ยังสามารถซื้อหุ้นได้อีก (บริษัทฯ)"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_PNCall",
+    "aliases": [
+      "Comp_PNCall",
+      "comp_pncall",
+      "บริษัทฯ",
+      "มูลค่า PN ที่ต้องเรียกเพิ่ม กรณี MM% ต่ำกว่ากำหนด (บริษัทฯ)"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_PnWithdraw",
+    "aliases": [
+      "Comp_PnWithdraw",
+      "comp_pnwithdraw",
+      "บริษัทฯ",
+      "มูลค่า PN ที่ถอนได้",
+      "มูลค่า PN ที่ถอนได้ (บริษัทฯ)"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_ForceSell",
+    "aliases": [
+      "Comp_ForceSell",
+      "comp_forcesell",
+      "จำนวนเงินที่ต้อง Force Sell กรณี MM% ต่ำกว่ากำหนด (บริษัทฯ)",
+      "บริษัทฯ"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Letter Refno :",
+    "aliases": [
+      "Letter Refno :",
+      "ReferNo ของจดหมาย Call PN",
+      "letter refno :"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "LetType",
+    "aliases": [
+      "LetType",
+      "lettype"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "LetDate",
+    "aliases": [
+      "LetDate",
+      "letdate"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "LetNo",
+    "aliases": [
+      "LetNo",
+      "letno"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "FifoAmt",
+    "aliases": [
+      "FifoAmt",
+      "fifoamt",
+      "เก็บ inamount, inamount.make ของลูกค้า"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Amt02",
+    "aliases": [
+      "Amt02",
+      "amt02",
+      "เฉพาะ inamount 02 เพื่อคำนวณ Avgim ใช้สำหรับ Post Margin"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Mkt_PledgeSell",
+    "aliases": [
+      "( Reserve )",
+      "Mkt_PledgeSell",
+      "Reserve",
+      "mkt_pledgesell"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AdvPNUsed",
+    "aliases": [
+      "( Reserve )",
+      "AdvPNUsed",
+      "Reserve",
+      "advpnused"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "CashBalance",
+    "aliases": [
+      "Cash Balance",
+      "CashBalance",
+      "cash balance",
+      "cashbalance",
+      "ยอดเงิน",
+      "ยอดเงินฝาก",
+      "เงินคงเหลือ",
+      "เงินที่วางเป็นประกันสำหรับ Credit Balance หรือ Cash Balance"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AdvCashBalance",
+    "aliases": [
+      "AdvCashBalance",
+      "advcashbalance",
+      "เงิน CashBalance รวมกับรายการ Cashbalance ล่วงหน้า"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "ShortMktVal",
+    "aliases": [
+      "ShortMktVal",
+      "shortmktval",
+      "มูลค่าตามราคาตลาดของหลักทรัพย์ของ Credit Balance ที่ขาย Short"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Equity",
+    "aliases": [
+      "Equity",
+      "Equity ในระบบ Credit Balance",
+      "equity",
+      "ทรัพย์สินของลูกค้า",
+      "ทรัพย์สินของลูกค้า ( Equity ในระบบ Credit Balance )"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "ExcessEquity",
+    "aliases": [
+      "Excess Equity ในระบบ Credit Balance",
+      "ExcessEquity",
+      "excessequity",
+      "ทรัพย์สินส่วนเกินของลูกค้า",
+      "ทรัพย์สินส่วนเกินของลูกค้า ( Excess Equity ในระบบ Credit Balance )"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AdvExcessEquity",
+    "aliases": [
+      "AdvExcessEquity",
+      "advexcessequity",
+      "ทรัพย์สินส่วนเกินของลูกค้าที่รวมรายการ Advance"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_AdvLineAvail",
+    "aliases": [
+      "Comp_AdvLineAvail",
+      "comp_advlineavail",
+      "วงเงินคงเหลือที่รวมรายการ Advance"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_CallMarg",
+    "aliases": [
+      "LONG MARKET VALUE * อัตรา Call Margin + SHORT MARKET VALUE * อัตรา Call Margin ฝั่ง Short ที่ตลาดกำหนด",
+      "Std_CallMarg",
+      "std_callmarg"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_CallMarg",
+    "aliases": [
+      "Comp_CallMarg",
+      "LONG MARKET VALUE * อัตรา Call Margin + SHORT MARKET VALUE * อัตรา Call Margin ฝั่ง Short ที่บริษัทฯกำหนด",
+      "comp_callmarg"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_AdvcallMarg",
+    "aliases": [
+      "( Reserve )",
+      "Comp_AdvcallMarg",
+      "Reserve",
+      "comp_advcallmarg"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Std_Forcesellbuy",
+    "aliases": [
+      "LONG MARKET VALUE * อัตรา Force Sale + SHORT MARKET VALUE * อัตรา Force Buy ที่ตลาดกำหนด",
+      "Std_Forcesellbuy",
+      "std_forcesellbuy"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_Forcesellbuy",
+    "aliases": [
+      "Comp_Forcesellbuy",
+      "LONG MARKET VALUE * อัตรา Force Sale + SHORT MARKET VALUE * อัตรา Force Buy ที่บริษัทฯกำหนด",
+      "comp_forcesellbuy"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Comp_AdvForcesell",
+    "aliases": [
+      "( Reserve )",
+      "Comp_AdvForcesell",
+      "Reserve",
+      "comp_advforcesell"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "Salesproceed",
+    "aliases": [
+      "SHORT MARKET VALUE * 105 %",
+      "Salesproceed",
+      "salesproceed"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "SegRegAmt",
+    "aliases": [
+      "SegRegAmt",
+      "segregamt",
+      "มูลค่าของเงินที่ Segregate ไว้รายลูกค้ารายวัน"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "WarrantLineAvail",
+    "aliases": [
+      "WarrantLineAvail",
+      "warrantlineavail",
+      "วงเงินที่สามารถซื้อหุ้น Warrant ได้"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "AR_Warrant",
+    "aliases": [
+      "AR ของการซื้อหุ้นที่ยังไม่ครบกำหนดชำระ เฉพาะรายการที่เป็น Warrant",
+      "AR_Warrant",
+      "ar_warrant"
+    ]
+  },
+  {
+    "table": "TTMG",
+    "field": "StockCollatAmt",
+    "aliases": [
+      "* 80% ถ้าหุ้นใน SET50",
+      "0 ถ้าเป็น Warrant",
+      "50% ถ้านอก SET50",
+      "Purpose 04",
+      "StockCollatAmt",
+      "stockcollatamt",
+      "มูลค่าหลักทรัพย์ค้ำประกัน",
+      "มูลค่าหลักทรัพย์ค้ำประกัน (Purpose 04) * 80% ถ้าหุ้นใน SET50 / 50% ถ้านอก SET50 / 0 ถ้าเป็น Warrant"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "LogUserId",
+    "aliases": [
+      "LogUserId",
+      "loguserid",
+      "รหัสผู้ใช้ที่ทำการแก้ไข"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "LogUserBranch",
+    "aliases": [
+      "LogUserBranch",
+      "loguserbranch",
+      "สาขาของผู้ใช้ที่แก้ไข"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "LogSysDate",
+    "aliases": [
+      "LogSysDate",
+      "logsysdate",
+      "วันและเวลาที่ทำการแก้ไข ของระบบ INFORMIX"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "LogProgName",
+    "aliases": [
+      "LogProgName",
+      "logprogname",
+      "ชื่อโปรแกรมที่ใช้แก้ไข"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "LogEditDate",
+    "aliases": [
+      "LogEditDate",
+      "logeditdate",
+      "วันที่ทำการแก้ไข"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "LogAction",
+    "aliases": [
+      "LogAction",
+      "logaction",
+      "ประเภทการแก้ไข"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "Custcode",
+    "aliases": [
+      "Custcode",
+      "custcode",
+      "ตามสไตล์ไฟล์ TCT",
+      "รหัสลูกค้า",
+      "รหัสลูกค้า (ตามสไตล์ไฟล์ TCT)"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "Custtype",
+    "aliases": [
+      "Custtype",
+      "custtype",
+      "ประเภทลูกค้า"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "Account",
+    "aliases": [
+      "Account",
+      "account",
+      "รหัสบัญชี",
+      "รหัสบัญชีลูกค้า",
+      "เลขบัญชี"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "Ename",
+    "aliases": [
+      "Ename",
+      "ename",
+      "ชื่อภาษาอังกฤษของลูกค้า"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "Esurname",
+    "aliases": [
+      "Esurname",
+      "esurname",
+      "นามสกุลภาษาอังกฤษของลูกค้า"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "Tname",
+    "aliases": [
+      "Tname",
+      "tname",
+      "ชื่อภาษาไทยของลูกค้า"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "Tsurname",
+    "aliases": [
+      "Tsurname",
+      "tsurname",
+      "นามสกุลภาษาไทยของลูกค้า"
+    ]
+  },
+  {
+    "table": "LTCT",
+    "field": "Delflag",
+    "aliases": [
+      "Delflag",
+      "delete flag",
+      "delflag",
+      "ยกเลิก",
+      "สถานะลบ",
+      "แฟลกสถานะการลบ",
+      "แฟลกสถานะการลบ/ยกเลิก"
+    ]
+  },
+  {
+    "table": "CPS",
+    "field": "ProgPost",
+    "aliases": [
+      "ProgPost",
+      "progpost",
+      "ชื่อโปรแกรม  post  ที่ถูก  run"
+    ]
+  },
+  {
+    "table": "CPS",
+    "field": "Branch",
+    "aliases": [
+      "Branch",
+      "branch",
+      "สาขา",
+      "สาขาที่  run program"
+    ]
+  },
+  {
+    "table": "CPS",
+    "field": "Runflag",
+    "aliases": [
+      "Runflag",
+      "runflag",
+      "ทำงานเสร็จแล้วหรือไม่  0",
+      "ทำงานเสร็จแล้วหรือไม่  0 -  ยังไม่เสร็จ\n1 -  ทำเสร็จแล้ว",
+      "ทำเสร็จแล้ว",
+      "ยังไม่เสร็จ\n1"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "Sharecode",
+    "aliases": [
+      "Sharecode",
+      "sharecode",
+      "ชื่อหลักทรัพย์"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "Closedate",
+    "aliases": [
+      "Closedate",
+      "closedate",
+      "วันที่ที่เก็บราคาปิด"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "AvgPrice",
+    "aliases": [
+      "AvgPrice",
+      "average price",
+      "avgprice",
+      "ราคาเฉลี่ย"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "ClosePrice",
+    "aliases": [
+      "ClosePrice",
+      "closeprice",
+      "ราคาปิด"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "Today_Unit",
+    "aliases": [
+      "CN จำนวนหุ้นทั้งหมดที่ซื้อขายในวันนั้น",
+      "Today_Unit",
+      "today_unit"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "Sectorial_Number",
+    "aliases": [
+      "Sectorial_Number",
+      "sectorial_number",
+      "หมายเลข Sector"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "Designed",
+    "aliases": [
+      "Designed",
+      "designed",
+      "สถานะเครื่องหมาย DS"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "Suspension",
+    "aliases": [
+      "Suspension",
+      "suspension",
+      "สถานะเครื่องหมาย SP"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "Notice",
+    "aliases": [
+      "Notice",
+      "notice",
+      "สถานะเครื่องหมาย NP"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "TodayAmt",
+    "aliases": [
+      "TodayAmt",
+      "todayamt",
+      "จำนวนมูลค่าทั้งหมดที่มีการซื้อขายในวันนั้น"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "LastCloseDate",
+    "aliases": [
+      "LastCloseDate",
+      "lastclosedate",
+      "วันที่มีราคาปิดครั้งสุดท้าย"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "LastClosePrice",
+    "aliases": [
+      "LastClosePrice",
+      "lastcloseprice",
+      "ราคาปิดครั้งสุดท้าย"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "BidPrice",
+    "aliases": [
+      "BidPrice",
+      "bidprice",
+      "ราคาเสนอซื้อ"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "OfferPrice",
+    "aliases": [
+      "OfferPrice",
+      "offerprice",
+      "ราคาเสนอขายที่ดีที่สุด ณ. สิ้นวัน"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "AvgBidPrice",
+    "aliases": [
+      "AvgBidPrice",
+      "avgbidprice",
+      "ราคาเสนอซื้อเฉลี่ย"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "AvgOfferPrice",
+    "aliases": [
+      "AvgOfferPrice",
+      "avgofferprice",
+      "ราคาเสนอขายเฉลี่ย"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "TheoryPrice",
+    "aliases": [
+      "TheoryPrice",
+      "theoryprice",
+      "ราคาทางทฤษฎี"
+    ]
+  },
+  {
+    "table": "TSP",
+    "field": "ComplienceFlag",
+    "aliases": [
+      "Compliance Flag",
+      "ComplienceFlag",
+      "complienceflag"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "ShareID",
+    "aliases": [
+      "ShareID",
+      "shareid",
+      "เลขที่หุ้น",
+      "เลขที่หุ้น (โปรแกรมสร้างให้)",
+      "โปรแกรมสร้างให้"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "ShareCode",
+    "aliases": [
+      "ShareCode",
+      "share",
+      "sharecode",
+      "stock",
+      "symbol",
+      "ชื่อหลักทรัพย์",
+      "ชื่อหุ้น",
+      "หลักทรัพย์",
+      "หุ้น"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "CloseDate",
+    "aliases": [
+      "CloseDate",
+      "closedate",
+      "วันที่ที่โอนข้อมูลราคาปิดมา",
+      "วันที่ปิดบัญชี"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "ClosePrice",
+    "aliases": [
+      "ClosePrice",
+      "closeprice",
+      "ราคาปิด"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "OpenPrice",
+    "aliases": [
+      "OpenPrice",
+      "openprice",
+      "ราคาเปิด"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "HighPrice",
+    "aliases": [
+      "HighPrice",
+      "highprice",
+      "ราคาสูงสุด"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "LowPrice",
+    "aliases": [
+      "LowPrice",
+      "lowprice",
+      "ราคาต่ำสุด"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "AvgPrice",
+    "aliases": [
+      "AvgPrice",
+      "average price",
+      "avgprice",
+      "ราคาเฉลี่ย"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "TotalUnit",
+    "aliases": [
+      "TotalUnit",
+      "totalunit",
+      "จำนวนหุ้นที่ซื้อขายเก็บจำนวนหุ้นที่ซื้อขายในวันที่ราคาปิด"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "TotalVolume",
+    "aliases": [
+      "TotalVolume",
+      "totalvolume",
+      "บาท",
+      "มูลค่าที่ซื้อขายเก็บมูลค่าหุ้นที่ซื้อขาย (บาท)"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "SecurityNum",
+    "aliases": [
+      "SecurityNum",
+      "securitynum",
+      "หมายเลขหลักทรัพย์"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "Board",
+    "aliases": [
+      "Board",
+      "board",
+      "กระดานต่างประเทศ",
+      "บอกว่าเป็นกระดาน Local",
+      "บอกว่าเป็นกระดาน Local (L) หรือ กระดานต่างประเทศ (F)"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "Flag1",
+    "aliases": [
+      "Flag1",
+      "flag1",
+      "สำหรับ JF รายงานเกี่ยวกับ Strategic Share"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "Flag2",
+    "aliases": [
+      "Flag2",
+      "flag2",
+      "บอร์ดล็อตของหุ้น"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "Flag3",
+    "aliases": [
+      "Flag3",
+      "flag3",
+      "สำหรับบริษัทเงินทุนหลักทรัพย์"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "Flag4",
+    "aliases": [
+      "Flag4",
+      "flag4",
+      "เช็คหุ้นในกลุ่ม SET50"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "Flag5",
+    "aliases": [
+      "Flag5",
+      "Grade ของหุ้น ใช้ Link กับไฟล์ TGD",
+      "flag5"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "Flag6",
+    "aliases": [
+      "Flag6",
+      "Grade ของหุ้น ใช้ Link กับไฟล์ TGD",
+      "flag6"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "SecurityCode",
+    "aliases": [
+      "SecurityCode",
+      "securitycode",
+      "หมายเลขที่ใช้ Link กับระบบวิสตา สำหรับ SCBWP"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "NCRTypeFlag",
+    "aliases": [
+      "NCRTypeFlag",
+      "ncrtypeflag",
+      "ประเภท NCR ของหุ้น"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "DebtTypeFlag",
+    "aliases": [
+      "DebtTypeFlag",
+      "debttypeflag",
+      "ประเภท NCR ในกรณีที่เป็น Convertible Debenture"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "SedolCode",
+    "aliases": [
+      "SedolCode",
+      "sedolcode",
+      "รหัสแทนหุ้นที่ตลาดฯกำหนดเพื่อให้ต่างประเทศทราบ"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "DWCanTrade",
+    "aliases": [
+      "DWCanTrade",
+      "dwcantrade",
+      "สำหรับ check การ trade ของหุ้น DW ว่าหุ้นใดๆ สามารถ Trade D.W ได้หรือไม่"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "RicCode",
+    "aliases": [
+      "Reuters",
+      "RicCode",
+      "riccode",
+      "รหัสหลักทรัพย์ตามมาตรฐาน Router",
+      "รหัสหลักทรัพย์ตามมาตรฐาน Router (Reuters)"
+    ]
+  },
+  {
+    "table": "TST",
+    "field": "IsinCode",
+    "aliases": [
+      "IsinCode",
+      "isincode",
+      "รหัสหลักทรัพย์ตามมาตรฐาน International"
+    ]
+  },
+  {
+    "table": "TPROG",
+    "field": "PrgId",
+    "aliases": [
+      "PrgId",
+      "prgid",
+      "รหัสโปรแกรม"
+    ]
+  },
+  {
+    "table": "TPROG",
+    "field": "PrgType",
+    "aliases": [
+      "PrgType",
+      "prgtype",
+      "ประเภทของโปรแกรม"
+    ]
+  },
+  {
+    "table": "TPROG",
+    "field": "PrgTitle",
+    "aliases": [
+      "PrgTitle",
+      "prgtitle",
+      "ชื่อโปรแกรมที่ปรากฏบนหน้าจอ"
+    ]
+  },
+  {
+    "table": "TPROG",
+    "field": "PrgRun",
+    "aliases": [
+      "PrgRun",
+      "prgrun",
+      "ชื่อโปรแกรม Execute"
+    ]
+  },
+  {
+    "table": "TPROG",
+    "field": "PrgForm",
+    "aliases": [
+      "PrgForm",
+      "prgform",
+      "ชื่อ Caption"
+    ]
+  },
+  {
+    "table": "TPROG",
+    "field": "PrgdefPerm",
+    "aliases": [
+      "Parameter ของโปรแกรม",
+      "PrgdefPerm",
+      "prgdefperm"
+    ]
+  },
+  {
+    "table": "TPROG",
+    "field": "Constrain",
+    "aliases": [
+      "Constrain",
+      "constrain",
+      "ข้อกำหนดเงื่อนไขโปรแกรม"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "ShareID",
+    "aliases": [
+      "ShareID",
+      "shareid",
+      "เลขที่หุ้น",
+      "เลขที่หุ้น (โปรแกรมสร้างให้)",
+      "โปรแกรมสร้างให้"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "ShareTName",
+    "aliases": [
+      "ShareTName",
+      "sharetname",
+      "ชื่อหลักทรัพย์เป็นภาษาไทย"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "ShareEName",
+    "aliases": [
+      "ShareEName",
+      "shareename",
+      "ชื่อหลักทรัพย์เป็นภาษาอังกฤษ"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "SectorCode",
+    "aliases": [
+      "SectorCode",
+      "sectorcode",
+      "รหัสกลุ่มอุตสาหกรรม"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "Par",
+    "aliases": [
+      "Par",
+      "par",
+      "พาร์ของหุ้น"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "Capital",
+    "aliases": [
+      "Capital",
+      "capital",
+      "จำนวนทุนจดทะเบียน"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "CommissionType",
+    "aliases": [
+      "CommissionType",
+      "commissiontype",
+      "ประเภทการคิด Commission"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "ShareType",
+    "aliases": [
+      "ShareType",
+      "sharetype",
+      "ประเภทหุ้น บอกว่าเป็นหุ้นประเภทใด"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "SubShareType",
+    "aliases": [
+      "SubShareType",
+      "subsharetype",
+      "ประเภทย่อยของหลักทรัพย์"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "XchgMkt",
+    "aliases": [
+      "XchgMkt",
+      "market",
+      "xchgmkt",
+      "ตลาด",
+      "ระบุว่าเป็นตลาดฯใด"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "BisShareType",
+    "aliases": [
+      "BisShareType",
+      "bissharetype",
+      "ประเภท BIS ของหุ้น บอกว่าหุ้นปัจจุบันอยู่ในประเภท BIS ใด"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "SDCFlag",
+    "aliases": [
+      "SDCFlag",
+      "sdcflag",
+      "แฟลก SDC บอกว่าหุ้นนี้เป็นหุ้นในระบบศูนย์รับฝากใบหุ้นหรือไม่"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "RegisFlag",
+    "aliases": [
+      "RegisFlag",
+      "regisflag",
+      "แฟลกนายทะเบียน บอกว่านายทะเบียนใช่ตลาดหลักทรัพย์หรือไม่"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "DutyFlag",
+    "aliases": [
+      "DutyFlag",
+      "dutyflag",
+      "แฟลกอากรบอกว่าการซื้อขายหุ้นนี้เสียอากรหรือไม่"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "FundTaxExempt",
+    "aliases": [
+      "FundTaxExempt",
+      "fundtaxexempt",
+      "แฟลกบอกว่าเป็นหุ้นหน่วยลงทุนที่ได้รับยกเว้นภาษีหรือไม่"
+    ]
+  },
+  {
+    "table": "TMST",
+    "field": "ShareCommGroup",
+    "aliases": [
+      "ShareCommGroup",
+      "sharecommgroup",
+      "กลุ่มหลักทรัพย์ในการคำนวณค่าคอมมิชชั่นแบบรายกลุ่มหุ้น"
+    ]
+  },
+  {
+    "table": "THD",
+    "field": "Holidaydate",
+    "aliases": [
+      "Holidaydate",
+      "holidaydate",
+      "เก็บวันหยุด"
+    ]
+  }
+]
