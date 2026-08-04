@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SBA SQL Assistant</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f3f7fb; color: #16324a; }
+    .shell { max-width: 980px; margin: auto; padding: 32px 18px; }
+    .top { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 20px; }
+    .brand { display: flex; gap: 12px; align-items: center; }
+    .logo { width: 48px; height: 48px; border-radius: 13px; background: #168f8a; color: #fff; display: grid; place-items: center; font-weight: 800; }
+    .top h1 { margin: 0; font-size: 26px; }
+    .top p { margin: 4px 0 0; color: #6a8093; font-size: 13px; }
+    .back { background: #fff; border: 1px solid #d6e2ea; border-radius: 10px; padding: 10px 14px; text-decoration: none; color: #264760; font-weight: 700; }
+    .card { background: #fff; border: 1px solid #d8e5ed; border-radius: 18px; padding: 24px; box-shadow: 0 16px 45px rgba(33,74,103,.08); }
+    .badge { display: inline-block; background: #e6f6f4; color: #087b76; border-radius: 999px; padding: 6px 10px; font-size: 11px; font-weight: 800; }
+    .intro { color: #60798e; line-height: 1.7; }
+    .ask { display: grid; grid-template-columns: 1fr auto; gap: 10px; margin-top: 18px; }
+    .ask textarea { min-height: 92px; border: 1px solid #cbdce5; border-radius: 12px; padding: 14px; font: inherit; }
+    .ask button { border: 0; border-radius: 12px; background: #168f8a; color: #fff; font-weight: 800; padding: 0 22px; cursor: pointer; }
+    .examples { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    .examples button { border: 1px solid #d4e2ea; background: #f8fbfd; border-radius: 999px; padding: 7px 11px; font-size: 12px; cursor: pointer; }
+    .result { display: none; margin-top: 20px; }
+    .result.show { display: block; }
+    .status { border-radius: 10px; padding: 12px 14px; font-size: 13px; line-height: 1.6; }
+    .ok { background: #ebf8f4; color: #17634f; }
+    .warn { background: #fff7e8; color: #865807; }
+    .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+    .meta article { border: 1px solid #dce7ed; background: #f9fbfc; border-radius: 12px; padding: 14px; }
+    .meta span { display: block; color: #75899a; font-size: 10px; font-weight: 800; }
+    .meta strong { display: block; margin-top: 7px; }
+    .sqlbox { margin-top: 14px; background: #0d1d2a; border-radius: 13px; overflow: hidden; }
+    .sqlhead { display: flex; justify-content: space-between; padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,.1); color: #9ec1d7; font-size: 11px; }
+    .copy { border: 1px solid rgba(255,255,255,.22); background: transparent; color: #fff; border-radius: 8px; padding: 6px 10px; }
+    .sqlbox pre { margin: 0; padding: 18px; color: #e7f4ff; white-space: pre-wrap; line-height: 1.7; }
+    .source { border-top: 1px solid #e4edf2; padding: 10px 0; }
+    .source b { font-family: monospace; color: #087b76; }
+    .source small { display: block; color: #72879a; margin-top: 4px; }
+    .note { margin-top: 18px; color: #74899a; font-size: 11px; }
+    @media (max-width: 700px) {
+      .ask { grid-template-columns: 1fr; }
+      .ask button { min-height: 48px; }
+      .meta { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="top">
+      <div class="brand">
+        <div class="logo">SBA</div>
+        <div>
+          <h1>SQL Assistant — Phase 1</h1>
+          <p>สร้าง Informix SELECT จากข้อมูลในโปรเจกต์เท่านั้น</p>
+        </div>
+      </div>
+      <a class="back" href="/">กลับหน้าหลัก</a>
+    </header>
+
+    <section class="card">
+      <span class="badge">PROJECT DATA ONLY</span>
+      <p class="intro">
+        พิมพ์สิ่งที่ต้องการเป็นภาษาไทย ระบบจะค้นหา Table และ Field
+        ที่มีอยู่จริงใน Data Dictionary ก่อนสร้าง Query หากข้อมูลไม่พอ ระบบจะไม่เดา
+      </p>
+
+      <div class="ask">
+        <textarea id="question" placeholder="ตัวอย่าง: หาข้อมูลลูกค้า custcode 0001234"></textarea>
+        <button id="generate">สร้าง Query</button>
+      </div>
+
+      <div class="examples">
+        <button data-q="custcode อยู่ในตารางไหนบ้าง">custcode อยู่ตารางไหน</button>
+        <button data-q="หาข้อมูลลูกค้าด้วย custcode 0001234">หาลูกค้าด้วย custcode</button>
+        <button data-q="ดูข้อมูลทั้งหมดของตาราง MCBL">ดูข้อมูล MCBL</button>
+      </div>
+
+      <section id="result" class="result">
+        <div id="status" class="status"></div>
+        <div class="meta">
+          <article><span>TABLE</span><strong id="tableName">—</strong></article>
+          <article><span>FIELDS</span><strong id="fieldNames">—</strong></article>
+        </div>
+
+        <div class="sqlbox">
+          <div class="sqlhead">
+            <span>INFORMIX SELECT</span>
+            <button id="copy" class="copy">COPY SQL</button>
+          </div>
+          <pre id="sql">—</pre>
+        </div>
+
+        <div>
+          <h3>ข้อมูลอ้างอิงจากโปรเจกต์</h3>
+          <div id="sourceList"></div>
+        </div>
+      </section>
+
+      <p class="note">Phase 1 สร้างเฉพาะ SELECT และไม่เชื่อมฐานข้อมูลจริง</p>
+    </section>
+  </main>
+
+  <script>
+    let dictionary = null;
+    const stop = new Set(["ต้องการ","อยาก","ขอ","ข้อมูล","ของ","ที่","ด้วย","โดย","หา","ดู","แสดง","ทั้งหมด","ตาราง","ฟิลด์","ลูกค้า","หน่อย","และ","หรือ","ใน","จาก","เป็น","ให้"]);
+    const norm = v => String(v || "").toLowerCase().replace(/[^a-z0-9ก-๙_]+/g, " ").trim();
+    const toks = v => norm(v).split(/\s+/).filter(x => x.length > 1 && !stop.has(x));
+    const esc = v => String(v).replace(/'/g, "''");
+
+    async function load() {
+      const r = await fetch("/data-dictionary.json", { cache: "no-store" });
+      if (!r.ok) throw new Error("โหลด Data Dictionary ไม่สำเร็จ");
+      dictionary = await r.json();
+    }
+
+    function tableText(t) {
+      return norm([
+        t.name, t.thaiName, t.description,
+        ...(t.notes || []),
+        ...(t.fields || []).flatMap(f => [f.name, f.type, f.key, f.description, f.rule])
+      ].join(" "));
+    }
+
+    function score(t, q, ts) {
+      const text = tableText(t);
+      let s = norm(q).includes(norm(t.name)) ? 100 : 0;
+      ts.forEach(x => { if (text.includes(x)) s += 3; });
+      (t.fields || []).forEach(f => { if (norm(q).includes(norm(f.name))) s += 25; });
+      return s;
+    }
+
+    function fields(t, q, ts) {
+      const nq = norm(q);
+      return (t.fields || [])
+        .map(f => {
+          const text = norm([f.name, f.type, f.key, f.description, f.rule].join(" "));
+          let s = nq.includes(norm(f.name)) ? 100 : 0;
+          ts.forEach(x => { if (text.includes(x)) s += 3; });
+          return { f, s };
+        })
+        .filter(x => x.s > 0)
+        .sort((a, b) => b.s - a.s)
+        .map(x => x.f);
+    }
+
+    function valueAfterField(q, fieldName) {
+      const escaped = fieldName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+      const m = q.match(new RegExp(
+        escaped + "\\s*(?:=|คือ|เป็น|:)?\\s*['\"]?([a-zA-Z0-9_./-]+)",
+        "i"
+      ));
+      return m && m[1] && norm(m[1]) !== norm(fieldName) ? m[1] : null;
+    }
+
+    function answer(q) {
+      if (/\b(update|delete|insert|drop|alter|truncate|create|execute)\b/i.test(q)) {
+        return { error: "Phase 1 อนุญาตเฉพาะ SELECT" };
+      }
+
+      const ts = toks(q);
+      const ranked = (dictionary.tables || [])
+        .map(t => ({ t, s: score(t, q, ts) }))
+        .filter(x => x.s > 0)
+        .sort((a, b) => b.s - a.s);
+
+      if (!ranked.length) {
+        return { error: "ไม่พบ Table หรือ Field ที่สัมพันธ์กับคำถามในโปรเจกต์ จึงยังไม่สร้าง Query" };
+      }
+
+      const t = ranked[0].t;
+      let fs = fields(t, q, ts);
+      fs = fs.length ? fs.slice(0, 10) : (t.fields || []).slice(0, 8);
+
+      if (!fs.length) return { error: `พบตาราง ${t.name} แต่ไม่มี Field` };
+
+      const wh = [];
+      fs.forEach(f => {
+        const v = valueAfterField(q, f.name);
+        if (v) wh.push(`${f.name} = '${esc(v)}'`);
+      });
+
+      const sql =
+`SELECT FIRST 100
+       ${fs.map(f => f.name).join(",\n       ")}
+FROM ${t.name}${wh.length ? "\nWHERE " + wh.join("\n  AND ") : ""};`;
+
+      return { t, fs, wh, sql };
+    }
+
+    function render(a) {
+      const result = document.getElementById("result");
+      const status = document.getElementById("status");
+      result.classList.add("show");
+
+      if (a.error) {
+        status.className = "status warn";
+        status.textContent = a.error;
+        tableName.textContent = "—";
+        fieldNames.textContent = "—";
+        sql.textContent = "ยังไม่มี SQL";
+        sourceList.innerHTML = "";
+        return;
+      }
+
+      status.className = "status ok";
+      status.textContent = a.wh.length
+        ? "สร้าง Query จาก Table/Field ที่พบจริง พร้อม WHERE ที่ตรวจพบ"
+        : "สร้าง Query จาก Table/Field ที่พบจริง แต่ยังไม่พบค่าที่ใช้ทำ WHERE";
+
+      tableName.textContent = a.t.name;
+      fieldNames.textContent = a.fs.map(f => f.name).join(", ");
+      sql.textContent = a.sql;
+      sourceList.innerHTML = a.fs.map(f =>
+        `<div class="source"><b>${a.t.name}.${f.name}</b><small>${f.description || "ไม่มีคำอธิบาย"}${f.rule ? " — " + f.rule : ""}</small></div>`
+      ).join("");
+    }
+
+    generate.onclick = async () => {
+      const q = question.value.trim();
+      if (!q) return;
+      generate.disabled = true;
+      generate.textContent = "กำลังค้นหา...";
+      try {
+        if (!dictionary) await load();
+        render(answer(q));
+      } catch (e) {
+        render({ error: e.message });
+      } finally {
+        generate.disabled = false;
+        generate.textContent = "สร้าง Query";
+      }
+    };
+
+    document.querySelectorAll("[data-q]").forEach(
+      b => b.onclick = () => question.value = b.dataset.q
+    );
+
+    copy.onclick = async () => {
+      if (sql.textContent && !sql.textContent.includes("ยังไม่มี")) {
+        await navigator.clipboard.writeText(sql.textContent);
+        copy.textContent = "COPIED";
+        setTimeout(() => copy.textContent = "COPY SQL", 1200);
+      }
+    };
+
+    load().catch(() => {});
+  </script>
+</body>
+</html>
